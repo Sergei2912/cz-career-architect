@@ -1,0 +1,33 @@
+# CZ Career Architect - Requirements
+
+# API and Web Framework
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+python-multipart>=0.0.6
+pydantic>=2.0.0
+
+# File processing
+PyMuPDF>=1.23.0
+python-docx>=1.0.0
+striprtf>=0.0.26
+pdfplumber>=0.10.0
+
+# OpenAI Agents SDK (already installed)
+# openai-agents
+
+# Validation
+jsonschema>=4.20.0
+
+# Testing
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+pytest-cov>=4.1.0
+
+# Code Quality and Linting
+flake8>=6.1.0
+black>=23.0.0
+isort>=5.12.0
+
+# Pre-commit hooks
+pre-commit>=3.5.0
+
