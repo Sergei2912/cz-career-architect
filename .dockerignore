@@ -1,0 +1,52 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info
+dist
+build
+venv/
+.venv/
+env/
+ENV/
+
+# Testing
+.pytest_cache
+.coverage
+coverage.xml
+htmlcov/
+.tox
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment
+.env
+
+# Outputs
+base_for_agent_cv/out/
+base_for_agent_cv/uploads/
+
+# Documentation
+*.md
+!base_for_agent_cv/README.md
+
+# CI/CD
+.github/
+
+# Development tools
+.flake8
+.pre-commit-config.yaml
+pyproject.toml
