@@ -4,6 +4,8 @@
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
+**English** | **[Русский](README_RU.md)**
+
 AI-powered assistant for creating GDPR-compliant HR documents for Czech healthcare professionals.
 
 ---
