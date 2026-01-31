@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CZ Medical Career Architect Phase A Output v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["cv_ssot_json"],
+  "properties": {
+    "cv_ssot_json": {
+      "$ref": "../types/cz_dentist_cv_gov_ats_gdpr_csn_v1.1.0.schema.json"
+    },
+    "evidence_map": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["claim", "source"],
+        "properties": {
+          "claim": {"type": "string"},
+          "source": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["file_id", "quote"],
+            "properties": {
+              "file_id": {"type": "string"},
+              "quote": {"type": "string"},
+              "location": {"type": "string"}
+            }
+          }
+        }
+      }
+    }
+  }
+}

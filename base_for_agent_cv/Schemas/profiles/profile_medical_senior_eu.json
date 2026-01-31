@@ -1,0 +1,209 @@
+{
+  "$schema": "https://czcareerarchitect.cz/schemas/profile/1.0.0",
+  "$id": "profile_medical_senior_eu",
+  "name": "MEDICAL-SENIOR-EU",
+  "version": "1.0.0",
+  "created": "2026-01-18",
+  "description": "Profil pro zkušené zdravotnické pracovníky s kvalifikací ze zemí mimo EU, kteří prošli procesem nostrifikace/aprobace.",
+  
+  "target": {
+    "market": "CZ",
+    "language": "cs-CZ",
+    "audience": ["HR", "nemocnice", "kliniky", "MZČR"],
+    "profession": ["lékař", "zubní lékař", "farmaceut"],
+    "experience_level": "senior",
+    "experience_years_min": 5
+  },
+
+  "extends": "profile_hr_review_cs",
+
+  "formatting": {
+    "standard": "ČSN 01 6910",
+    "paper": {
+      "size": "A4",
+      "orientation": "portrait",
+      "margins": {
+        "top": "2.5cm",
+        "bottom": "2.5cm",
+        "left": "2.5cm",
+        "right": "2.5cm"
+      }
+    },
+    "typography": {
+      "fontFamily": "Calibri",
+      "fontSize": "11pt",
+      "lineHeight": "1.15",
+      "headingSize": "14pt"
+    },
+    "pageLimit": 2,
+    "preferredLength": 2
+  },
+
+  "medical_specific": {
+    "required_sections": [
+      "medicalQualification",
+      "professionalRegistration",
+      "clinicalExperience"
+    ],
+    "recommended_sections": [
+      "medicalSpecializations",
+      "certificates",
+      "publications"
+    ],
+    "optional_sections": [
+      "militaryService",
+      "research",
+      "teaching"
+    ],
+    
+    "qualification_display": {
+      "show_nostrifikace": true,
+      "show_original_degree": true,
+      "show_original_country": true,
+      "format": "{recognizedAs} (nostrifikace UK {issueDate}, původně {originalDegree} - {originalCountry})"
+    },
+
+    "clinical_experience_display": {
+      "quantify_procedures": true,
+      "show_hours_under_supervision": true,
+      "format": "{count}+ {procedureType} ({period})"
+    }
+  },
+
+  "content": {
+    "required_sections": [
+      "personal_info",
+      "medical_qualification",
+      "professional_registration",
+      "work_experience",
+      "education",
+      "clinical_experience"
+    ],
+    "optional_sections": [
+      "specializations",
+      "skills",
+      "languages",
+      "certificates",
+      "publications",
+      "military_service"
+    ],
+    "forbidden_sections": [
+      "photo",
+      "date_of_birth",
+      "hobbies",
+      "marital_status"
+    ],
+    "section_order": [
+      "personal_info",
+      "medical_qualification",
+      "professional_registration",
+      "work_experience",
+      "clinical_experience",
+      "education",
+      "specializations",
+      "certificates",
+      "languages",
+      "skills"
+    ]
+  },
+
+  "section_templates": {
+    "personal_info": {
+      "format": "Jméno: {name}\nPozice: {label}\nE-mail: {email}\nTelefon: {phone}\nMísto: {city}, {countryCode}"
+    },
+    "medical_qualification": {
+      "format": "ODBORNÁ ZPŮSOBILOST\n{recognizedAs}\nNostrifikace: {issuedBy}, {issueDate}\nPůvodní kvalifikace: {originalDegree} ({originalCountry})"
+    },
+    "professional_registration": {
+      "format": "REGISTRACE V KOMOŘE\n{chamber} č. {registrationNumber}\nPlatnost: od {validFrom}"
+    },
+    "clinical_experience": {
+      "format": "KLINICKÁ PRAXE\n• {procedureType}: {count}+ výkonů ({period})\n• {setting}: {hours}+ hodin"
+    }
+  },
+
+  "tone": {
+    "style": "neutral_clinical",
+    "rules": {
+      "no_first_person": true,
+      "no_subjective_claims": true,
+      "quantify_achievements": true,
+      "action_verbs": true,
+      "use_professional_titles": true,
+      "czech_medical_terminology": true
+    }
+  },
+
+  "validation_rules": {
+    "total_rules": 95,
+    "categories": {
+      "formatting": 15,
+      "gdpr": 12,
+      "ats": 18,
+      "content": 22,
+      "language": 15,
+      "medical": 13
+    },
+    "medical_rules": [
+      {
+        "id": "MED-001",
+        "description": "Nostrifikace musí obsahovat vydávající instituci a datum",
+        "severity": "error"
+      },
+      {
+        "id": "MED-002",
+        "description": "Registrace v profesní komoře je povinná",
+        "severity": "error"
+      },
+      {
+        "id": "MED-003",
+        "description": "Klinická praxe musí být kvantifikována (počet výkonů)",
+        "severity": "warning"
+      },
+      {
+        "id": "MED-004",
+        "description": "Specializace musí obsahovat instituci a rok získání",
+        "severity": "warning"
+      },
+      {
+        "id": "MED-005",
+        "description": "Pro zubní lékaře: CSK registrace je povinná",
+        "severity": "error",
+        "applies_to": "zubní lékař"
+      }
+    ]
+  },
+
+  "legal_basis": [
+    {
+      "name": "Zákon č. 95/2004 Sb.",
+      "description": "O podmínkách získávání a uznávání odborné způsobilosti",
+      "url": "https://www.zakonyprolidi.cz/cs/2004-95"
+    },
+    {
+      "name": "Vyhláška č. 189/2009 Sb.",
+      "description": "O atestační zkoušce, aprobační zkoušce",
+      "url": "https://www.zakonyprolidi.cz/cs/2009-189"
+    },
+    {
+      "name": "Zákon č. 220/1991 Sb.",
+      "description": "O České lékařské komoře, České stomatologické komoře",
+      "url": "https://www.zakonyprolidi.cz/cs/1991-220"
+    },
+    {
+      "name": "ČSN 01 6910",
+      "description": "Úprava dokumentů zpracovaných textovými procesory",
+      "url": "https://www.unmz.cz/"
+    },
+    {
+      "name": "Nařízení (EU) 2016/679",
+      "description": "GDPR",
+      "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+    }
+  ],
+
+  "example_instance": {
+    "ref": "example_medical_resume_cs.json",
+    "description": "Dr. Sergii Anipreyev - zubní lékař, endodoncie"
+  }
+}

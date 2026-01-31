@@ -1,0 +1,179 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "cz-dentist-cv.ssot.schema.v1.1.json",
+  "title": "CZ Dentist CV SSOT Schema v1.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["meta", "basics", "summary", "education", "experience"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["profile"],
+      "properties": {
+        "profile": {
+          "type": "string",
+          "enum": ["ATS_SAFE", "HR_REVIEW", "PUBLIC_SECTOR"]
+        },
+        "layout": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "columns": {"type": "integer", "minimum": 1, "maximum": 3},
+            "has_photo": {"type": "boolean"}
+          }
+        },
+        "rendering_preferences": {
+          "type": "object",
+          "additionalProperties": true
+        },
+        "document_spec": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      }
+    },
+    "basics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["full_name"],
+      "properties": {
+        "full_name": {"type": "string", "minLength": 1},
+        "titles": {"type": "array", "items": {"type": "string"}},
+        "contacts": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "email": {"type": "string", "format": "email"},
+            "phone": {"type": "string"},
+            "website": {"type": "string"}
+          }
+        },
+        "location": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "city": {"type": "string"},
+            "country": {"type": "string"}
+          }
+        },
+        "photo_url": {"type": "string"}
+      }
+    },
+    "summary": {"type": "string"},
+    "education": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["institution"],
+        "properties": {
+          "institution": {"type": "string"},
+          "degree": {"type": "string"},
+          "field": {"type": "string"},
+          "start_date": {"type": "string"},
+          "end_date": {"type": "string"},
+          "location": {"type": "string"},
+          "notes": {"type": "string"}
+        }
+      }
+    },
+    "experience": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["role", "institution"],
+        "properties": {
+          "role": {"type": "string"},
+          "institution": {"type": "string"},
+          "start_date": {"type": "string"},
+          "end_date": {"type": "string"},
+          "location": {"type": "string"},
+          "description": {"type": "string"},
+          "achievements": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "skills": {"type": "array", "items": {"type": "string"}},
+    "languages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["language"],
+        "properties": {
+          "language": {"type": "string"},
+          "level": {"type": "string"}
+        }
+      }
+    },
+    "certifications": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name"],
+        "properties": {
+          "name": {"type": "string"},
+          "issuer": {"type": "string"},
+          "date": {"type": "string"},
+          "notes": {"type": "string"}
+        }
+      }
+    },
+    "licenses_and_registration": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name"],
+        "properties": {
+          "name": {"type": "string"},
+          "issuer": {"type": "string"},
+          "status": {"type": "string"},
+          "date": {"type": "string"}
+        }
+      }
+    },
+    "additional_activities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["title"],
+        "properties": {
+          "title": {"type": "string"},
+          "description": {"type": "string"},
+          "date": {"type": "string"}
+        }
+      }
+    },
+    "references": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name"],
+        "properties": {
+          "name": {"type": "string"},
+          "role": {"type": "string"},
+          "contact": {"type": "string"},
+          "source": {"type": "string"}
+        }
+      }
+    },
+    "gdpr": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "consent_to_process": {"type": "boolean"},
+        "notes": {"type": "string"}
+      }
+    },
+    "compliance_restricted": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  }
+}

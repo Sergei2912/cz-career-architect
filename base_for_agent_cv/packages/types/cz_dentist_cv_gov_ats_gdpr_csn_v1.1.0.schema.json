@@ -1,0 +1,1307 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://cz-career-architect.example/schemas/cz_dentist_cv_gov_ats_gdpr_csn_v1_1_0.schema.json",
+  "schema_version": "1.1.0",
+  "schema_compatibility": {
+    "backward_compatible_with": [
+      "1.0.x"
+    ],
+    "breaking_change_policy": "MAJOR: rename/remove fields, make new required, tighten enums/patterns; MINOR: add optional fields/enums; PATCH: descriptions/annotations."
+  },
+  "title": "Czech Dentist CV Data Model (ATS + GDPR + Approbation) — Improved",
+  "description": "Строгая схема данных CV врача-стоматолога для Чешской Республики (гос. сектор): SSOT-ready, ATS-friendly, GDPR by design, ČSN-aware. Схема описывает данные (контент), а требования ATS/ČSN фиксируются декларативно в meta_compliance.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "document_meta",
+    "header",
+    "profile_summary",
+    "professional_status",
+    "work_experience",
+    "education",
+    "skills",
+    "languages",
+    "meta_compliance"
+  ],
+  "definitions": {
+    "semver": {
+      "type": "string",
+      "pattern": "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(?:-[0-9A-Za-z-]+(?:\\.[0-9A-Za-z-]+)*)?(?:\\+[0-9A-Za-z-]+(?:\\.[0-9A-Za-z-]+)*)?$"
+    },
+    "iso_date": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+      "examples": [
+        "2026-01-17"
+      ]
+    },
+    "iso_year_month": {
+      "type": "string",
+      "pattern": "^\\d{4}-(0[1-9]|1[0-2])$",
+      "examples": [
+        "2026-01"
+      ]
+    },
+    "iso_date_or_year_month": {
+      "oneOf": [
+        {
+          "$ref": "#/definitions/iso_year_month"
+        },
+        {
+          "$ref": "#/definitions/iso_date"
+        }
+      ]
+    },
+    "phone_international": {
+      "type": "string",
+      "description": "Телефон в международном формате. Для CZ предпочтительно: +420 XXX XXX XXX.",
+      "pattern": "^\\+(?:420 \\d{3} \\d{3} \\d{3}|\\d{1,3}(?:[ -]?\\d{2,4}){2,6})$",
+      "examples": [
+        "+420 777 123 456",
+        "+972 532 707 793"
+      ]
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "maxLength": 254
+    },
+    "uri": {
+      "type": "string",
+      "format": "uri",
+      "maxLength": 2048
+    },
+    "city_country_location": {
+      "type": "string",
+      "description": "Только город и страна (без улицы/дома).",
+      "pattern": "^[A-Za-zěščřžýáíéúůťďňĚŠČŘŽÝÁÍÉÚŮŤĎŇ\\- ]{2,60}, [A-Za-zěščřžýáíéúůťďňĚŠČŘŽÝÁÍÉÚŮŤĎŇ\\- ]{2,60}$",
+      "examples": [
+        "Praha, Česká republika",
+        "Tel Aviv, Israel"
+      ]
+    },
+    "safe_file_name": {
+      "type": "string",
+      "description": "ATS-friendly имя файла. Рекомендация: CV_Jmeno_Prijmeni_Zubni_Lekar_CZ.pdf",
+      "pattern": "^CV_[A-Za-z0-9ěščřžýáíéúůťďňĚŠČŘŽÝÁÍÉÚŮŤĎŇ._-]{3,160}\\.(pdf|docx)$",
+      "examples": [
+        "CV_Petr_Novak_Zubni_Lekar_CZ.pdf"
+      ]
+    },
+    "year_1950_2100": {
+      "type": "integer",
+      "minimum": 1950,
+      "maximum": 2100
+    },
+    "short_note_200": {
+      "type": "string",
+      "maxLength": 200
+    },
+    "short_note_140": {
+      "type": "string",
+      "maxLength": 140
+    },
+    "text_12_240": {
+      "type": "string",
+      "minLength": 12,
+      "maxLength": 240
+    },
+    "tag": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 40
+    },
+    "tags_array": {
+      "type": "array",
+      "maxItems": 10,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/definitions/tag"
+      }
+    },
+    "metric_object": {
+      "type": "object",
+      "description": "Структура для цифр/эффекта (value/count + unit + timeframe).",
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "type": "number"
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 500000
+        },
+        "unit": {
+          "type": "string",
+          "maxLength": 30
+        },
+        "delta": {
+          "type": "string",
+          "maxLength": 30
+        },
+        "timeframe": {
+          "type": "string",
+          "maxLength": 30
+        }
+      }
+    },
+    "period_display_start": {
+      "type": "string",
+      "pattern": "^(\\d{1,2}\\. \\d{1,2}\\. \\d{4}|\\d{1,2}\\. \\d{4}|\\d{1,2}\\/\\d{4}|\\d{4})$"
+    },
+    "period_display_end": {
+      "type": "string",
+      "pattern": "^(dosud|Současnost|\\d{1,2}\\. \\d{1,2}\\. \\d{4}|\\d{1,2}\\. \\d{4}|\\d{1,2}\\/\\d{4}|\\d{4})$"
+    },
+    "period_normalized": {
+      "type": "object",
+      "description": "Период: нормализованные поля (ISO) + опциональные display-поля.",
+      "additionalProperties": false,
+      "required": [
+        "start_iso",
+        "end_iso"
+      ],
+      "properties": {
+        "start_iso": {
+          "$ref": "#/definitions/iso_date_or_year_month"
+        },
+        "end_iso": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/iso_date_or_year_month"
+            },
+            {
+              "const": "present"
+            }
+          ]
+        },
+        "start": {
+          "$ref": "#/definitions/period_display_start"
+        },
+        "end": {
+          "$ref": "#/definitions/period_display_end"
+        },
+        "display": {
+          "type": "string",
+          "maxLength": 40
+        }
+      }
+    },
+    "language_level_cefr": {
+      "type": "string",
+      "enum": [
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2",
+        "Rodilý mluvčí"
+      ]
+    },
+    "gdpr_forbidden_property_name": {
+      "type": "string",
+      "enum": [
+        "rodne_cislo",
+        "rodneCislo",
+        "rodné_číslo",
+        "rodné číslo",
+        "birth_date",
+        "birthdate",
+        "date_of_birth",
+        "dateOfBirth",
+        "dob",
+        "DoB",
+        "datum_narozeni",
+        "datum_narození",
+        "datumNarozeni",
+        "age",
+        "age_years",
+        "years_old",
+        "marital_status",
+        "maritalStatus",
+        "family_status",
+        "children",
+        "child",
+        "kids",
+        "spouse",
+        "partner",
+        "passport",
+        "passport_number",
+        "passportNumber",
+        "id_number",
+        "idNumber",
+        "national_id",
+        "nationalId",
+        "nationality_id",
+        "nationalityId",
+        "personal_id",
+        "personalId",
+        "identity_card",
+        "id_card",
+        "idCard",
+        "citizenship_number",
+        "citizenshipNumber",
+        "full_address",
+        "address",
+        "street",
+        "house_number",
+        "houseNumber",
+        "zip",
+        "zipcode",
+        "postal_code",
+        "postalCode",
+        "psc",
+        "nationality",
+        "citizenship",
+        "ethnicity",
+        "race",
+        "religion",
+        "political_views",
+        "politicalViews",
+        "health_status",
+        "healthStatus",
+        "gender",
+        "sex",
+        "disability",
+        "photo",
+        "image",
+        "picture",
+        "portrait",
+        "headshot"
+      ]
+    },
+    "gdpr_forbidden_fields_guard": {
+      "description": "Глобальная рекурсивная защита: запрещённые имена полей на любом уровне вложенности.",
+      "allOf": [
+        {
+          "if": {
+            "type": "object"
+          },
+          "then": {
+            "propertyNames": {
+              "not": {
+                "$ref": "#/definitions/gdpr_forbidden_property_name"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "type": "object"
+          },
+          "then": {
+            "additionalProperties": {
+              "$ref": "#/definitions/gdpr_forbidden_fields_guard"
+            }
+          }
+        },
+        {
+          "if": {
+            "type": "array"
+          },
+          "then": {
+            "items": {
+              "$ref": "#/definitions/gdpr_forbidden_fields_guard"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "properties": {
+    "document_meta": {
+      "type": "object",
+      "description": "Метаданные документа (для HR/ATS и контроля качества).",
+      "additionalProperties": false,
+      "required": [
+        "cv_language",
+        "target_country",
+        "file_name",
+        "last_updated_year"
+      ],
+      "properties": {
+        "cv_language": {
+          "type": "string",
+          "description": "Основной язык CV для гос. клиник ЧР.",
+          "enum": [
+            "cs"
+          ]
+        },
+        "secondary_languages": {
+          "type": "array",
+          "description": "Опционально: дополнительные языки (например, en).",
+          "maxItems": 5,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "enum": [
+              "en",
+              "de",
+              "uk",
+              "ru"
+            ]
+          }
+        },
+        "target_country": {
+          "type": "string",
+          "enum": [
+            "CZ"
+          ]
+        },
+        "locale": {
+          "type": "string",
+          "enum": [
+            "cs-CZ"
+          ],
+          "default": "cs-CZ"
+        },
+        "schema_version": {
+          "$ref": "#/definitions/semver"
+        },
+        "file_name": {
+          "$ref": "#/definitions/safe_file_name"
+        },
+        "last_updated_year": {
+          "type": "integer",
+          "minimum": 2000,
+          "maximum": 2100
+        },
+        "last_updated_date": {
+          "$ref": "#/definitions/iso_date"
+        },
+        "one_or_two_pages_target": {
+          "type": "string",
+          "description": "Неформальный ориентир: 1–2 страницы.",
+          "enum": [
+            "1 page preferred",
+            "2 pages max"
+          ],
+          "default": "1 page preferred"
+        },
+        "source_notes": {
+          "$ref": "#/definitions/short_note_200"
+        }
+      }
+    },
+    "header": {
+      "type": "object",
+      "description": "Раздел 1: Заголовок и контакты (Záhlaví). GDPR: без даты рождения, адреса, семейного статуса.",
+      "additionalProperties": false,
+      "required": [
+        "full_name",
+        "target_position",
+        "contact_info"
+      ],
+      "properties": {
+        "full_name": {
+          "type": "string",
+          "description": "Имя для отображения. Если указан титул MDDr./MUDr., он должен быть ПЕРЕД именем.",
+          "pattern": "^(?:(MDDr\\.|MUDr\\.) )?[A-Za-zěščřžýáíéúůťďňĚŠČŘŽÝÁÍÉÚŮŤĎŇ\\- ]{3,80}$",
+          "examples": [
+            "MDDr. Petr Novák",
+            "Petr Novák"
+          ]
+        },
+        "alt_name_latin": {
+          "type": "string",
+          "description": "Опционально: альтернативная запись имени латиницей (если основное с диакритикой/другой алфавит).",
+          "pattern": "^[A-Za-z\\- ]{3,80}$"
+        },
+        "target_position": {
+          "type": "string",
+          "description": "Используйте формулировку, близкую к вакансии.",
+          "enum": [
+            "Zubní lékař – všeobecná stomatologie",
+            "Praktický zubní lékař",
+            "Zubní lékař",
+            "Ortodontista"
+          ],
+          "default": "Zubní lékař – všeobecná stomatologie"
+        },
+        "contact_info": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "phone",
+            "email",
+            "location"
+          ],
+          "properties": {
+            "phone": {
+              "$ref": "#/definitions/phone_international"
+            },
+            "email": {
+              "$ref": "#/definitions/email"
+            },
+            "location": {
+              "$ref": "#/definitions/city_country_location"
+            },
+            "linkedin": {
+              "$ref": "#/definitions/uri"
+            }
+          }
+        },
+        "relocation": {
+          "type": "object",
+          "description": "Опционально: релокация/готовность.",
+          "additionalProperties": false,
+          "properties": {
+            "ready_to_relocate": {
+              "type": "boolean"
+            },
+            "available_from": {
+              "type": "string",
+              "maxLength": 40
+            },
+            "note": {
+              "type": "string",
+              "maxLength": 120
+            }
+          }
+        },
+        "photo_included": {
+          "type": "boolean",
+          "description": "ATS/GDPR: фото в данных CV для гос. сектора не используется.",
+          "const": false
+        }
+      }
+    },
+    "profile_summary": {
+      "type": "string",
+      "description": "Раздел 2: Саммари (3–4 предложения). Должно содержать: стаж, сильные стороны, 1–2 цифры/факта, статус CZ (нострификация/апробация).",
+      "minLength": 60,
+      "maxLength": 700
+    },
+    "professional_status": {
+      "type": "object",
+      "description": "Раздел 3: Статус врача (признание диплома/апробация/лицензии/право на работу).",
+      "additionalProperties": false,
+      "required": [
+        "degree_recognition_status",
+        "approbation_status",
+        "work_permit_type",
+        "scope_of_practice_in_cz"
+      ],
+      "properties": {
+        "degree_recognition_status": {
+          "type": "string",
+          "description": "Статус признания образования (для HR гос. сектора).",
+          "enum": [
+            "CZ absolvent (bez nostrifikace)",
+            "Nostrifikace dokončena",
+            "Nostrifikace v procesu",
+            "Není požadováno / EU uznání"
+          ]
+        },
+        "nostrification": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "university",
+            "year_recognized"
+          ],
+          "properties": {
+            "university": {
+              "type": "string",
+              "minLength": 2
+            },
+            "year_recognized": {
+              "type": "integer",
+              "minimum": 1980,
+              "maximum": 2100
+            },
+            "note": {
+              "type": "string",
+              "description": "Короткая ремарка без персональных данных.",
+              "maxLength": 140
+            }
+          }
+        },
+        "approbation_status": {
+          "type": "string",
+          "description": "Юридически точный статус процесса апробации.",
+          "enum": [
+            "V procesu přípravy",
+            "Povolení k výkonu odborné praxe (pod dohledem)",
+            "Písemná část splněna",
+            "Praktická část splněna",
+            "Plně aprobován"
+          ]
+        },
+        "scope_of_practice_in_cz": {
+          "type": "string",
+          "description": "Как кандидат может работать в CZ прямо сейчас (важно для HR).",
+          "enum": [
+            "Pouze pod dohledem (supervised practice)",
+            "Samostatně po aprobaci (independent after approbation)",
+            "Samostatně (already independent)"
+          ]
+        },
+        "foreign_licenses": {
+          "type": "array",
+          "description": "Иностранные лицензии (Израиль/ЕС/и др.).",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "country",
+              "authority",
+              "active"
+            ],
+            "properties": {
+              "country": {
+                "type": "string",
+                "minLength": 2
+              },
+              "authority": {
+                "type": "string",
+                "minLength": 2
+              },
+              "license_type": {
+                "type": "string",
+                "maxLength": 80
+              },
+              "active": {
+                "type": "boolean"
+              },
+              "valid_from": {
+                "type": "string",
+                "description": "Год или ММ/ГГГГ.",
+                "pattern": "^(\\d{4}|\\d{1,2}\\/\\d{4})$"
+              },
+              "valid_from_iso": {
+                "$ref": "#/definitions/iso_date_or_year_month"
+              }
+            }
+          }
+        },
+        "csk_membership": {
+          "type": "object",
+          "description": "Česká stomatologická komora (если применимо).",
+          "additionalProperties": false,
+          "properties": {
+            "is_member": {
+              "type": "boolean"
+            },
+            "registration_number": {
+              "type": "string",
+              "maxLength": 40
+            }
+          }
+        },
+        "work_permit_type": {
+          "type": "string",
+          "description": "Тип доступа к рынку труда (если применимо).",
+          "enum": [
+            "EU Blue Card",
+            "Trvalý pobyt",
+            "Zaměstnanecká karta",
+            "Free Labour Market Access",
+            "Not applicable (no permit required)"
+          ]
+        },
+        "radiation_safety_authorization": {
+          "type": "string",
+          "description": "Опционально: допуск/обучение по работе с RTG (если есть).",
+          "enum": [
+            "Completed (documented)",
+            "In progress",
+            "Not yet"
+          ]
+        },
+        "attachments_ready": {
+          "type": "boolean",
+          "description": "Опционально: готовы ли копии нострификации/лицензий/переводов (в CV не перечислять)."
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "degree_recognition_status": {
+                "const": "Nostrifikace dokončena"
+              }
+            },
+            "required": [
+              "degree_recognition_status"
+            ]
+          },
+          "then": {
+            "required": [
+              "nostrification"
+            ]
+          }
+        }
+      ]
+    },
+    "work_experience": {
+      "type": "array",
+      "description": "Раздел 4: Опыт (обратная хронология). Стоматология: тип учреждения, кейс-микс, оборудование, метрики.",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "position",
+          "employer",
+          "location",
+          "period",
+          "ats_bullets"
+        ],
+        "properties": {
+          "position": {
+            "type": "string",
+            "minLength": 2
+          },
+          "employer": {
+            "type": "string",
+            "minLength": 2
+          },
+          "location": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "city",
+              "country"
+            ],
+            "properties": {
+              "city": {
+                "type": "string",
+                "minLength": 2
+              },
+              "country": {
+                "type": "string",
+                "minLength": 2
+              }
+            }
+          },
+          "facility_type": {
+            "type": "string",
+            "description": "Контекст места работы (важен для HR гос.больницы).",
+            "enum": [
+              "Státní nemocnice",
+              "Univerzitní nemocnice",
+              "Soukromá klinika",
+              "Ambulance",
+              "Vojenské zařízení",
+              "Jiné"
+            ]
+          },
+          "period": {
+            "$ref": "#/definitions/period_normalized"
+          },
+          "ats_bullets": {
+            "type": "array",
+            "description": "ATS-совместимые буллеты (3–8). Каждый буллет: действие + объект + (желательно) цифра/результат.",
+            "minItems": 3,
+            "maxItems": 8,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "text"
+              ],
+              "properties": {
+                "text": {
+                  "$ref": "#/definitions/text_12_240"
+                },
+                "tags": {
+                  "$ref": "#/definitions/tags_array"
+                },
+                "metrics": {
+                  "$ref": "#/definitions/metric_object"
+                }
+              }
+            }
+          },
+          "case_mix": {
+            "type": "object",
+            "description": "Опционально: профиль пациентов/случаев.",
+            "additionalProperties": false,
+            "properties": {
+              "high_volume_patient_flow": {
+                "type": "boolean"
+              },
+              "emergency_cases": {
+                "type": "boolean"
+              },
+              "endo_focus": {
+                "type": "boolean"
+              },
+              "pediatric_patients": {
+                "type": "boolean"
+              },
+              "prosthetics_exposure": {
+                "type": "boolean"
+              }
+            }
+          },
+          "clinical_metrics": {
+            "type": "object",
+            "description": "Опционально: ключевые цифры по позиции.",
+            "additionalProperties": false,
+            "properties": {
+              "patients_per_month": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 10000
+              },
+              "endo_cases_total": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 50000
+              },
+              "microscope_hours": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 20000
+              },
+              "emergency_cases_per_month": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 5000
+              }
+            }
+          },
+          "equipment_and_tech": {
+            "type": "array",
+            "description": "Оборудование/техники: микроскоп, коффердам, ротационные системы, апекслокатор, цифровой RTG/CBCT и т.д.",
+            "maxItems": 18,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "minLength": 2,
+              "maxLength": 60
+            }
+          },
+          "quality_and_compliance": {
+            "type": "array",
+            "description": "Опционально: качество/протоколы/инфекционный контроль/документация.",
+            "maxItems": 10,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "minLength": 4,
+              "maxLength": 80
+            }
+          },
+          "team_leadership": {
+            "type": "object",
+            "description": "Опционально: руководящий опыт (если был).",
+            "additionalProperties": false,
+            "properties": {
+              "led_team": {
+                "type": "boolean"
+              },
+              "team_size": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 200
+              },
+              "roles_led": {
+                "type": "array",
+                "maxItems": 8,
+                "uniqueItems": true,
+                "items": {
+                  "type": "string",
+                  "maxLength": 40
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "education": {
+      "type": "array",
+      "description": "Раздел 5: Образование + интернатура/ординатура/эквивалентность.",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "institution",
+          "degree",
+          "country",
+          "year_end"
+        ],
+        "properties": {
+          "institution": {
+            "type": "string",
+            "minLength": 2
+          },
+          "city": {
+            "type": "string",
+            "minLength": 2
+          },
+          "country": {
+            "type": "string",
+            "minLength": 2
+          },
+          "degree": {
+            "type": "string",
+            "description": "Напр.: DMD / Doctor of Dental Medicine / Stomatologie.",
+            "minLength": 2,
+            "maxLength": 80,
+            "default": "Stomatologie / Zubní lékařství"
+          },
+          "year_start": {
+            "type": "integer",
+            "minimum": 1950,
+            "maximum": 2100
+          },
+          "year_end": {
+            "type": "integer",
+            "minimum": 1950,
+            "maximum": 2100
+          },
+          "start_iso": {
+            "$ref": "#/definitions/iso_date_or_year_month"
+          },
+          "end_iso": {
+            "oneOf": [
+              {
+                "$ref": "#/definitions/iso_date_or_year_month"
+              },
+              {
+                "const": "present"
+              }
+            ]
+          },
+          "postgraduate": {
+            "type": "array",
+            "description": "Опционально: интернатура/ординатура/стажировки (структурно).",
+            "maxItems": 6,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "title",
+                "year_end"
+              ],
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "minLength": 2,
+                  "maxLength": 120
+                },
+                "institution": {
+                  "type": "string",
+                  "maxLength": 120
+                },
+                "country": {
+                  "type": "string",
+                  "maxLength": 60
+                },
+                "year_start": {
+                  "type": "integer",
+                  "minimum": 1950,
+                  "maximum": 2100
+                },
+                "year_end": {
+                  "type": "integer",
+                  "minimum": 1950,
+                  "maximum": 2100
+                },
+                "start_iso": {
+                  "$ref": "#/definitions/iso_date_or_year_month"
+                },
+                "end_iso": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/definitions/iso_date_or_year_month"
+                    },
+                    {
+                      "const": "present"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "certifications": {
+      "type": "array",
+      "description": "Раздел 6a: Курсы/сертификаты.",
+      "maxItems": 20,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "title",
+          "provider",
+          "year"
+        ],
+        "properties": {
+          "title": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 140
+          },
+          "provider": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 120
+          },
+          "year": {
+            "type": "integer",
+            "minimum": 1980,
+            "maximum": 2100
+          },
+          "hours": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2000
+          },
+          "expires_year": {
+            "type": "integer",
+            "minimum": 1980,
+            "maximum": 2100
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "BLS / Emergency",
+              "Endodontics",
+              "Microscopy",
+              "Radiology / Radiation Safety",
+              "Prosthetics",
+              "Surgery",
+              "Pediatric",
+              "Infection Control",
+              "Other"
+            ]
+          },
+          "date_awarded_iso": {
+            "$ref": "#/definitions/iso_date_or_year_month"
+          }
+        }
+      }
+    },
+    "skills": {
+      "type": "object",
+      "description": "Раздел 6: Навыки. Разложены по доменам + ats_keywords.",
+      "additionalProperties": false,
+      "required": [
+        "clinical_core",
+        "emergency_care",
+        "infection_control",
+        "documentation"
+      ],
+      "properties": {
+        "clinical_core": {
+          "type": "array",
+          "description": "База для врача общей практики.",
+          "minItems": 4,
+          "maxItems": 25,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 60
+          }
+        },
+        "endodontics": {
+          "type": "array",
+          "maxItems": 20,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 60
+          }
+        },
+        "restorative": {
+          "type": "array",
+          "maxItems": 20,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 60
+          }
+        },
+        "surgery": {
+          "type": "array",
+          "maxItems": 18,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 60
+          }
+        },
+        "prosthodontics": {
+          "type": "array",
+          "maxItems": 18,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 60
+          }
+        },
+        "radiology": {
+          "type": "array",
+          "description": "RTG/диагностика (в рамках навыков/допусков).",
+          "maxItems": 15,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 60
+          }
+        },
+        "anesthesia_sedation": {
+          "type": "array",
+          "description": "Только если реально есть компетенции/сертификаты.",
+          "maxItems": 12,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 60
+          }
+        },
+        "emergency_care": {
+          "type": "array",
+          "description": "Острые состояния и неотложка (важно для больницы).",
+          "minItems": 2,
+          "maxItems": 15,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 60
+          }
+        },
+        "infection_control": {
+          "type": "array",
+          "description": "Инфекционная безопасность/стерилизация/протоколы.",
+          "minItems": 2,
+          "maxItems": 15,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 60
+          }
+        },
+        "documentation": {
+          "type": "array",
+          "description": "Документация, протоколы, работа по стандартам учреждения.",
+          "minItems": 1,
+          "maxItems": 10,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 60
+          }
+        },
+        "digital_tools": {
+          "type": "array",
+          "description": "Цифровые системы/оборудование: стоматологические ИС, цифровой RTG, CBCT, CAD/CAM и т.п.",
+          "maxItems": 20,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 60
+          }
+        },
+        "practice_management": {
+          "type": "array",
+          "description": "Организация процессов/качество/команда (если есть).",
+          "maxItems": 18,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 60
+          }
+        },
+        "soft_skills": {
+          "type": "array",
+          "description": "Коротко и по делу.",
+          "maxItems": 8,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 40
+          }
+        },
+        "ats_keywords": {
+          "type": "array",
+          "description": "Ключевые слова из вакансии (self-check совпадений).",
+          "maxItems": 30,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 50
+          }
+        }
+      }
+    },
+    "languages": {
+      "type": "array",
+      "description": "Раздел 7: Языки (CEFR).",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "language",
+          "level"
+        ],
+        "properties": {
+          "language": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 30
+          },
+          "level": {
+            "$ref": "#/definitions/language_level_cefr"
+          },
+          "note": {
+            "type": "string",
+            "maxLength": 120
+          }
+        }
+      }
+    },
+    "memberships": {
+      "type": "array",
+      "description": "Раздел 8 (опционально): профессиональные общества/ассоциации.",
+      "maxItems": 10,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "organization"
+        ],
+        "properties": {
+          "organization": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 120
+          },
+          "role": {
+            "type": "string",
+            "maxLength": 80
+          },
+          "since_year": {
+            "type": "integer",
+            "minimum": 1980,
+            "maximum": 2100
+          }
+        }
+      }
+    },
+    "references": {
+      "type": "string",
+      "description": "Раздел 9: Рекомендации. Только фраза 'по запросу' (без контактов внутри данных CV).",
+      "const": "Reference jsou dostupné na vyžádání (References available upon request)"
+    },
+    "meta_compliance": {
+      "type": "object",
+      "description": "Служебный блок: декларативные требования к ATS/GDPR/оформлению.",
+      "additionalProperties": false,
+      "required": [
+        "layout_type",
+        "gdpr_status",
+        "ats_safe_content"
+      ],
+      "properties": {
+        "export_profile": {
+          "type": "string",
+          "enum": [
+            "ATS_SAFE",
+            "HR_REVIEW",
+            "PUBLIC_SECTOR"
+          ],
+          "default": "PUBLIC_SECTOR"
+        },
+        "layout_type": {
+          "const": "Single Column ATS-Optimized"
+        },
+        "typography_standard": {
+          "const": "ČSN 01 6910"
+        },
+        "file_format_recommended": {
+          "const": "PDF"
+        },
+        "gdpr_status": {
+          "const": "Clean (No DoB, No Marital Status, No Full Address, No Passport/ID)"
+        },
+        "ats_safe_content": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "no_tables",
+            "no_graphics",
+            "standard_headings"
+          ],
+          "properties": {
+            "no_tables": {
+              "const": true
+            },
+            "no_graphics": {
+              "const": true
+            },
+            "standard_headings": {
+              "const": true
+            }
+          }
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "#/definitions/gdpr_forbidden_fields_guard"
+    },
+    {
+      "if": {
+        "properties": {
+          "professional_status": {
+            "type": "object",
+            "properties": {
+              "approbation_status": {
+                "const": "Plně aprobován"
+              }
+            },
+            "required": [
+              "approbation_status"
+            ]
+          }
+        },
+        "required": [
+          "professional_status"
+        ]
+      },
+      "then": {
+        "properties": {
+          "header": {
+            "type": "object",
+            "properties": {
+              "full_name": {
+                "type": "string",
+                "pattern": "^(MDDr\\.|MUDr\\.) [A-Za-zěščřžýáíéúůťďňĚŠČŘŽÝÁÍÉÚŮŤĎŇ\\- ]{3,80}$"
+              }
+            },
+            "required": [
+              "full_name"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

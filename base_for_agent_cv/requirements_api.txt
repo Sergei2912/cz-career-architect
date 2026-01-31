@@ -1,0 +1,17 @@
+# CZ Career Architect API - Requirements
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+python-multipart>=0.0.6
+pydantic>=2.0.0
+
+# File processing
+PyMuPDF>=1.23.0
+python-docx>=1.0.0
+striprtf>=0.0.26
+pdfplumber>=0.10.0
+
+# OpenAI Agents SDK (already installed)
+# openai-agents
+
+# Validation
+jsonschema>=4.20.0

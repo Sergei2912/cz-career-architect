@@ -1,0 +1,1127 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-01-21T20:42:06.061019",
+  "total_rules": 185,
+  "rules_by_domain": {
+    "GENERAL_HR": [
+      {
+        "rule_id": "RULE-2024-HES_r-001",
+        "text": "It should highlight your strongest assets and effective job search documents",
+        "imperative": "should",
+        "source": "2024-HES_resume-and-letter.pdf"
+      },
+      {
+        "rule_id": "RULE-2024-HES_r-008",
+        "text": "Do not use personal pronouns; each line should be a phrase rather than a full sentence",
+        "imperative": "should",
+        "source": "2024-HES_resume-and-letter.pdf"
+      },
+      {
+        "rule_id": "RULE-2024-HES_r-010",
+        "text": "Financial Analyst, Finance & Strategic Planning 20XX – 20XX Analyzed and recommended to the CFO and CEO viable business investments in Real Estate projects and lease commitments ($5M-$25M)",
+        "imperative": "should",
+        "source": "2024-HES_resume-and-letter.pdf"
+      },
+      {
+        "rule_id": "RULE-2024-HES_r-011",
+        "text": "Analyzed and recommended the CFO to adjust product production based on competing companies’ market share for multiple product lines",
+        "imperative": "should",
+        "source": "2024-HES_resume-and-letter.pdf"
+      },
+      {
+        "rule_id": "RULE-2024-gsas--003",
+        "text": "Avoid text boxes, underlining, and shading; italics may be used in moderation",
+        "imperative": "avoid",
+        "source": "2024-gsas-cvs-and-cover-letters.pdf"
+      },
+      {
+        "rule_id": "RULE-2024-gsas--004",
+        "text": "Margins should be equal on all four sides and be ¾ to 1 inch in size",
+        "imperative": "should",
+        "source": "2024-gsas-cvs-and-cover-letters.pdf"
+      },
+      {
+        "rule_id": "RULE-2024-gsas--009",
+        "text": "Middle paragraphs: You should have several paragraphs that elaborate on how your research and other experiences in graduate school have prepared you for the job as it is described",
+        "imperative": "should",
+        "source": "2024-gsas-cvs-and-cover-letters.pdf"
+      },
+      {
+        "rule_id": "RULE-2024-gsas--011",
+        "text": "Remember that each document in your package should stand alone, telling the same story in a different way",
+        "imperative": "should",
+        "source": "2024-gsas-cvs-and-cover-letters.pdf"
+      },
+      {
+        "rule_id": "RULE-2024-gsas--013",
+        "text": "I have helped students contend with Arabic’s grammatically gendered nature with sensitivity to nonbinary students, and navigate the emotional dimensions of learning a language, including for heritage learners who may feel they should already be fluent, and individuals raised in places where Arabic was stigmatized",
+        "imperative": "should",
+        "source": "2024-gsas-cvs-and-cover-letters.pdf"
+      },
+      {
+        "rule_id": "RULE-A guide to-003",
+        "text": "The \"rst page should include your name and degrees at the top",
+        "imperative": "should",
+        "source": "A guide to creating a high‐quality curriculum vitae - Gottlieb - 2021 - AEM Education and Training - Wiley Online Library.pdf"
+      },
+      {
+        "rule_id": "RULE-A guide to-006",
+        "text": "All subsequent pages should include your italicized name at the top right as a header along with the page number on the bottom right as a footer",
+        "imperative": "should",
+        "source": "A guide to creating a high‐quality curriculum vitae - Gottlieb - 2021 - AEM Education and Training - Wiley Online Library.pdf"
+      },
+      {
+        "rule_id": "RULE-A guide to-008",
+        "text": "For faculty, you should include your current and prior academic appointments along with the dates at each rank",
+        "imperative": "should",
+        "source": "A guide to creating a high‐quality curriculum vitae - Gottlieb - 2021 - AEM Education and Training - Wiley Online Library.pdf"
+      },
+      {
+        "rule_id": "RULE-A guide to-009",
+        "text": "You should also include all relevant employment",
+        "imperative": "should",
+        "source": "A guide to creating a high‐quality curriculum vitae - Gottlieb - 2021 - AEM Education and Training - Wiley Online Library.pdf"
+      },
+      {
+        "rule_id": "RULE-A guide to-010",
+        "text": "These should include the title, department, institution, and date range",
+        "imperative": "should",
+        "source": "A guide to creating a high‐quality curriculum vitae - Gottlieb - 2021 - AEM Education and Training - Wiley Online Library.pdf"
+      },
+      {
+        "rule_id": "RULE-A guide to-011",
+        "text": "4 из 14 rule, you should limit these to jobs most relevant to the current position and should routinely trim these back as you advance your career",
+        "imperative": "should",
+        "source": "A guide to creating a high‐quality curriculum vitae - Gottlieb - 2021 - AEM Education and Training - Wiley Online Library.pdf"
+      },
+      {
+        "rule_id": "RULE-A guide to-012",
+        "text": "You should generally list all honors and awards that you have received along with the corresponding date",
+        "imperative": "should",
+        "source": "A guide to creating a high‐quality curriculum vitae - Gottlieb - 2021 - AEM Education and Training - Wiley Online Library.pdf"
+      },
+      {
+        "rule_id": "RULE-A guide to-014",
+        "text": "Additionally, you should include the societies to which you belong",
+        "imperative": "should",
+        "source": "A guide to creating a high‐quality curriculum vitae - Gottlieb - 2021 - AEM Education and Training - Wiley Online Library.pdf"
+      },
+      {
+        "rule_id": "RULE-AET2-5-e10-008",
+        "text": "All subsequent pages positions at your institution and within professional societies as well should include your italicized name at the top right as a header along as any committee or task force membership roles within profes- with the page number on the bottom right as a footer",
+        "imperative": "should",
+        "source": "AET2-5-e10717.pdf"
+      },
+      {
+        "rule_id": "RULE-AET2-5-e10-010",
+        "text": "You should leading any local, regional, and national curricula",
+        "imperative": "should",
+        "source": "AET2-5-e10717.pdf"
+      },
+      {
+        "rule_id": "RULE-AET2-5-e10-013",
+        "text": "For faculty, you should include your current and prior graduate medical education (e.g., residents, fellows), and other academic appointments along with the dates at each rank",
+        "imperative": "should",
+        "source": "AET2-5-e10717.pdf"
+      },
+      {
+        "rule_id": "RULE-AET2-5-e10-014",
+        "text": "You should also include program title, your role, the number of learners, type of learners all relevant employment",
+        "imperative": "should",
+        "source": "AET2-5-e10717.pdf"
+      },
+      {
+        "rule_id": "RULE-AET2-5-e10-015",
+        "text": "These should include the title, department, in- of the sessions, and dates that the program occurred",
+        "imperative": "should",
+        "source": "AET2-5-e10717.pdf"
+      },
+      {
+        "rule_id": "RULE-AET2-5-e10-016",
+        "text": "As a general rule, you should limit these vance in your career, you may consider removing low- impact inter- to jobs most relevant to the current position and should routinely nal teaching activities",
+        "imperative": "should",
+        "source": "AET2-5-e10717.pdf"
+      },
+      {
+        "rule_id": "RULE-CV_Cover_L-002",
+        "text": "My experience working with hos- and board certifications should be listed following your pitals and health systems has helped me understand what education",
+        "imperative": "should",
+        "source": "CV_Cover_Letter_Guide_InDesign.pdf"
+      },
+      {
+        "rule_id": "RULE-CV_Cover_L-003",
+        "text": "These qualifications are always at the top of they are looking for and the best ways a physician can use a recruiter or hiring physician’s list of questions",
+        "imperative": "must",
+        "source": "CV_Cover_Letter_Guide_InDesign.pdf"
+      },
+      {
+        "rule_id": "RULE-CV_Cover_L-004",
+        "text": "Your timeline should not recruiters and hiring physicians will thank you",
+        "imperative": "should",
+        "source": "CV_Cover_Letter_Guide_InDesign.pdf"
+      },
+      {
+        "rule_id": "RULE-CV_Cover_L-005",
+        "text": "Avoid using Skills, which would capture procedural skills, electronic an email address tied to your current setting, such as a resi- health record proficiency, or languages spoken",
+        "imperative": "avoid",
+        "source": "CV_Cover_Letter_Guide_InDesign.pdf"
+      },
+      {
+        "rule_id": "RULE-CV_Cover_L-006",
+        "text": "Also, make sure your personal email address example, if you have no interest in doing obstetrics, then isn’t too personal; reserve your “hotdoctor” email addresses you do not need to include every obstetrics conference or for friends and family, not potential employers",
+        "imperative": "avoid",
+        "source": "CV_Cover_Letter_Guide_InDesign.pdf"
+      },
+      {
+        "rule_id": "RULE-How to Wri-002",
+        "text": "00:00 / 15:10 Listen to this article To hear more, download the Noa app What the Experts Say The answer is almost always yes",
+        "imperative": "must",
+        "source": "How to Write a Cover Letter.pdf"
+      },
+      {
+        "rule_id": "RULE-How to Wri-003",
+        "text": "Of course, you should carefully read the job description, but also peruse the company’s website, its executives’ Twitter feeds, and employee profiles on LinkedIn",
+        "imperative": "should",
+        "source": "How to Write a Cover Letter.pdf"
+      },
+      {
+        "rule_id": "RULE-How to Wri-004",
+        "text": "You might say, “Thanks for the helpful conversation last week” or “I recently spoke to so-and-so at your company.” Of course, it’s not always possible to contact someone — or you may not get a response",
+        "imperative": "must",
+        "source": "How to Write a Cover Letter.pdf"
+      },
+      {
+        "rule_id": "RULE-How to Wri-006",
+        "text": "And always address your letter to someone directly",
+        "imperative": "must",
+        "source": "How to Write a Cover Letter.pdf"
+      },
+      {
+        "rule_id": "RULE-How to Wri-007",
+        "text": "“Even if you’ve been out of work for months, and would take any job at this point, you want to avoid sounding desperate,” says Lees",
+        "imperative": "avoid",
+        "source": "How to Write a Cover Letter.pdf"
+      },
+      {
+        "rule_id": "RULE-How to Wri-008",
+        "text": "A good rule of thumb is to put yourself in the shoes of the hiring manager and think about “the kind of language that the hiring manager would use with one of the company’s customers.” Of course, it can be hard to discern your own tone in writing, so you may need to ask someone to review a draft (which is always a good idea anyway — see advice below)",
+        "imperative": "must",
+        "source": "How to Write a Cover Letter.pdf"
+      },
+      {
+        "rule_id": "RULE-How to Wri-009",
+        "text": "“It should be brief enough that someone can read it at a glance.” You do have to cover a lot of ground — but you should do it succinctly",
+        "imperative": "should",
+        "source": "How to Write a Cover Letter.pdf"
+      },
+      {
+        "rule_id": "RULE-How to Wri-010",
+        "text": "“Other people are more attuned to desperation, overselling, over-modesty, and underselling,” says Lees, and they should be able to point out places where the tone is 21.1.2026, 17:44 Стр",
+        "imperative": "should",
+        "source": "How to Write a Cover Letter.pdf"
+      },
+      {
+        "rule_id": "RULE-How to Wri-011",
+        "text": "Be succinct — a hiring manager should be able to read your letter at a glance",
+        "imperative": "should",
+        "source": "How to Write a Cover Letter.pdf"
+      },
+      {
+        "rule_id": "RULE-How to Wri-012",
+        "text": "This is how Emily conveyed her interest in working for IRC: You should also know that I have a sincere appreciation of the IRC",
+        "imperative": "should",
+        "source": "How to Write a Cover Letter.pdf"
+      },
+      {
+        "rule_id": "RULE-Implementa-001",
+        "text": "If AI assumes a larger role in generating these letters, faculty members must remain actively engaged in reviewing, personalizing, and validating the content to ensure it rehects their true assessment of a candidate’s abilities",
+        "imperative": "must",
+        "source": "Implementation of Artificial Intelligence in Writing Letters of Recommendation | Cureus.pdf"
+      },
+      {
+        "rule_id": "RULE-Implementa-002",
+        "text": "Future research should, therefore, explore not only the technical quality of AI-generated letters but also the ethical frameworks, disclosure practices, and best-practice guidelines that should accompany their use",
+        "imperative": "should",
+        "source": "Implementation of Artificial Intelligence in Writing Letters of Recommendation | Cureus.pdf"
+      },
+      {
+        "rule_id": "RULE-Implementa-003",
+        "text": "However, its adoption must be accompanied by careful consideration of ethical, professional, and educational implications",
+        "imperative": "must",
+        "source": "Implementation of Artificial Intelligence in Writing Letters of Recommendation | Cureus.pdf"
+      },
+      {
+        "rule_id": "RULE-Implementa-004",
+        "text": "Future studies should continue exploring the quality of AI LoRs compared to traditional LoRs and the ethical implications of integrating AI into the interview process",
+        "imperative": "should",
+        "source": "Implementation of Artificial Intelligence in Writing Letters of Recommendation | Cureus.pdf"
+      },
+      {
+        "rule_id": "RULE-Implementa-005",
+        "text": "Speci?cally, studies should focus on the accuracy of AI in depicting the quality of candidates in professional authorship of evaluative materials, whether the comfort level with using AI is advantageous in a residency candidate, and the ethical considerations of the continued integration of AI in the professional evaluation of medical students",
+        "imperative": "should",
+        "source": "Implementation of Artificial Intelligence in Writing Letters of Recommendation | Cureus.pdf"
+      },
+      {
+        "rule_id": "RULE-NIH_Biogra-002",
+        "text": "Do not include manuscripts submitted or in preparation",
+        "imperative": "avoid",
+        "source": "NIH_Biographical_Sketch_Template_PHS.pdf"
+      },
+      {
+        "rule_id": "RULE-NIH_Biogra-003",
+        "text": "Do not include number of person months or direct costs",
+        "imperative": "avoid",
+        "source": "NIH_Biographical_Sketch_Template_PHS.pdf"
+      },
+      {
+        "rule_id": "RULE-PMC1209361-006",
+        "text": "A majority (84.8%) think AI/ML should be included in residency curricula, but 59.2% report insufficient AI/ML education in their programs",
+        "imperative": "should",
+        "source": "PMC12093616_Modern_artificial_intelligence_and_large_language_.md"
+      },
+      {
+        "rule_id": "RULE-PMC1209361-008",
+        "text": "The ongoing refinement and validation of AI technologies are frequently recommended because of performance concerns [56, 58, 59, 64, 92, 102, 105, 106]",
+        "imperative": "should",
+        "source": "PMC12093616_Modern_artificial_intelligence_and_large_language_.md"
+      },
+      {
+        "rule_id": "RULE-PMC1209361-009",
+        "text": "## Implications for future research and practice Future research should validate current findings and explore additional AI applications for GME",
+        "imperative": "should",
+        "source": "PMC12093616_Modern_artificial_intelligence_and_large_language_.md"
+      },
+      {
+        "rule_id": "RULE-PMC1209361-010",
+        "text": "Future studies should systematically assess the clinical significance of AI models by comparing them against human performance standards or widely accepted diagnostic thresholds",
+        "imperative": "should",
+        "source": "PMC12093616_Modern_artificial_intelligence_and_large_language_.md"
+      },
+      {
+        "rule_id": "RULE-PMC1209361-011",
+        "text": "Ethical considerations such as data privacy, informed consent, and transparency in AI algorithms must be prioritized to maintain the effectiveness and reliability of AI-driven tools",
+        "imperative": "must",
+        "source": "PMC12093616_Modern_artificial_intelligence_and_large_language_.md"
+      },
+      {
+        "rule_id": "RULE-PMC1209361-012",
+        "text": "Given the gap in AI training within residency programs, incorporating AI education into curricula is recommended along with faculty training for effectively utilizing AI tools and interpreting AI-generated data",
+        "imperative": "should",
+        "source": "PMC12093616_Modern_artificial_intelligence_and_large_language_.md"
+      },
+      {
+        "rule_id": "RULE-PMC1209361-013",
+        "text": "Research should also explore AI applications in broader aspects of medical education",
+        "imperative": "should",
+        "source": "PMC12093616_Modern_artificial_intelligence_and_large_language_.md"
+      },
+      {
+        "rule_id": "RULE-PMC1209361-014",
+        "text": "Future studies should refine AI algorithms to ensure fairness and equity in recruitment",
+        "imperative": "should",
+        "source": "PMC12093616_Modern_artificial_intelligence_and_large_language_.md"
+      },
+      {
+        "rule_id": "RULE-PMC1209361-015",
+        "text": "Future research should explore how AI can support trainees in preparing for standardized exams and improving their test performance",
+        "imperative": "should",
+        "source": "PMC12093616_Modern_artificial_intelligence_and_large_language_.md"
+      },
+      {
+        "rule_id": "RULE-PMC1209361-016",
+        "text": "To mitigate this challenge in future research, efforts should be made to standardize study designs and reporting frameworks",
+        "imperative": "should",
+        "source": "PMC12093616_Modern_artificial_intelligence_and_large_language_.md"
+      },
+      {
+        "rule_id": "RULE-PMC1209361-017",
+        "text": "Future research should not only focus on validating findings across multiple settings but also on developing standardized methodologies that facilitate clearer synthesis of AI’s role in medical education",
+        "imperative": "should",
+        "source": "PMC12093616_Modern_artificial_intelligence_and_large_language_.md"
+      },
+      {
+        "rule_id": "RULE-PMC1209361-018",
+        "text": "Future research should focus on standardized evaluation frameworks for AI-driven assessments, ensuring their reliability and applicability across diverse training environments",
+        "imperative": "should",
+        "source": "PMC12093616_Modern_artificial_intelligence_and_large_language_.md"
+      },
+      {
+        "rule_id": "RULE-PMC1209361-019",
+        "text": "| Survey study | Neurosurgery, Otolaryngology; 60 Faculty | General AI; Real world; No comparator | Standardization and use of simulation, AI, and VR should be at the forefront of educational practices in the next 5–10 years",
+        "imperative": "should",
+        "source": "PMC12093616_Modern_artificial_intelligence_and_large_language_.md"
+      },
+      {
+        "rule_id": "RULE-PMC1216631-002",
+        "text": "Future research should investigate how linguistic expectations impact equity in the holistic review process and explore whether standardized LORs or structured PS guidance could help preserve both individuality and fairness in residency selection",
+        "imperative": "should",
+        "source": "PMC12166312_Language_Analysis_of_Matched_and_Unmatched_Otolary.md"
+      },
+      {
+        "rule_id": "RULE-PMC1216631-003",
+        "text": "Future studies should explore these areas further and incorporate qualitative methods to provide a more comprehensive understanding of the content and structure of these critical narrative components",
+        "imperative": "should",
+        "source": "PMC12166312_Language_Analysis_of_Matched_and_Unmatched_Otolary.md"
+      },
+      {
+        "rule_id": "RULE-PMC1216631-004",
+        "text": "## Conclusion As residency programs increasingly emphasize holistic reviews, applicants must strategically approach every component of their application",
+        "imperative": "must",
+        "source": "PMC12166312_Language_Analysis_of_Matched_and_Unmatched_Otolary.md"
+      },
+      {
+        "rule_id": "RULE-PMC1220802-001",
+        "text": "Resident wellness is critical for resident training and important to prospective residents; it follows that programs must be transparent about resident wellness on websites",
+        "imperative": "must",
+        "source": "PMC12208029_Emergency_Medicine_Residency_Website_Wellness_Page.md"
+      },
+      {
+        "rule_id": "RULE-PMC1230574-003",
+        "text": "However, thoughtful consideration of how to best maximize interpersonal fits during the residency application process should be at the forefront of targets for innovation in an increasingly virtual era rife with the challenges of rapidly evolving technologies",
+        "imperative": "should",
+        "source": "PMC12305746_Comparative_Analysis_of_Artificial_Intelligence-Ge.md"
+      },
+      {
+        "rule_id": "RULE-PMC1230574-004",
+        "text": "Future studies should explore the utility of PSs in a broader context as well as alternative assessment methods that may offer a more reliable and meaningful evaluation of an applicant's fit for a program",
+        "imperative": "should",
+        "source": "PMC12305746_Comparative_Analysis_of_Artificial_Intelligence-Ge.md"
+      },
+      {
+        "rule_id": "RULE-PMC1235908-001",
+        "text": "Faculty who were not trained with a formal residency ultrasound curriculum must now maintain their skills through a practice-based pathway",
+        "imperative": "must",
+        "source": "PMC12359087_Blended_Learning_Curriculum_for_Training_Faculty_P.md"
+      },
+      {
+        "rule_id": "RULE-PMC1235908-002",
+        "text": "Namely, providers are recommended to complete a minimum of 25 scans and three hours of continuing education every two years",
+        "imperative": "should",
+        "source": "PMC12359087_Blended_Learning_Curriculum_for_Training_Faculty_P.md"
+      },
+      {
+        "rule_id": "RULE-PMC1235908-003",
+        "text": "If literature can demonstrate such gains in individuals without prior training, it suggests that those with prior exposure should also be able to do well with minimal continued education",
+        "imperative": "should",
+        "source": "PMC12359087_Blended_Learning_Curriculum_for_Training_Faculty_P.md"
+      },
+      {
+        "rule_id": "RULE-PMC1235908-004",
+        "text": "The goal of increasing faculty confidence in both image acquisition and interpretation of the eFAST exam was targeted to empower providers to increase their ultrasound utilization in the clinical management of their patients, with our study demonstrating that confidence was most increased in faculty who never had ultrasound training during their own residency training",
+        "imperative": "avoid",
+        "source": "PMC12359087_Blended_Learning_Curriculum_for_Training_Faculty_P.md"
+      },
+      {
+        "rule_id": "RULE-PMC1235908-005",
+        "text": "As such, the eFAST does not always result in a change in clinical management",
+        "imperative": "must",
+        "source": "PMC12359087_Blended_Learning_Curriculum_for_Training_Faculty_P.md"
+      },
+      {
+        "rule_id": "RULE-PMC1237544-001",
+        "text": "Study Selection Criteria To qualify for inclusion in the present review, studies must have been (1) available in full-text as (2) peer-reviewed publications reporting (3) primary data obtained through PD surveys",
+        "imperative": "must",
+        "source": "PMC12375441_Neurosurgery_Residency_Program_Directors_Perspect.md"
+      },
+      {
+        "rule_id": "RULE-PMC1237544-002",
+        "text": "Huq and colleagues found that 77% of responding PDs “always” screened applicants by Step 1 scores [8]",
+        "imperative": "must",
+        "source": "PMC12375441_Neurosurgery_Residency_Program_Directors_Perspect.md"
+      },
+      {
+        "rule_id": "RULE-PMC1237544-003",
+        "text": "Only 4.4% felt that the RRC had an excellent grasp on present and future neurosurgical demands, and 67.6% felt that the RRC should have the authority to set the number of neurosurgical residents in training in the US",
+        "imperative": "should",
+        "source": "PMC12375441_Neurosurgery_Residency_Program_Directors_Perspect.md"
+      },
+      {
+        "rule_id": "RULE-PMC1237544-004",
+        "text": "Additionally, it is important to note that Likert scales can introduce the bias of central tendency, in which respondents may avoid extreme answer choices, or the social desirability bias, in which respondents may list answers they believe are socially acceptable rather than reflective of their true opinions",
+        "imperative": "avoid",
+        "source": "PMC12375441_Neurosurgery_Residency_Program_Directors_Perspect.md"
+      },
+      {
+        "rule_id": "RULE-PMC1239269-001",
+        "text": "Clear guidelines regarding the appropriate use of AI and authorship must be developed in order to maintain the integrity of student submissions",
+        "imperative": "must",
+        "source": "PMC12392696_Can_Residency_Programs_Detect_Artificial_Intellige.md"
+      },
+      {
+        "rule_id": "RULE-PMC1239269-004",
+        "text": "With this ease of access and growing popularity, many institutions now face the same questions: Who is using or should be using AI, and to what degree",
+        "imperative": "should",
+        "source": "PMC12392696_Can_Residency_Programs_Detect_Artificial_Intellige.md"
+      },
+      {
+        "rule_id": "RULE-PMC1239269-005",
+        "text": "Can AI usage be regulated, and if not, should disclosure of its use be required in academic or professional situations",
+        "imperative": "must",
+        "source": "PMC12392696_Can_Residency_Programs_Detect_Artificial_Intellige.md"
+      },
+      {
+        "rule_id": "RULE-PMC1239269-007",
+        "text": "Further, GPTZero and Winston AI caution that students should not be penalized solely based on its findings [8,11]",
+        "imperative": "should",
+        "source": "PMC12392696_Can_Residency_Programs_Detect_Artificial_Intellige.md"
+      },
+      {
+        "rule_id": "RULE-PMC1239269-008",
+        "text": "All of these variables must be considered when crafting academic policies regarding the use of AI",
+        "imperative": "must",
+        "source": "PMC12392696_Can_Residency_Programs_Detect_Artificial_Intellige.md"
+      },
+      {
+        "rule_id": "RULE-PMC1239269-009",
+        "text": "We do not wish to condemn or support AI use in the residency selection process, merely propose adhering to guidelines for all non-author contributions to maintain transparency and justice",
+        "imperative": "avoid",
+        "source": "PMC12392696_Can_Residency_Programs_Detect_Artificial_Intellige.md"
+      },
+      {
+        "rule_id": "RULE-PMC1239269-010",
+        "text": "With regard to the use of AI assistance in writing, we believe that most would agree that the principle of transparency must be adhered to in order to protect the integrity of our systems and organizations",
+        "imperative": "must",
+        "source": "PMC12392696_Can_Residency_Programs_Detect_Artificial_Intellige.md"
+      },
+      {
+        "rule_id": "RULE-PMC1239269-011",
+        "text": "If an author’s contribution is more than half of the work required to complete the writing, they are considered the lead author",
+        "imperative": "must",
+        "source": "PMC12392696_Can_Residency_Programs_Detect_Artificial_Intellige.md"
+      },
+      {
+        "rule_id": "RULE-PMC1239269-013",
+        "text": "It should be made clear that failure to make this disclosure is sufficient for disqualification",
+        "imperative": "should",
+        "source": "PMC12392696_Can_Residency_Programs_Detect_Artificial_Intellige.md"
+      },
+      {
+        "rule_id": "RULE-PMC1239269-014",
+        "text": "A transparency statement should be required with applicant submissions to enforce professional and ethical standards in our vocation and maintain equity in the residency admissions process",
+        "imperative": "must",
+        "source": "PMC12392696_Can_Residency_Programs_Detect_Artificial_Intellige.md"
+      },
+      {
+        "rule_id": "RULE-PMC1239269-015",
+        "text": "Clear guidelines regarding authorship and AI assistance must be developed in order to maintain the integrity of student submissions",
+        "imperative": "must",
+        "source": "PMC12392696_Can_Residency_Programs_Detect_Artificial_Intellige.md"
+      },
+      {
+        "rule_id": "RULE-PMC1261967-001",
+        "text": "If AI assumes a larger role in generating these letters, faculty members must remain actively engaged in reviewing, personalizing, and validating the content to ensure it reflects their true assessment of a candidate’s abilities",
+        "imperative": "must",
+        "source": "PMC12619671_Implementation_of_Artificial_Intelligence_in_Writi.md"
+      },
+      {
+        "rule_id": "RULE-PMC1261967-005",
+        "text": "Specifically, studies should focus on the accuracy of AI in depicting the quality of candidates in professional authorship of evaluative materials, whether the comfort level with using AI is advantageous in a residency candidate, and the ethical considerations of the continued integration of AI in the professional evaluation of medical students",
+        "imperative": "should",
+        "source": "PMC12619671_Implementation_of_Artificial_Intelligence_in_Writi.md"
+      },
+      {
+        "rule_id": "RULE-PMC1279919-003",
+        "text": "Overall, these findings demonstrate the improved AI-detection ability of these tools when compared to human reviewers, but caution should still be advised when implementing these tools into standardized review processes due to the false positive rates",
+        "imperative": "should",
+        "source": "PMC12799199_Distinguishing_Between_AI-Generated_and_Human-Writ.md"
+      },
+      {
+        "rule_id": "RULE-PMC1279919-004",
+        "text": "OpenAI holds the opinion that text written by AI is not “wholly generated by a human or wholly generated by an AI” and that the individual must take responsibility for what the AI produces [14]",
+        "imperative": "must",
+        "source": "PMC12799199_Distinguishing_Between_AI-Generated_and_Human-Writ.md"
+      },
+      {
+        "rule_id": "RULE-PMC1279919-005",
+        "text": "For this reason, while these AI detection tools can be helpful, their outputs should be taken with a healthy dose of skepticism, at least for the time being",
+        "imperative": "should",
+        "source": "PMC12799199_Distinguishing_Between_AI-Generated_and_Human-Writ.md"
+      },
+      {
+        "rule_id": "RULE-PMC1279919-006",
+        "text": "Future studies should formally assess this detection ability, as well as the differences between AI- and human-written texts, in a larger and more systematic way",
+        "imperative": "should",
+        "source": "PMC12799199_Distinguishing_Between_AI-Generated_and_Human-Writ.md"
+      },
+      {
+        "rule_id": "RULE-PMC1280799-001",
+        "text": "As AI technologies continue to evolve, program directors should consider how LLM-assisted writing influences their ability to holistically assess an applicant and encourage more explicit guidelines for the use of these tools",
+        "imperative": "should",
+        "source": "PMC12807993_Integration_of_Large_Language_Models_in_Personal_S.md"
+      },
+      {
+        "rule_id": "RULE-PMC1280799-003",
+        "text": "This limitation was mitigated through anonymity, but must be acknowledged",
+        "imperative": "must",
+        "source": "PMC12807993_Integration_of_Large_Language_Models_in_Personal_S.md"
+      },
+      {
+        "rule_id": "RULE-PMC1280799-004",
+        "text": "Future discussions should focus on establishing clearer guidelines for AI use in medical education, ensuring transparency in the application process, and preserving the integrity of qualitative evaluations in neurosurgical residency selection",
+        "imperative": "should",
+        "source": "PMC12807993_Integration_of_Large_Language_Models_in_Personal_S.md"
+      },
+      {
+        "rule_id": "RULE-Physician -002",
+        "text": "It should also give the recipient the sense that the physician has researched the opportunity or organization before writing the letter",
+        "imperative": "should",
+        "source": "Physician Cover Letters | NEJM CareerCenter.pdf"
+      },
+      {
+        "rule_id": "RULE-Physician -004",
+        "text": "“The geographic ‘connection’ to the opportunity’s location is the most important message you can include — whether it’s because you grew up there, have relatives in the region, or simply have always dreamed of living or working there,” Ms",
+        "imperative": "must",
+        "source": "Physician Cover Letters | NEJM CareerCenter.pdf"
+      },
+      {
+        "rule_id": "RULE-Physician -007",
+        "text": "“Therefore, if there is one goal that really sums up your search, or some objective that is a must-have for you under any circumstances, it would be okay to 21.1.2026, 17:45 Стр",
+        "imperative": "must",
+        "source": "Physician Cover Letters | NEJM CareerCenter.pdf"
+      },
+      {
+        "rule_id": "RULE-Physician -010",
+        "text": "It’s best to avoid going into extensive detail about personal interests or extracurricular pursuits",
+        "imperative": "avoid",
+        "source": "Physician Cover Letters | NEJM CareerCenter.pdf"
+      },
+      {
+        "rule_id": "RULE-Physician -012",
+        "text": "Because of the letter’s potential importance, physicians should have several trusted individuals — on the professional and personal side — review the document, including a professional editor, if warranted",
+        "imperative": "should",
+        "source": "Physician Cover Letters | NEJM CareerCenter.pdf"
+      },
+      {
+        "rule_id": "RULE-Physician -013",
+        "text": "6 из 8 Ideally, the letter’s tone should be professional but friendly, and should sound like its writer, and not like a cookie-cutter form letter",
+        "imperative": "should",
+        "source": "Physician Cover Letters | NEJM CareerCenter.pdf"
+      },
+      {
+        "rule_id": "RULE-Physician -014",
+        "text": "“The letter should be professional and warm, and the tone should also reflect how you would communicate with patients and staff,” Ms",
+        "imperative": "should",
+        "source": "Physician Cover Letters | NEJM CareerCenter.pdf"
+      },
+      {
+        "rule_id": "RULE-Physician -016",
+        "text": "But for the most part, those specifics should be left for an on-site interview",
+        "imperative": "should",
+        "source": "Physician Cover Letters | NEJM CareerCenter.pdf"
+      },
+      {
+        "rule_id": "RULE-Physician -017",
+        "text": "“If the parameter is a potential deal-breaker, you can mention it, but avoid sounding inflexible,” Mr",
+        "imperative": "avoid",
+        "source": "Physician Cover Letters | NEJM CareerCenter.pdf"
+      },
+      {
+        "rule_id": "RULE-Physician -020",
+        "text": "Avoid: Don’t sound desperate or beg for the job, even if it’s the perfect opportunity or you are worried about securing a position",
+        "imperative": "avoid",
+        "source": "Physician Cover Letters | NEJM CareerCenter.pdf"
+      },
+      {
+        "rule_id": "RULE-ResidencyP-002",
+        "text": "How to make it convincing and interesting: Give specific examples of experiences that inform your career choice or demonstrate your skills (avoid clichés and generalities)",
+        "imperative": "avoid",
+        "source": "ResidencyPersonalStatementTips.pdf"
+      },
+      {
+        "rule_id": "RULE-ResidencyP-003",
+        "text": "(Avoid lecturing your reader on what the profession should be.) Try to include details that will distinguish you from other applicants: perhaps you have had an unusual training experience; perhaps you have an unusual way of thinking of the specialty (yet one that will resonate with others in the specialty)",
+        "imperative": "should",
+        "source": "ResidencyPersonalStatementTips.pdf"
+      },
+      {
+        "rule_id": "RULE-Teaching P-001",
+        "text": "If it does, you should maintain your internal portfolio in accordance with those standards",
+        "imperative": "should",
+        "source": "Teaching Portfolio | AAMC.pdf"
+      },
+      {
+        "rule_id": "RULE-Tips_Writi-005",
+        "text": "https://www.nejmcareercenter.org/article/physician-cover-letters-why-writing-a-good-one- is-as-important-as-ever/ can be as long as they need to be, but be should include a specific detail about careful to avoid including facts that are the particular practice, whether it is the not relevant to medicine",
+        "imperative": "should",
+        "source": "Tips_Writing_Effective_CVs_Cover_Letters.pdf"
+      },
+      {
+        "rule_id": "RULE-Tips_Writi-006",
+        "text": "They should be no longer than one page",
+        "imperative": "should",
+        "source": "Tips_Writing_Effective_CVs_Cover_Letters.pdf"
+      },
+      {
+        "rule_id": "RULE-sample-res-001",
+        "text": "o The first paragraph should introduce the reader to you",
+        "imperative": "should",
+        "source": "sample-residency-application-documents.pdf"
+      },
+      {
+        "rule_id": "RULE-sample-res-002",
+        "text": "o The second paragraph should let the reader know how you arrived at your choice of the specialty",
+        "imperative": "should",
+        "source": "sample-residency-application-documents.pdf"
+      },
+      {
+        "rule_id": "RULE-sample-res-003",
+        "text": "o The third paragraph should confirm why you think this specialty choice is the perfect fit for you",
+        "imperative": "should",
+        "source": "sample-residency-application-documents.pdf"
+      },
+      {
+        "rule_id": "RULE-sample-res-004",
+        "text": "o The fourth paragraph should inform the reader what you see as your long-term goals in this specialty",
+        "imperative": "should",
+        "source": "sample-residency-application-documents.pdf"
+      },
+      {
+        "rule_id": "RULE-sample-res-007",
+        "text": "Your statement should be one page MAX",
+        "imperative": "should",
+        "source": "sample-residency-application-documents.pdf"
+      },
+      {
+        "rule_id": "RULE-sample-res-008",
+        "text": "Avoid: Using quotes and including statements you can’t back up in an interview",
+        "imperative": "avoid",
+        "source": "sample-residency-application-documents.pdf"
+      },
+      {
+        "rule_id": "RULE-sample-res-009",
+        "text": "She 20 10 was always engaged, she took initiative and saw patients without having to 0 be prompted, and she truly became an integral part of the team",
+        "imperative": "must",
+        "source": "sample-residency-application-documents.pdf"
+      },
+      {
+        "rule_id": "RULE-sample-res-011",
+        "text": "Her presentations were concise and organized with good assessments and she always made a thoughtful plan of care for her patients",
+        "imperative": "must",
+        "source": "sample-residency-application-documents.pdf"
+      },
+      {
+        "rule_id": "RULE-sample-res-014",
+        "text": "If your interview is being conducted virtually, be sure to incorporate set up time to avoid log in delays",
+        "imperative": "avoid",
+        "source": "sample-residency-application-documents.pdf"
+      },
+      {
+        "rule_id": "RULE-sample-res-017",
+        "text": "If you are concerned that you were asked an illegal question, you can always get in touch with Dr",
+        "imperative": "must",
+        "source": "sample-residency-application-documents.pdf"
+      },
+      {
+        "rule_id": "RULE-sample-str-001",
+        "text": "Panther was always prepared for each day’s census, reading about known the student",
+        "imperative": "must",
+        "source": "sample-strong-letter-of-recommendation-03-08-2018.pdf"
+      }
+    ],
+    "CV_STRUCTURE": [
+      {
+        "rule_id": "RULE-2024-HES_r-002",
+        "text": "This does not mean that all of your For more resume information, see the Resume and Cover letter webinar experience must relate directly, but your recording and information on AI in the job search",
+        "imperative": "must",
+        "source": "2024-HES_resume-and-letter.pdf"
+      },
+      {
+        "rule_id": "RULE-2024-HES_r-003",
+        "text": "resume should reflect the skills, experience, and impact the employer would value",
+        "imperative": "should",
+        "source": "2024-HES_resume-and-letter.pdf"
+      },
+      {
+        "rule_id": "RULE-2024-HES_r-004",
+        "text": "Spelling and grammar errors RESUME LANGUAGE SHOULD BE: 2",
+        "imperative": "should",
+        "source": "2024-HES_resume-and-letter.pdf"
+      },
+      {
+        "rule_id": "RULE-2024-HES_r-005",
+        "text": "When including coursework or foci, awards and honors, projects, or campus involvement in the Education section of your resume, always consider what is relevant to the specific job you are applying for",
+        "imperative": "must",
+        "source": "2024-HES_resume-and-letter.pdf"
+      },
+      {
+        "rule_id": "RULE-2024-gsas--001",
+        "text": "The most important information should be on the first page",
+        "imperative": "should",
+        "source": "2024-gsas-cvs-and-cover-letters.pdf"
+      },
+      {
+        "rule_id": "RULE-2024-gsas--002",
+        "text": " Keep locations, dates and less important information on the right side of the page – the left side should have important details like university, degree, job title, etc",
+        "imperative": "should",
+        "source": "2024-gsas-cvs-and-cover-letters.pdf"
+      },
+      {
+        "rule_id": "RULE-2024-gsas--005",
+        "text": "Tailor your CV to the position, purpose, or audience “Why should we select YOU?” – That is the question on the top of your reader’s mind, so craft your CV to convince the reader that you have the skills, experience, and knowledge they seek",
+        "imperative": "should",
+        "source": "2024-gsas-cvs-and-cover-letters.pdf"
+      },
+      {
+        "rule_id": "RULE-2024-gsas--006",
+        "text": "REFERENCES PLEASE NOTE: The REFERENCES category should always be included in an academic CV",
+        "imperative": "must",
+        "source": "2024-gsas-cvs-and-cover-letters.pdf"
+      },
+      {
+        "rule_id": "RULE-2024-gsas--008",
+        "text": "References should not be included on the CV for industry jobs",
+        "imperative": "should",
+        "source": "2024-gsas-cvs-and-cover-letters.pdf"
+      },
+      {
+        "rule_id": "RULE-2024-gsas--012",
+        "text": "The letter should not read as a CV in prose, and should summarize and encapsulate the points you expand upon in your research statement and teaching statement",
+        "imperative": "should",
+        "source": "2024-gsas-cvs-and-cover-letters.pdf"
+      },
+      {
+        "rule_id": "RULE-A guide to-001",
+        "text": "We wish to emphasize that the CV should not be the sole criterion for a position or advancement and that it is important to engage in holistic review of applications2; however, the CV is one important component of this process",
+        "imperative": "should",
+        "source": "A guide to creating a high‐quality curriculum vitae - Gottlieb - 2021 - AEM Education and Training - Wiley Online Library.pdf"
+      },
+      {
+        "rule_id": "RULE-A guide to-002",
+        "text": "In general, a CV should have a consistent and legible font, appropriate spacing and use of line breaks, bolding to highlight key components or headers, and the dates should be listed in a consistent order (either chronological or reverse chronological)",
+        "imperative": "should",
+        "source": "A guide to creating a high‐quality curriculum vitae - Gottlieb - 2021 - AEM Education and Training - Wiley Online Library.pdf"
+      },
+      {
+        "rule_id": "RULE-A guide to-004",
+        "text": "The top of the page should also include your contact information, such as your address, phone number, and email address",
+        "imperative": "should",
+        "source": "A guide to creating a high‐quality curriculum vitae - Gottlieb - 2021 - AEM Education and Training - Wiley Online Library.pdf"
+      },
+      {
+        "rule_id": "RULE-A guide to-005",
+        "text": "Finally, the \"rst page should include the date that the CV was last updated",
+        "imperative": "should",
+        "source": "A guide to creating a high‐quality curriculum vitae - Gottlieb - 2021 - AEM Education and Training - Wiley Online Library.pdf"
+      },
+      {
+        "rule_id": "RULE-A guide to-013",
+        "text": "However, you should avoid including information such as your DEA or medical license number unless explicitly required to reduce the risk of this being misappropriated",
+        "imperative": "must",
+        "source": "A guide to creating a high‐quality curriculum vitae - Gottlieb - 2021 - AEM Education and Training - Wiley Online Library.pdf"
+      },
+      {
+        "rule_id": "RULE-A guide to-015",
+        "text": "You should also include a dedicated section on your leadership positions at your institution and within professional societies as well as any committee or task force membership roles within professional societies",
+        "imperative": "should",
+        "source": "A guide to creating a high‐quality curriculum vitae - Gottlieb - 2021 - AEM Education and Training - Wiley Online Library.pdf"
+      },
+      {
+        "rule_id": "RULE-A guide to-016",
+        "text": "The teaching section should include your involvement with leading any local, regional, and national curricula",
+        "imperative": "should",
+        "source": "A guide to creating a high‐quality curriculum vitae - Gottlieb - 2021 - AEM Education and Training - Wiley Online Library.pdf"
+      },
+      {
+        "rule_id": "RULE-A guide to-017",
+        "text": "While not as comprehensive as an educator's portfolio,4 you should consider including su$cient information for the reader to understand the scope, size, and time commitment of the program",
+        "imperative": "should",
+        "source": "A guide to creating a high‐quality curriculum vitae - Gottlieb - 2021 - AEM Education and Training - Wiley Online Library.pdf"
+      },
+      {
+        "rule_id": "RULE-A guide to-018",
+        "text": "The mentorship section should include any people you are or have been mentoring",
+        "imperative": "should",
+        "source": "A guide to creating a high‐quality curriculum vitae - Gottlieb - 2021 - AEM Education and Training - Wiley Online Library.pdf"
+      },
+      {
+        "rule_id": "RULE-A guide to-019",
+        "text": "This section should include their name, length of mentorship, current role (e.g., faculty role, fellow, resident, medical student), and institution as well as their prior role when you began mentoring them (if applicable)",
+        "imperative": "should",
+        "source": "A guide to creating a high‐quality curriculum vitae - Gottlieb - 2021 - AEM Education and Training - Wiley Online Library.pdf"
+      },
+      {
+        "rule_id": "RULE-A guide to-020",
+        "text": "Publications should be listed in a citation format consistent with your institutional guidelines, and you should consider adding the Digital Object Identi\"er (DOI) or PubMed identi\"er (PMID)",
+        "imperative": "should",
+        "source": "A guide to creating a high‐quality curriculum vitae - Gottlieb - 2021 - AEM Education and Training - Wiley Online Library.pdf"
+      },
+      {
+        "rule_id": "RULE-AET2-5-e10-001",
+        "text": "Most chairs and hiring committees will ex- a CV should have a consistent and legible font, appropriate spac- pect a CV and cover letter as the initial component of the application ing and use of line breaks, bolding to highlight key components or materials",
+        "imperative": "should",
+        "source": "AET2-5-e10717.pdf"
+      },
+      {
+        "rule_id": "RULE-AET2-5-e10-002",
+        "text": "Additionally, the CV is utilized as one of the primary crite- headers, and the dates should be listed in a consistent order (either ria as part of the dossier used for making decisions about promotion chronological or reverse chronological)",
+        "imperative": "should",
+        "source": "AET2-5-e10717.pdf"
+      },
+      {
+        "rule_id": "RULE-AET2-5-e10-003",
+        "text": "We wish to emphasize that the CV should not be here as Appendix S1",
+        "imperative": "should",
+        "source": "AET2-5-e10717.pdf"
+      },
+      {
+        "rule_id": "RULE-AET2-5-e10-004",
+        "text": "the sole criterion for a position or advancement and that it is import- The first page should include your name and degrees at the ant to engage in holistic review of applications2; however, the CV is top",
+        "imperative": "should",
+        "source": "AET2-5-e10717.pdf"
+      },
+      {
+        "rule_id": "RULE-AET2-5-e10-005",
+        "text": "The top of the page should also include to discuss your interests and current progress and identify areas for your contact information, such as your address, phone number, and future growth",
+        "imperative": "should",
+        "source": "AET2-5-e10717.pdf"
+      },
+      {
+        "rule_id": "RULE-AET2-5-e10-006",
+        "text": "Finally, the first page should include the date that the CV was last Supervising Editor: Daniel J",
+        "imperative": "should",
+        "source": "AET2-5-e10717.pdf"
+      },
+      {
+        "rule_id": "RULE-AET2-5-e10-007",
+        "text": "This will assist you with tracking the versions, as well as You should also include a dedicated section on your leadership the recipient if you send an updated CV later",
+        "imperative": "should",
+        "source": "AET2-5-e10717.pdf"
+      },
+      {
+        "rule_id": "RULE-AET2-5-e10-009",
+        "text": "dates attended, degree obtained, major(s), minor(s), and any hon- The teaching section should include your involvement with ors (e.g., cum laude, distinctions, Alpha Omega Alpha)",
+        "imperative": "should",
+        "source": "AET2-5-e10717.pdf"
+      },
+      {
+        "rule_id": "RULE-AET2-5-e10-011",
+        "text": "While not as include any advanced leadership training that does not fall within comprehensive as an educator's portfolio,4 you should consider the above categories (e.g., leadership courses, speaker courses) as a including sufficient information for the reader to understand the separate section located after the education section, which could be scope, size, and time commitment of the program",
+        "imperative": "should",
+        "source": "AET2-5-e10717.pdf"
+      },
+      {
+        "rule_id": "RULE-AET2-5-e10-012",
+        "text": "It is important entitled “Additional Training” or “Faculty Development.” to separate this curricular section (i.e., a set of courses) from the The next component of the CV should contain appointments, latter section on individual courses",
+        "imperative": "should",
+        "source": "AET2-5-e10717.pdf"
+      },
+      {
+        "rule_id": "RULE-AET2-5-e10-017",
+        "text": "For example, being a The mentorship section should include any people you are scribe in the emergency department would be relevant for medical or have been mentoring",
+        "imperative": "should",
+        "source": "AET2-5-e10717.pdf"
+      },
+      {
+        "rule_id": "RULE-AET2-5-e10-018",
+        "text": "This section should include but these are individual decisions that warrant deliberate consider- their name, length of mentorship, current role (e.g., faculty role, fel- ation",
+        "imperative": "should",
+        "source": "AET2-5-e10717.pdf"
+      },
+      {
+        "rule_id": "RULE-AET2-5-e10-019",
+        "text": "The scientific and scholarly activities section (also known as You should generally list all honors and awards that you have the research section) can include a wide array of components",
+        "imperative": "should",
+        "source": "AET2-5-e10717.pdf"
+      },
+      {
+        "rule_id": "RULE-AET2-5-e10-020",
+        "text": "However, you should avoid including information cal or reverse chronological order, depending on your institution's such as your DEA or medical license number unless explicitly re- preference",
+        "imperative": "should",
+        "source": "AET2-5-e10717.pdf"
+      },
+      {
+        "rule_id": "RULE-CV_Cover_L-007",
+        "text": "The last section should to explain than others",
+        "imperative": "should",
+        "source": "CV_Cover_Letter_Guide_InDesign.pdf"
+      },
+      {
+        "rule_id": "RULE-CV_Cover_L-008",
+        "text": "Like your CV, your cover letter should be short information necessary and just need to put it together in and easy to read",
+        "imperative": "should",
+        "source": "CV_Cover_Letter_Guide_InDesign.pdf"
+      },
+      {
+        "rule_id": "RULE-PMC1209361-002",
+        "text": "Graduate Medical Education (GME) plays a crucial role in developing healthcare provider’s skills and competencies to meet the evolving healthcare landscape [6] While AI holds transformative potential, its integration into graduate medical education (GME) must be considered within the context of the evolving challenges that GME faces [7]",
+        "imperative": "must",
+        "source": "PMC12093616_Modern_artificial_intelligence_and_large_language_.md"
+      },
+      {
+        "rule_id": "RULE-PMC1220802-002",
+        "text": "Using this information, we identified themes including community involvement, growth and development, nutrition and health, psychological well-being, social and relaxation activities, wellness culture and environment, wellness curriculum, wellness structure and resources, and work-life integration.ConclusionMost EM program websites do not include a wellness page",
+        "imperative": "avoid",
+        "source": "PMC12208029_Emergency_Medicine_Residency_Website_Wellness_Page.md"
+      },
+      {
+        "rule_id": "RULE-PMC1220802-003",
+        "text": "After reviewing 278 EM websites, we believe that the following information should be included on EM residency program pages: 1",
+        "imperative": "should",
+        "source": "PMC12208029_Emergency_Medicine_Residency_Website_Wellness_Page.md"
+      },
+      {
+        "rule_id": "RULE-Physician -003",
+        "text": "Longtime recruiter Regina Levison, president of the national firm Levison Search Associates, agrees that the geographic preference statement is a vital piece of information that should appear early in the letter",
+        "imperative": "should",
+        "source": "Physician Cover Letters | NEJM CareerCenter.pdf"
+      },
+      {
+        "rule_id": "RULE-Physician -005",
+        "text": "“The cover letter really is a differentiator, and even though a recruiter will always look at your CV first, the letter is nice to have",
+        "imperative": "must",
+        "source": "Physician Cover Letters | NEJM CareerCenter.pdf"
+      },
+      {
+        "rule_id": "RULE-Physician -006",
+        "text": "If there are gaps in the CV that are not sensitive in nature, and therefore don’t require a phone conversation, that information should be included in the letter",
+        "imperative": "should",
+        "source": "Physician Cover Letters | NEJM CareerCenter.pdf"
+      },
+      {
+        "rule_id": "RULE-Physician -008",
+        "text": "(See “Cover letters: What to do, what to avoid” section at the end of this article.) Dr",
+        "imperative": "avoid",
+        "source": "Physician Cover Letters | NEJM CareerCenter.pdf"
+      },
+      {
+        "rule_id": "RULE-ResidencyP-004",
+        "text": "The exact themes are up to you, but they should allow you to deliver the kind of information a residency director is looking for",
+        "imperative": "should",
+        "source": "ResidencyPersonalStatementTips.pdf"
+      },
+      {
+        "rule_id": "RULE-Tips_Writi-002",
+        "text": "It SENIOR CIRCULATION STRATEGIST should start with your full name and contact information",
+        "imperative": "should",
+        "source": "Tips_Writing_Effective_CVs_Cover_Letters.pdf"
+      },
+      {
+        "rule_id": "RULE-Tips_Writi-003",
+        "text": "In the busi- Rebecca Harp ness world, most CVs include a concise, descriptive statement about your CIRCULATION AND AD SUPPORT SPECIALIST skills, but this is not always included on medical CVs",
+        "imperative": "must",
+        "source": "Tips_Writing_Effective_CVs_Cover_Letters.pdf"
+      },
+      {
+        "rule_id": "RULE-sample-res-010",
+        "text": "She is a joy to teach because she is always interested in new cases, 30 20 asks thoughtful questions, listens carefully, and incorporates all new 10 information in real-time",
+        "imperative": "must",
+        "source": "sample-residency-application-documents.pdf"
+      }
+    ],
+    "RECOMMENDATION": [
+      {
+        "rule_id": "RULE-2024-HES_r-006",
+        "text": "Avoid • Reference skills or experiences from the job description and draw flowery language",
+        "imperative": "avoid",
+        "source": "2024-HES_resume-and-letter.pdf"
+      },
+      {
+        "rule_id": "RULE-2024-gsas--007",
+        "text": "For any letter of recommendation, you should ask if they feel comfortable writing you a STRONG letter of recommendation",
+        "imperative": "should",
+        "source": "2024-gsas-cvs-and-cover-letters.pdf"
+      },
+      {
+        "rule_id": "RULE-Implementa-006",
+        "text": "Mansour J, Burman M, Bernstein M, Sandman E, Yammine K, Daher M, Martineau PA: Should my recommendation letter be written by arti?cial intelligence",
+        "imperative": "should",
+        "source": "Implementation of Artificial Intelligence in Writing Letters of Recommendation | Cureus.pdf"
+      },
+      {
+        "rule_id": "RULE-PMC4336015-001",
+        "text": "Programs formally evaluated the interview (89%) and recommendation letters (84%).Conclusion:Understanding the importance that RPDs place on application and interview features, as well as the process used to assess communication skills and interpersonal interactions, should allow residency candidates to become more competitive residency prospects",
+        "imperative": "should",
+        "source": "PMC4336015_Application_and_Interview_Features_Used_to_Assess_.md"
+      }
+    ],
+    "COVER_LETTER": [
+      {
+        "rule_id": "RULE-CV_Cover_L-001",
+        "text": "Gaps should be C hief executive officers, medical directors, and phy- explained in your cover letter, which we will discuss later",
+        "imperative": "should",
+        "source": "CV_Cover_Letter_Guide_InDesign.pdf"
+      },
+      {
+        "rule_id": "RULE-How to Wri-005",
+        "text": "While your résumé is meant to be a look back at your experience and where you’ve been, the cover letter should focus on the future and what you want to do, says Glickman",
+        "imperative": "should",
+        "source": "How to Write a Cover Letter.pdf"
+      },
+      {
+        "rule_id": "RULE-Physician -001",
+        "text": "The cover letter should be brief, well written, professional and positive in tone, and absolutely error-free",
+        "imperative": "should",
+        "source": "Physician Cover Letters | NEJM CareerCenter.pdf"
+      },
+      {
+        "rule_id": "RULE-Physician -009",
+        "text": "Other sources agreed that cover letters should not exceed one page, unless special circumstances dictate an extra paragraph or two",
+        "imperative": "should",
+        "source": "Physician Cover Letters | NEJM CareerCenter.pdf"
+      },
+      {
+        "rule_id": "RULE-Physician -011",
+        "text": "Professional tone, error-free content are musts It should go without saying that the cover letter must be professionally written and free of spelling or grammatical errors, but unfortunately, that’s not always the case",
+        "imperative": "must",
+        "source": "Physician Cover Letters | NEJM CareerCenter.pdf"
+      },
+      {
+        "rule_id": "RULE-Physician -018",
+        "text": "Very important parameters should, however, be provided to the recruiter outside the context of the cover letter if such detail is requested",
+        "imperative": "should",
+        "source": "Physician Cover Letters | NEJM CareerCenter.pdf"
+      },
+      {
+        "rule_id": "RULE-Physician -019",
+        "text": "Cover letters: What to do, what to avoid The sources who contributed to this article offered these additional tips on what physicians should do, or not do, when they craft their cover letters",
+        "imperative": "should",
+        "source": "Physician Cover Letters | NEJM CareerCenter.pdf"
+      },
+      {
+        "rule_id": "RULE-Tips_Writi-007",
+        "text": "You should write different cover letters for each job and Sarina Schrager, MD, MS not use a standard template",
+        "imperative": "should",
+        "source": "Tips_Writing_Effective_CVs_Cover_Letters.pdf"
+      }
+    ],
+    "PERSONAL_STATEMENT": [
+      {
+        "rule_id": "RULE-PMC1239269-002",
+        "text": "According to the Electronic Residency Application Service (ERAS) Applicant User Guide, the personal statement “must be your own work and not the work of another author or the product of artificial intelligence” [3]",
+        "imperative": "must",
+        "source": "PMC12392696_Can_Residency_Programs_Detect_Artificial_Intellige.md"
+      },
+      {
+        "rule_id": "RULE-PMC1239269-012",
+        "text": "We believe that the use of AI assistance in the writing of a personal statement should be disclosed in accordance with the AMA and ICMJE",
+        "imperative": "should",
+        "source": "PMC12392696_Can_Residency_Programs_Detect_Artificial_Intellige.md"
+      },
+      {
+        "rule_id": "RULE-PMC1279919-001",
+        "text": "With regard to personal statement writing, one article had a group of 10 plastic surgery residents and faculty members rate, in a blinded fashion, original personal statements and those generated by AI for things such as readability, originality, syntax, and whether an interview offer should be extended",
+        "imperative": "should",
+        "source": "PMC12799199_Distinguishing_Between_AI-Generated_and_Human-Writ.md"
+      },
+      {
+        "rule_id": "RULE-PMC1279919-002",
+        "text": "Each query for a new AI-generated personal statement was executed in its own ChatGPT session rather than in sequence to avoid any bias",
+        "imperative": "avoid",
+        "source": "PMC12799199_Distinguishing_Between_AI-Generated_and_Human-Writ.md"
+      },
+      {
+        "rule_id": "RULE-ResidencyP-005",
+        "text": "(An exception to this rule is the first paragraph, which may start with an anecdote, and end with the theme: “And that’s why I want to specialize in X.”) The specialty you are applying for should appear early in your essay—ideally in the first paragraph, at least by the second paragraph",
+        "imperative": "should",
+        "source": "ResidencyPersonalStatementTips.pdf"
+      },
+      {
+        "rule_id": "RULE-ResidencyP-006",
+        "text": "Avoid spending the whole essay documenting the steps that led you to choose a specialty",
+        "imperative": "avoid",
+        "source": "ResidencyPersonalStatementTips.pdf"
+      }
+    ]
+  }
+}

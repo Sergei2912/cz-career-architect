@@ -1,0 +1,135 @@
+{
+  "$schema": "https://czcareerarchitect.cz/schemas/profile/1.0.0",
+  "$id": "profile_hr_review_cs",
+  "name": "HR-REVIEW",
+  "version": "1.0.0",
+  "created": "2026-01-18",
+  "description": "Profil pro validaci životopisů dle českých HR standardů. GDPR/ATS kompatibilní.",
+  
+  "target": {
+    "market": "CZ",
+    "language": "cs-CZ",
+    "audience": ["HR", "recruiter", "ATS"]
+  },
+
+  "formatting": {
+    "standard": "ČSN 01 6910",
+    "paper": {
+      "size": "A4",
+      "orientation": "portrait",
+      "margins": {
+        "top": "2.5cm",
+        "bottom": "2.5cm",
+        "left": "2.5cm",
+        "right": "2.5cm"
+      }
+    },
+    "typography": {
+      "fontFamily": "Calibri",
+      "fontSize": "11pt",
+      "lineHeight": "1.15",
+      "headingSize": "14pt"
+    },
+    "pageLimit": 2,
+    "preferredLength": 1
+  },
+
+  "ats_compatibility": {
+    "enabled": true,
+    "rules": {
+      "no_tables": true,
+      "no_columns": true,
+      "no_text_boxes": true,
+      "no_headers_footers": false,
+      "no_images": true,
+      "no_icons": true,
+      "no_graphics": true,
+      "simple_bullets": true,
+      "standard_section_names": true
+    },
+    "allowed_formats": ["docx", "pdf"],
+    "preferred_format": "docx"
+  },
+
+  "gdpr_compliance": {
+    "enabled": true,
+    "rules": {
+      "no_photo": true,
+      "no_date_of_birth": true,
+      "no_marital_status": true,
+      "no_nationality": false,
+      "no_religion": true,
+      "no_political_views": true,
+      "consent_optional": true,
+      "consent_text": "Souhlasím se zpracováním osobních údajů pro účely výběrového řízení dle nařízení (EU) 2016/679 (GDPR)."
+    }
+  },
+
+  "content": {
+    "required_sections": [
+      "personal_info",
+      "work_experience",
+      "education"
+    ],
+    "optional_sections": [
+      "skills",
+      "languages",
+      "certificates",
+      "summary"
+    ],
+    "forbidden_sections": [
+      "photo",
+      "hobbies",
+      "references_with_contacts"
+    ],
+    "section_order": [
+      "personal_info",
+      "summary",
+      "work_experience",
+      "education",
+      "skills",
+      "languages",
+      "certificates"
+    ]
+  },
+
+  "tone": {
+    "style": "neutral_clinical",
+    "rules": {
+      "no_first_person": true,
+      "no_subjective_claims": true,
+      "quantify_achievements": true,
+      "action_verbs": true,
+      "no_abbreviations_without_expansion": true
+    }
+  },
+
+  "validation_rules": {
+    "total_rules": 82,
+    "categories": {
+      "formatting": 15,
+      "gdpr": 12,
+      "ats": 18,
+      "content": 22,
+      "language": 15
+    }
+  },
+
+  "legal_basis": [
+    {
+      "name": "ČSN 01 6910",
+      "description": "Úprava dokumentů zpracovaných textovými procesory",
+      "url": "https://www.unmz.cz/"
+    },
+    {
+      "name": "Nařízení (EU) 2016/679",
+      "description": "GDPR - Obecné nařízení o ochraně osobních údajů",
+      "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+    },
+    {
+      "name": "Zákon č. 110/2019 Sb.",
+      "description": "O zpracování osobních údajů",
+      "url": "https://www.zakonyprolidi.cz/cs/2019-110"
+    }
+  ]
+}

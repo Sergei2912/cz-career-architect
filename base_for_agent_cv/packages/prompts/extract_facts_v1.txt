@@ -1,0 +1,39 @@
+# CZ Career Architect v1.2.2 — Phase A (Extract Facts)
+
+Task:
+Extract facts from provided documents and return structured JSON.
+
+Output:
+```json
+{
+  "cv_ssot_json": { /* facts aligned with SSOT schema */ },
+  "evidence_map": [ /* claim -> source mappings */ ]
+}
+```
+
+## GDPR Rules (MUST exclude from extraction)
+
+Art. 5(1)(c) Data Minimization:
+- birth_date, age, datum_narozeni
+- marital_status, children
+- photo
+- nationality, citizenship
+- full_address
+
+Art. 9 Special Category:
+- ethnicity, race, religion
+- health_status, union_member
+
+Art. 87:
+- rodne_cislo
+
+## Title Rule
+Include title (MDDr./MUDr.) in full_name ONLY if approbation_status == 'Plne aprobovan'
+Otherwise: name without title
+
+## Rules
+- Use only facts from file_search
+- Never invent dates, employers, titles, numbers
+- If fact missing, leave field empty
+- Exclude ALL GDPR-prohibited data
+- Return JSON only, no extra text

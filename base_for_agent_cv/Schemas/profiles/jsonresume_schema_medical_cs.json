@@ -1,0 +1,316 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://czcareerarchitect.cz/schemas/medical-resume-cs/1.0.0",
+  "title": "Medical Resume Schema (CZ)",
+  "description": "JSON Resume schema extended for Czech medical professionals. Based on jsonresume.org v1.0.0 with additions for nostrifikace, specializace, and professional registration.",
+  "type": "object",
+  "additionalProperties": true,
+  "_meta": {
+    "version": "1.0.0",
+    "baseSchema": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/schema.json",
+    "created": "2026-01-18",
+    "author": "CZ Career Architect",
+    "license": "MIT",
+    "legalBasis": [
+      "Zákon č. 95/2004 Sb.",
+      "Vyhláška č. 189/2009 Sb.",
+      "Zákon č. 220/1991 Sb."
+    ]
+  },
+  "definitions": {
+    "iso8601": {
+      "type": "string",
+      "description": "ISO 8601 date format: YYYY-MM-DD, YYYY-MM, or YYYY",
+      "pattern": "^([1-2][0-9]{3}-[0-1][0-9]-[0-3][0-9]|[1-2][0-9]{3}-[0-1][0-9]|[1-2][0-9]{3})$"
+    },
+    "countryCode": {
+      "type": "string",
+      "description": "ISO 3166-1 alpha-2 country code",
+      "pattern": "^[A-Z]{2}$"
+    }
+  },
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "format": "uri"
+    },
+    "basics": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "name": { "type": "string" },
+        "label": { "type": "string", "description": "e.g. Zubní lékař" },
+        "email": { "type": "string", "format": "email" },
+        "phone": { "type": "string" },
+        "url": { "type": "string", "format": "uri" },
+        "summary": { "type": "string" },
+        "location": {
+          "type": "object",
+          "properties": {
+            "city": { "type": "string" },
+            "countryCode": { "$ref": "#/definitions/countryCode" },
+            "region": { "type": "string" }
+          }
+        }
+      }
+    },
+
+    "medicalQualification": {
+      "type": "object",
+      "description": "Odborná způsobilost - základní kvalifikace dle zákona č. 95/2004 Sb.",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["nostrifikace", "aprobace", "automaticke_uznani", "eu_uznani"],
+          "description": "Typ uznání kvalifikace"
+        },
+        "issuedBy": {
+          "type": "string",
+          "description": "Vydávající instituce, např. Univerzita Karlova"
+        },
+        "issueDate": {
+          "$ref": "#/definitions/iso8601"
+        },
+        "documentNumber": {
+          "type": "string",
+          "description": "Číslo rozhodnutí/osvědčení"
+        },
+        "originalCountry": {
+          "$ref": "#/definitions/countryCode",
+          "description": "Země původní kvalifikace"
+        },
+        "originalDegree": {
+          "type": "string",
+          "description": "Původní titul, např. DMD, MD"
+        },
+        "recognizedAs": {
+          "type": "string",
+          "description": "Uznáno jako, např. zubní lékař, lékař, farmaceut"
+        }
+      }
+    },
+
+    "medicalSpecializations": {
+      "type": "array",
+      "description": "Specializovaná způsobilost - atestace dle vyhlášky č. 189/2009 Sb.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Název specializace, např. Endodoncie"
+          },
+          "level": {
+            "type": "string",
+            "enum": ["zakladni", "nastavbova", "certifikovany_kurz"],
+            "description": "Úroveň specializace"
+          },
+          "institution": {
+            "type": "string",
+            "description": "Kde získána, např. IPVZ Praha"
+          },
+          "date": {
+            "$ref": "#/definitions/iso8601"
+          },
+          "certificateNumber": {
+            "type": "string"
+          }
+        }
+      }
+    },
+
+    "professionalRegistration": {
+      "type": "object",
+      "description": "Registrace v profesní komoře dle zákona č. 220/1991 Sb.",
+      "properties": {
+        "chamber": {
+          "type": "string",
+          "enum": ["CLK", "CSK", "CLnK"],
+          "description": "CLK=Česká lékařská komora, CSK=Česká stomatologická komora, CLnK=Česká lékárnická komora"
+        },
+        "registrationNumber": {
+          "type": "string"
+        },
+        "validFrom": {
+          "$ref": "#/definitions/iso8601"
+        },
+        "validUntil": {
+          "$ref": "#/definitions/iso8601"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["active", "suspended", "inactive"]
+        }
+      }
+    },
+
+    "clinicalExperience": {
+      "type": "array",
+      "description": "Klinická praxe - kvantifikované zkušenosti",
+      "items": {
+        "type": "object",
+        "properties": {
+          "procedureType": {
+            "type": "string",
+            "description": "Typ výkonu, např. Endodontické ošetření"
+          },
+          "count": {
+            "type": "integer",
+            "description": "Počet provedených výkonů"
+          },
+          "period": {
+            "type": "string",
+            "description": "Období, např. 2015-2025"
+          },
+          "setting": {
+            "type": "string",
+            "description": "Podmínky, např. pod mikroskopem"
+          },
+          "hours": {
+            "type": "integer",
+            "description": "Počet hodin (volitelné)"
+          }
+        }
+      }
+    },
+
+    "militaryService": {
+      "type": "object",
+      "description": "Vojenská služba (volitelné)",
+      "properties": {
+        "branch": {
+          "type": "string",
+          "description": "Složka, např. IDF Medical Corps"
+        },
+        "rank": {
+          "type": "string",
+          "description": "Hodnost, např. Captain"
+        },
+        "startDate": {
+          "$ref": "#/definitions/iso8601"
+        },
+        "endDate": {
+          "$ref": "#/definitions/iso8601"
+        },
+        "unit": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string",
+          "description": "Funkce, např. Dental Officer"
+        }
+      }
+    },
+
+    "gdprConsent": {
+      "type": "object",
+      "description": "GDPR souhlas (volitelné) - viz gdpr_consent_clause_cs.md",
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "default": false
+        },
+        "text": {
+          "type": "string",
+          "default": "Souhlasím se zpracováním osobních údajů pro účely výběrového řízení dle nařízení (EU) 2016/679 (GDPR)."
+        }
+      }
+    },
+
+    "work": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "name": { "type": "string" },
+          "location": { "type": "string" },
+          "position": { "type": "string" },
+          "startDate": { "$ref": "#/definitions/iso8601" },
+          "endDate": { "$ref": "#/definitions/iso8601" },
+          "summary": { "type": "string" },
+          "highlights": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+
+    "education": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "institution": { "type": "string" },
+          "area": { "type": "string" },
+          "studyType": { "type": "string" },
+          "startDate": { "$ref": "#/definitions/iso8601" },
+          "endDate": { "$ref": "#/definitions/iso8601" },
+          "score": { "type": "string" }
+        }
+      }
+    },
+
+    "certificates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "date": { "$ref": "#/definitions/iso8601" },
+          "issuer": { "type": "string" },
+          "url": { "type": "string", "format": "uri" }
+        }
+      }
+    },
+
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "level": { "type": "string" },
+          "keywords": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+
+    "languages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "language": { "type": "string" },
+          "fluency": { "type": "string" }
+        }
+      }
+    },
+
+    "publications": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "publisher": { "type": "string" },
+          "releaseDate": { "$ref": "#/definitions/iso8601" },
+          "url": { "type": "string", "format": "uri" }
+        }
+      }
+    },
+
+    "meta": {
+      "type": "object",
+      "properties": {
+        "version": { "type": "string" },
+        "lastModified": { "type": "string" }
+      }
+    }
+  }
+}

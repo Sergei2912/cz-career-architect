@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CZCA File Metadata",
+  "type": "object",
+  "required": ["id", "title", "type", "path", "format", "language", "status"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^(R|S|T|L|TMP|SCR|EX)\\d{2}$|^REG-[A-Z_]+(-\\d{2})?$"
+    },
+    "group_id": {
+      "type": "string",
+      "pattern": "^REG-[A-Z_]+$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 3
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "documentation",
+        "index",
+        "guide",
+        "log",
+        "schema",
+        "profile",
+        "dataset",
+        "legislation",
+        "regulation",
+        "template",
+        "script",
+        "example",
+        "manifest",
+        "spec"
+      ]
+    },
+    "path": {
+      "type": "string",
+      "minLength": 3
+    },
+    "format": {
+      "type": "string",
+      "enum": ["md", "pdf", "docx", "jsonl", "py", "json", "yaml", "yml", "txt"]
+    },
+    "language": {
+      "type": "string",
+      "pattern": "^[a-z]{2}(-[A-Z]{2})?$"
+    },
+    "jurisdiction": {
+      "type": "string",
+      "enum": ["CZ", "EU"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "verified", "archived", "pending"]
+    },
+    "quality": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 10
+    },
+    "tags": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "examples_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "duplicate_of": {
+      "type": "string",
+      "pattern": "^(R|S|T|L|TMP|SCR|EX)\\d{2}$|^REG-[A-Z_]+(-\\d{2})?$"
+    },
+    "checksum_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "name": {"type": "string"},
+        "url": {"type": "string"},
+        "retrieved": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"}
+      },
+      "additionalProperties": false
+    },
+    "updated": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

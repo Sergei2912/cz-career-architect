@@ -1,0 +1,100 @@
+{
+  "$schema": "https://czcareerarchitect.cz/schemas/medical-resume-cs/1.0.0",
+  "basics": {
+    "name": "MUDr. Sergii Anipreyev",
+    "label": "Zubní lékař – Endodoncie",
+    "email": "example@email.cz",
+    "phone": "+420 XXX XXX XXX",
+    "location": {
+      "city": "Praha",
+      "countryCode": "CZ"
+    },
+    "summary": "Zubní lékař s více než 10 lety klinické praxe, specializující se na endodoncii. Více než 1700 provedených endodontických ošetření a 375+ hodin práce pod mikroskopem."
+  },
+
+  "medicalQualification": {
+    "type": "nostrifikace",
+    "issuedBy": "Univerzita Karlova",
+    "issueDate": "2025-01",
+    "originalCountry": "IL",
+    "originalDegree": "DMD",
+    "recognizedAs": "zubní lékař"
+  },
+
+  "medicalSpecializations": [
+    {
+      "name": "Endodoncie",
+      "level": "zakladni",
+      "institution": "Postgraduální vzdělávání",
+      "date": "2020"
+    }
+  ],
+
+  "professionalRegistration": {
+    "chamber": "CSK",
+    "status": "active",
+    "validFrom": "2025"
+  },
+
+  "clinicalExperience": [
+    {
+      "procedureType": "Endodontické ošetření",
+      "count": 1700,
+      "period": "2015-2025"
+    },
+    {
+      "procedureType": "Práce pod mikroskopem",
+      "hours": 375,
+      "period": "2018-2025"
+    }
+  ],
+
+  "militaryService": {
+    "branch": "IDF Medical Corps",
+    "rank": "Captain",
+    "startDate": "2015",
+    "endDate": "2023",
+    "role": "Dental Officer"
+  },
+
+  "work": [
+    {
+      "name": "DENTIKA",
+      "position": "Zubní lékař",
+      "startDate": "2024",
+      "summary": "Komplexní stomatologická péče se zaměřením na endodoncii"
+    }
+  ],
+
+  "education": [
+    {
+      "institution": "Univerzita (původní)",
+      "area": "Zubní lékařství",
+      "studyType": "DMD",
+      "endDate": "2014"
+    }
+  ],
+
+  "languages": [
+    { "language": "Čeština", "fluency": "Profesionální" },
+    { "language": "Ruština", "fluency": "Rodilý mluvčí" },
+    { "language": "Angličtina", "fluency": "Plynule" }
+  ],
+
+  "skills": [
+    {
+      "name": "Endodoncie",
+      "level": "Expert",
+      "keywords": ["kořenové kanálky", "mikroskop", "NiTi nástroje"]
+    }
+  ],
+
+  "gdprConsent": {
+    "enabled": false
+  },
+
+  "meta": {
+    "version": "1.0.0",
+    "lastModified": "2026-01-18"
+  }
+}
