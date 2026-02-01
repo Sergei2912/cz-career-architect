@@ -1,15 +1,28 @@
 """
 CZ Career Architect - Document Generation Logic
-Handles CV and cover letter generation
+Handles CV and cover letter generation with logging, caching, and metrics
 """
 
 import sys
 from pathlib import Path
+from typing import Optional
 
 # Add packages to path
 ROOT_DIR = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(ROOT_DIR))
 sys.path.insert(0, str(ROOT_DIR / "packages"))
+
+from src.logging_config import get_logger
+from src.config import get_settings
+from src.exceptions import DocumentGenerationError, ModelResponseError
+from src.cache import cached
+from src.metrics import (
+    record_cv_generated,
+    record_cover_letter_generated,
+    track_model_request
+)
+
+logger = get_logger(__name__)
 
 
 SYSTEM_PROMPT = """You are CZ Career Architect v1.2.3.
@@ -31,7 +44,9 @@ OUTPUT:
 """
 
 
-async def generate_full_package(agent, user_request, runner_class):
+@track_model_request('gpt-5.2')
+@cached('full_package_generation', ttl=86400)  # Cache for 24 hours
+async def generate_full_package(agent, user_request: str, runner_class) -> str:
     """
     Generate a full HR document package.
     
@@ -42,18 +57,50 @@ async def generate_full_package(agent, user_request, runner_class):
         
     Returns:
         str: Generated output
+        
+    Raises:
+        DocumentGenerationError: If generation fails
     """
-    result = await runner_class.run(agent, user_request)
-    return str(result.final_output)
+    logger.info("Starting full package generation")
+    logger.debug(f"User request length: {len(user_request)} chars")
+    
+    try:
+        result = await runner_class.run(agent, user_request)
+        
+        if not hasattr(result, 'final_output'):
+            logger.error("Invalid response from agent: missing final_output")
+            raise ModelResponseError("Agent response missing final_output")
+        
+        output = str(result.final_output)
+        
+        if not output or len(output.strip()) < 200:
+            logger.error(f"Generated package too short: {len(output)} chars")
+            raise DocumentGenerationError("Generated package is too short or empty")
+        
+        logger.info(f"✓ Full package generated successfully ({len(output)} chars)")
+        
+        # Record metrics (CV + cover letter in package)
+        record_cv_generated()
+        record_cover_letter_generated()
+        
+        return output
+        
+    except (DocumentGenerationError, ModelResponseError):
+        raise
+    except Exception as e:
+        logger.error(f"Full package generation error: {e}", exc_info=True)
+        raise DocumentGenerationError(f"Failed to generate package: {e}", model_error=str(e))
 
 
-def get_default_user_request():
+def get_default_user_request() -> str:
     """
     Get the default user request template.
     
     Returns:
         str: Default request template
     """
+    logger.debug("Getting default user request template")
+    
     return """
 Vytvor kompletni balicek HR dokumentu.
 
