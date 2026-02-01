@@ -27,7 +27,8 @@ if env_path.exists():
             key, val = line.split('=', 1)
             os.environ[key] = val
 
-from agents import Agent, Runner, ModelSettings
+from agents import Agent, Runner, ModelSettings, FileSearchTool
+from config import resolve_vector_store_ids, resolve_model
 
 import sys
 sys.path.insert(0, str(ROOT_DIR / 'packages'))
@@ -227,11 +228,25 @@ def analyze_text(text: str) -> List[str]:
 # ============================================================================
 
 def create_agent() -> Agent:
+    """Create agent with RAG/file_search integration."""
+    # Get vector store IDs from config (mandatory RAG)
+    vector_store_ids = resolve_vector_store_ids()
+    
+    # Create file_search tool for RAG
+    tools = [
+        FileSearchTool(
+            vector_store_ids=vector_store_ids,
+            max_num_results=5,
+            include_search_results=True
+        )
+    ] if vector_store_ids else None
+    
     return Agent(
         name='CZ Career Architect',
         instructions=SYSTEM_PROMPT,
-        model=os.getenv('OPENAI_MODEL', 'gpt-5.2'),
-        model_settings=ModelSettings()
+        model=resolve_model(),
+        model_settings=ModelSettings(response_include=["file_search_call.results"]),
+        tools=tools
     )
 
 async def chat_with_agent(
@@ -292,10 +307,13 @@ async def root():
 
 @app.get('/health')
 async def health():
+    vector_store_ids = resolve_vector_store_ids()
     return {
         'status': 'online',
         'version': VERSION,
-        'model': os.getenv('OPENAI_MODEL', 'gpt-5.2')
+        'model': resolve_model(),
+        'rag_enabled': bool(vector_store_ids),
+        'vector_stores': len(vector_store_ids) if vector_store_ids else 0
     }
 
 @app.post('/upload', response_model=FileInfo)
