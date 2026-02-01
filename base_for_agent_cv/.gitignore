@@ -9,3 +9,15 @@ build/
 uploads/
 venv/
 .venv/
+out/
+*.log
+.coverage
+coverage.xml
+htmlcov/
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+*.db
+*.sqlite3
