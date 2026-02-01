@@ -10,6 +10,23 @@ from pydantic import ValidationError
 from base_for_agent_cv.src.config import Settings, get_settings
 
 
+@pytest.fixture(autouse=True)
+def clean_env():
+    """Clean environment variables after each test."""
+    # Setup: Save original env
+    original_env = os.environ.copy()
+    # Ensure base requirements
+    os.environ['OPENAI_API_KEY'] = 'test-key-default'
+    if 'LOG_LEVEL' in os.environ:
+        del os.environ['LOG_LEVEL']
+    
+    yield
+    
+    # Teardown: Restore original env
+    os.environ.clear()
+    os.environ.update(original_env)
+
+
 class TestSettings:
     """Test Settings class."""
     
@@ -94,12 +111,16 @@ class TestGetSettings:
         """Test that get_settings returns the same instance."""
         os.environ['OPENAI_API_KEY'] = 'test-key-singleton'
         
+        # Force reset for this test
+        import base_for_agent_cv.src.config as config_module
+        config_module._settings = None
+        
         settings1 = get_settings()
         settings2 = get_settings()
         
         assert settings1 is settings2
     
-    def test_get_settings_creates_directories(self, tmp_path, monkeypatch):
+    def test_get_settings_creates_directories(self, tmp_path):
         """Test that get_settings creates directories."""
         os.environ['OPENAI_API_KEY'] = 'test-key-create'
         
@@ -107,16 +128,8 @@ class TestGetSettings:
         import base_for_agent_cv.src.config as config_module
         config_module._settings = None
         
-        # Mock the paths to use tmp_path
-        def mock_settings_init(self):
-            self.__dict__.update(Settings().__dict__)
-            self.upload_dir = tmp_path / 'uploads'
-            self.output_dir = tmp_path / 'output'
-            self.log_dir = tmp_path / 'logs'
-        
-        monkeypatch.setattr(Settings, '__init__', mock_settings_init)
-        
         settings = get_settings()
         
-        # Note: directories might not exist in test due to mocking
+        # Just check settings is created properly
         assert settings is not None
+        assert settings.openai_api_key == 'test-key-create'
