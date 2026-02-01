@@ -29,6 +29,7 @@ if env_path.exists():
 
 from agents import Agent, Runner, ModelSettings, FileSearchTool
 from config import resolve_vector_store_ids, resolve_model
+from database import db_manager, SQLALCHEMY_AVAILABLE
 
 import sys
 sys.path.insert(0, str(ROOT_DIR / 'packages'))
@@ -144,8 +145,18 @@ if FRONTEND_DIR.exists():
 # Storage
 # ============================================================================
 
-uploaded_files: dict[str, dict] = {}
-chat_sessions: dict[str, list] = {}
+# Legacy in-memory fallback (if database not available)
+if not SQLALCHEMY_AVAILABLE:
+    uploaded_files: dict[str, dict] = {}
+    chat_sessions: dict[str, list] = {}
+    print("⚠️  Using in-memory storage (SQLAlchemy not available)")
+else:
+    print("✅ Using SQLite database for persistence")
+    # Cleanup old sessions/files on startup
+    cleaned_sessions = db_manager.cleanup_old_sessions()
+    cleaned_files = db_manager.cleanup_old_files()
+    if cleaned_sessions > 0 or cleaned_files > 0:
+        print(f"   Cleaned up {cleaned_sessions} old sessions, {cleaned_files} old files")
 
 # ============================================================================
 # Models
@@ -313,7 +324,8 @@ async def health():
         'version': VERSION,
         'model': resolve_model(),
         'rag_enabled': bool(vector_store_ids),
-        'vector_stores': len(vector_store_ids) if vector_store_ids else 0
+        'vector_stores': len(vector_store_ids) if vector_store_ids else 0,
+        'storage': 'sqlite' if SQLALCHEMY_AVAILABLE else 'in-memory'
     }
 
 @app.post('/upload', response_model=FileInfo)
@@ -334,53 +346,102 @@ async def upload_file(file: UploadFile = File(...)):
     issues = analyze_text(text)
     preview = text[:300] + '...' if len(text) > 300 else text
     
-    file_info = {
-        'id': file_id,
-        'name': file.filename,
-        'size': len(content),
-        'type': suffix[1:],
-        'path': str(file_path),
-        'text': text,
-        'uploaded_at': datetime.now().isoformat(),
-        'preview': preview,
-        'issues': issues
-    }
-    uploaded_files[file_id] = file_info
+    # Save to database
+    if SQLALCHEMY_AVAILABLE:
+        db_manager.save_uploaded_file(
+            file_id=file_id,
+            filename=file.filename,
+            size=len(content),
+            file_type=suffix[1:],
+            file_path=str(file_path),
+            text_content=text,
+            preview=preview,
+            issues=issues
+        )
+    else:
+        # Fallback to in-memory
+        file_info = {
+            'id': file_id,
+            'name': file.filename,
+            'size': len(content),
+            'type': suffix[1:],
+            'path': str(file_path),
+            'text': text,
+            'uploaded_at': datetime.now().isoformat(),
+            'preview': preview,
+            'issues': issues
+        }
+        uploaded_files[file_id] = file_info
     
-    return FileInfo(**{k: v for k, v in file_info.items() if k not in ['path', 'text']})
+    return FileInfo(
+        id=file_id,
+        name=file.filename,
+        size=len(content),
+        type=suffix[1:],
+        uploaded_at=datetime.now().isoformat(),
+        preview=preview,
+        issues=issues
+    )
 
 @app.get('/files')
 async def list_files():
-    return [
-        FileInfo(id=f['id'], name=f['name'], size=f['size'], type=f['type'],
-                 uploaded_at=f['uploaded_at'], preview=f.get('preview'), issues=f.get('issues'))
-        for f in uploaded_files.values()
-    ]
+    if SQLALCHEMY_AVAILABLE:
+        files = db_manager.list_uploaded_files()
+        return [
+            FileInfo(
+                id=f['id'],
+                name=f['name'],
+                size=f['size'],
+                type=f['type'],
+                uploaded_at=f['uploaded_at'],
+                preview=f.get('preview'),
+                issues=f.get('issues')
+            )
+            for f in files
+        ]
+    else:
+        return [
+            FileInfo(id=f['id'], name=f['name'], size=f['size'], type=f['type'],
+                     uploaded_at=f['uploaded_at'], preview=f.get('preview'), issues=f.get('issues'))
+            for f in uploaded_files.values()
+        ]
 
 @app.delete('/files/{file_id}')
 async def delete_file(file_id: str):
-    if file_id not in uploaded_files:
-        raise HTTPException(404, 'Файл не найден')
-    Path(uploaded_files[file_id]['path']).unlink(missing_ok=True)
-    del uploaded_files[file_id]
-    return {'status': 'deleted'}
+    if SQLALCHEMY_AVAILABLE:
+        if db_manager.delete_uploaded_file(file_id):
+            return {'status': 'deleted'}
+        else:
+            raise HTTPException(404, 'Файл не найден')
+    else:
+        if file_id not in uploaded_files:
+            raise HTTPException(404, 'Файл не найден')
+        Path(uploaded_files[file_id]['path']).unlink(missing_ok=True)
+        del uploaded_files[file_id]
+        return {'status': 'deleted'}
 
 @app.post('/chat', response_model=ChatResponse)
 async def chat(request: ChatRequest):
     session_id = request.session_id or str(uuid.uuid4())
     
-    if session_id not in chat_sessions:
-        chat_sessions[session_id] = []
-    
-    history = chat_sessions[session_id]
+    # Get history from database
+    if SQLALCHEMY_AVAILABLE:
+        history = db_manager.get_chat_history(session_id)
+    else:
+        if session_id not in chat_sessions:
+            chat_sessions[session_id] = []
+        history = chat_sessions[session_id]
     
     # File context
     file_context = None
     if request.file_ids:
         contexts = []
         for fid in request.file_ids:
-            if fid in uploaded_files:
-                f = uploaded_files[fid]
+            if SQLALCHEMY_AVAILABLE:
+                f = db_manager.get_uploaded_file(fid)
+            else:
+                f = uploaded_files.get(fid)
+            if f:
                 contexts.append(f"Файл '{f['name']}':\n{f['text'][:2500]}")
         if contexts:
             file_context = '\n\n'.join(contexts)
@@ -396,7 +457,13 @@ async def chat(request: ChatRequest):
     history.append({'role': 'assistant', 'content': response, 'ts': datetime.now().isoformat()})
     
     if len(history) > 50:
-        chat_sessions[session_id] = history[-50:]
+        history = history[-50:]
+    
+    # Save to database
+    if SQLALCHEMY_AVAILABLE:
+        db_manager.update_chat_history(session_id, history)
+    else:
+        chat_sessions[session_id] = history
     
     return ChatResponse(
         response=response,
@@ -406,11 +473,18 @@ async def chat(request: ChatRequest):
 
 @app.get('/session/{session_id}')
 async def get_session(session_id: str):
-    return {'messages': chat_sessions.get(session_id, [])}
+    if SQLALCHEMY_AVAILABLE:
+        messages = db_manager.get_chat_history(session_id)
+    else:
+        messages = chat_sessions.get(session_id, [])
+    return {'messages': messages}
 
 @app.delete('/session/{session_id}')
 async def clear_session(session_id: str):
-    chat_sessions.pop(session_id, None)
+    if SQLALCHEMY_AVAILABLE:
+        db_manager.clear_chat_session(session_id)
+    else:
+        chat_sessions.pop(session_id, None)
     return {'status': 'cleared'}
 
 # ============================================================================

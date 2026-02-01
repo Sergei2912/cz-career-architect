@@ -50,6 +50,7 @@ htmlcov/
 # Outputs
 base_for_agent_cv/out/
 base_for_agent_cv/uploads/
+base_for_agent_cv/data/
 *.log
 
 # Database
