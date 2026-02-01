@@ -13,8 +13,11 @@ help:
 	@echo "Development:"
 	@echo "  make format          Format code with Black and isort"
 	@echo "  make lint            Run linting checks"
-	@echo "  make test            Run test suite"
-	@echo "  make test-cov        Run tests with coverage report"
+	@echo "  make test            Run all tests"
+	@echo "  make test-coverage   Run tests with HTML coverage report"
+	@echo "  make test-quick      Quick test run (no verbose)"
+	@echo "  make test-file FILE=<name>  Run specific test file"
+	@echo "  make install-test    Install test dependencies"
 	@echo ""
 	@echo "Running:"
 	@echo "  make run-chat        Run interactive chat mode"
@@ -37,10 +40,26 @@ dev-install: install
 
 # Testing
 test:
-	cd base_for_agent_cv && pytest ../tests/ -v
+	pytest tests/ -v
 
-test-cov:
-	cd base_for_agent_cv && pytest ../tests/ --cov=. --cov-report=html --cov-report=term
+test-coverage:
+	pytest tests/ --cov=base_for_agent_cv --cov-report=html --cov-report=term-missing
+	@echo ""
+	@echo "HTML coverage report: htmlcov/index.html"
+
+test-quick:
+	pytest tests/ -q
+
+test-file:
+	@if [ -z "$(FILE)" ]; then \
+		echo "Error: Please specify FILE=test_name"; \
+		echo "Example: make test-file FILE=test_config"; \
+		exit 1; \
+	fi
+	pytest tests/$(FILE).py -v
+
+install-test:
+	pip install pytest pytest-asyncio pytest-cov pytest-mock
 
 # Code quality
 format:
