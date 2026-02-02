@@ -61,9 +61,24 @@ open http://localhost:8000
 
 ## Конфигурация (.env)
 
+Скопируй `.env.example` → `.env` и заполни.
+
+Минимум:
+- `OPENAI_API_KEY`
+
+Рекомендуется для деплоя (чтобы защитить ключ и бюджет):
+- `API_KEY` (тогда все запросы требуют заголовок `X-API-Key`)
+
+Пример:
+```env
 OPENAI_API_KEY=sk-...
 OPENAI_MODEL=gpt-5.2
-OPENAI_VECTOR_STORE_ID=vs_697776db24488191bf2f9bf0528d2845
+API_KEY=change-me
+CORS_ALLOW_ORIGINS=http://localhost:8000,http://127.0.0.1:8000
+CORS_ALLOW_CREDENTIALS=false
+```
+
+(Опционально) `OPENAI_VECTOR_STORE_ID` — если/когда будет реально подключён.
 
 ---
 
