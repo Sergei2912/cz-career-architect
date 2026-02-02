@@ -18,7 +18,7 @@ if env_path.exists():
             key, val = line.split("=", 1)
             os.environ[key] = val
 
-VERSION = "1.2.3"
+VERSION = os.getenv("APP_VERSION", "2.0.0")
 
 app = FastAPI(
     title="CZ Career Architect API",
@@ -56,7 +56,7 @@ async def health():
     return {
         "status": "online",
         "version": VERSION,
-        "model": os.getenv("OPENAI_MODEL", "gpt-4o-mini"),
+        "model": os.getenv("OPENAI_MODEL", "gpt-5.2"),
     }
 
 
