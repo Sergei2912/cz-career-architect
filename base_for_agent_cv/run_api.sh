@@ -4,7 +4,7 @@
 cd "$(dirname "$0")"
 
 echo "========================================"
-echo "  CZ Career Architect API v1.2.3"
+echo "  CZ Career Architect API"
 echo "========================================"
 echo ""
 
@@ -20,4 +20,4 @@ echo ""
 echo "Press Ctrl+C to stop"
 echo ""
 
-uvicorn api:app --reload --host 0.0.0.0 --port 8000
+uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
