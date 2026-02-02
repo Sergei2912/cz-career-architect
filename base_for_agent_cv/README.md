@@ -47,9 +47,9 @@ open http://localhost:8000
 - POST /chat/ — Сообщение
 - GET /chat/session/{session_id} — История
 - DELETE /chat/session/{session_id} — Очистить историю
-- POST /files/upload — Загрузить файл
-- GET /files/ — Список файлов
-- DELETE /files/{file_id} — Удалить файл
+- POST /files/upload — Загрузить файл (требует session_id / X-Session-Id)
+- GET /files/ — Список файлов (требует session_id / X-Session-Id)
+- DELETE /files/{file_id} — Удалить файл (требует session_id / X-Session-Id)
 
 ## Legacy aliases (compat)
 

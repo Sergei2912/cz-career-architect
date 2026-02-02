@@ -31,7 +31,7 @@ def test_chat_includes_uploaded_file_context_when_file_ids_given(client: TestCli
     # Upload a file
     upload = client.post(
         "/files/upload",
-        files={"file": ("cv.txt", b"Hello from file", "text/plain")},
+        files={"file": ("cv.txt", b"Hello from file", "text/plain"), "session_id": (None, "s1")},
     )
     file_id = upload.json()["id"]
 
