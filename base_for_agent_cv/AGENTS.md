@@ -9,6 +9,23 @@ Runtime entry points live at the repo root: `chat.py` (interactive intake) and `
 - `python main.py --mode check --text "Datum narozeni: 15.1.1985"`: run a validator check on a single text snippet.
 - `python main.py --help`: list all supported modes and flags.
 
+### Local dev environment
+```bash
+cd base_for_agent_cv
+python3 -m venv .venv
+. .venv/bin/activate
+pip install -r requirements_api.txt -r requirements_dev.txt
+pre-commit install
+```
+
+### Quality gates
+```bash
+cd base_for_agent_cv
+ruff check .
+black --check .
+pytest
+```
+
 There is no separate build step; scripts run directly with Python.
 
 ## Coding Style & Naming Conventions

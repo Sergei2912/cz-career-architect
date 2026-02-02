@@ -1,8 +1,9 @@
 import os
 from typing import List
-from agents import Agent, Runner, ModelSettings
 
-SYSTEM_PROMPT = '''Ты — CZ Career Architect, дружелюбный AI-помощник для создания HR-документов для чешского здравоохранения.
+from agents import Agent, ModelSettings, Runner
+
+SYSTEM_PROMPT = """Ты — CZ Career Architect, дружелюбный AI-помощник для создания HR-документов для чешского здравоохранения.
 
 ## КАК ОБЩАТЬСЯ
 
@@ -75,75 +76,60 @@ SYSTEM_PROMPT = '''Ты — CZ Career Architect, дружелюбный AI-по�
 - Всегда предлагай следующий шаг
 - Если не уверен — спроси
 - Документы создавай только на чешском языке
-'''
+"""
+
 
 def create_agent() -> Agent:
     return Agent(
-        name='CZ Career Architect',
+        name="CZ Career Architect",
         instructions=SYSTEM_PROMPT,
-        model=os.getenv('OPENAI_MODEL', 'gpt-4o-mini'),
-        model_settings=ModelSettings()
+        model=os.getenv("OPENAI_MODEL", "gpt-4o-mini"),
+        model_settings=ModelSettings(),
     )
 
+
 async def chat_with_agent(
-    message: str, 
-    history: List[dict] = None,
-    file_context: str = None
+    message: str, history: List[dict] = None, file_context: str = None
 ) -> str:
     agent = create_agent()
-    
+
     # Build conversation context
     context_parts = []
-    
+
     if history and len(history) > 0:
         # Include last 10 messages for context
         recent = history[-10:]
-        context_parts.append('История диалога:')
+        context_parts.append("История диалога:")
         for msg in recent:
-            role = 'Пользователь' if msg['role'] == 'user' else 'Ассистент'
+            role = "Пользователь" if msg["role"] == "user" else "Ассистент"
             context_parts.append(f'{role}: {msg["content"][:200]}')
-        context_parts.append('---')
-    
+        context_parts.append("---")
+
     if file_context:
-        context_parts.append(f'Загруженный документ:\n{file_context[:3000]}')
-        context_parts.append('---')
-    
-    context_parts.append(f'Текущее сообщение пользователя: {message}')
-    
-    full_prompt = '\n'.join(context_parts)
-    
+        context_parts.append(f"Загруженный документ:\n{file_context[:3000]}")
+        context_parts.append("---")
+
+    context_parts.append(f"Текущее сообщение пользователя: {message}")
+
+    full_prompt = "\n".join(context_parts)
+
     result = await Runner.run(agent, full_prompt)
     return str(result.final_output)
+
 
 def get_suggestions(message: str, response: str) -> List[str]:
     """Generate contextual follow-up suggestions."""
     suggestions = []
     msg_lower = message.lower()
-    resp_lower = response.lower()
-    
-    if 'cv' in msg_lower or 'резюме' in msg_lower:
-        suggestions = [
-            'Добавь мотивационное письмо',
-            'Проверь на GDPR',
-            'Переведи на чешский'
-        ]
-    elif 'письмо' in msg_lower:
-        suggestions = [
-            'Сделай короче',
-            'Добавь больше о опыте',
-            'Проверь грамматику'
-        ]
-    elif 'провер' in msg_lower:
-        suggestions = [
-            'Исправь ошибки',
-            'Создай новую версию',
-            'Объясни подробнее'
-        ]
+    # resp_lower removed (was unused)
+
+    if "cv" in msg_lower or "резюме" in msg_lower:
+        suggestions = ["Добавь мотивационное письмо", "Проверь на GDPR", "Переведи на чешский"]
+    elif "письмо" in msg_lower:
+        suggestions = ["Сделай короче", "Добавь больше о опыте", "Проверь грамматику"]
+    elif "провер" in msg_lower:
+        suggestions = ["Исправь ошибки", "Создай новую версию", "Объясни подробнее"]
     else:
-        suggestions = [
-            'Создай CV',
-            'Напиши письмо',
-            'Что нельзя указывать?'
-        ]
-    
+        suggestions = ["Создай CV", "Напиши письмо", "Что нельзя указывать?"]
+
     return suggestions[:3]
