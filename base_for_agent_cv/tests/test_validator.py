@@ -3,8 +3,6 @@
 import json
 from pathlib import Path
 
-import pytest
-
 from packages.validators.cz_cv_validator_adapter import (
     Finding,
     apply_fixes_to_json,
@@ -251,20 +249,28 @@ class TestValidateSchema:
 
     def test_invalid_data_against_schema(self, tmp_path):
         schema_path = tmp_path / "schema.json"
-        schema_path.write_text(json.dumps({
-            "type": "object",
-            "required": ["name"],
-            "properties": {"name": {"type": "string"}},
-        }))
+        schema_path.write_text(
+            json.dumps(
+                {
+                    "type": "object",
+                    "required": ["name"],
+                    "properties": {"name": {"type": "string"}},
+                }
+            )
+        )
         findings = validate_schema({}, schema_path, 50)
         assert any(f.code == "SCHEMA_VALIDATION" for f in findings)
 
     def test_max_errors_limit(self, tmp_path):
         schema_path = tmp_path / "schema.json"
-        schema_path.write_text(json.dumps({
-            "type": "object",
-            "required": ["a", "b", "c", "d", "e"],
-        }))
+        schema_path.write_text(
+            json.dumps(
+                {
+                    "type": "object",
+                    "required": ["a", "b", "c", "d", "e"],
+                }
+            )
+        )
         findings = validate_schema({}, schema_path, 2)
         assert len(findings) <= 3  # 2 + MAX_ERRORS marker
 

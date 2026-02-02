@@ -4,7 +4,7 @@ import asyncio
 import json
 import os
 from dataclasses import dataclass
-from typing import Any, Generic, Iterable, TypeVar
+from typing import Any, Generic, TypeVar
 
 from openai import OpenAI
 from pydantic import BaseModel
@@ -23,16 +23,20 @@ class ModelSettings:
         if override is None:
             return self
         return ModelSettings(
-            temperature=override.temperature
-            if override.temperature is not None
-            else self.temperature,
+            temperature=(
+                override.temperature if override.temperature is not None else self.temperature
+            ),
             top_p=override.top_p if override.top_p is not None else self.top_p,
-            max_output_tokens=override.max_output_tokens
-            if override.max_output_tokens is not None
-            else self.max_output_tokens,
-            response_include=override.response_include
-            if override.response_include is not None
-            else self.response_include,
+            max_output_tokens=(
+                override.max_output_tokens
+                if override.max_output_tokens is not None
+                else self.max_output_tokens
+            ),
+            response_include=(
+                override.response_include
+                if override.response_include is not None
+                else self.response_include
+            ),
         )
 
 

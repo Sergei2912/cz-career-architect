@@ -6,10 +6,10 @@ import uuid
 from pathlib import Path
 from typing import Any, Literal
 
-from packages.validators import cz_cv_validator_adapter as validator
 from pydantic import BaseModel, Field
 
 from agents import Agent, Runner
+from packages.validators import cz_cv_validator_adapter as validator
 
 from .assistant_runner import run_assistant
 from .config import SSOT_SCHEMA_PATH, use_assistant_api

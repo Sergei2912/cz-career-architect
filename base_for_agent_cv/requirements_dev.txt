@@ -1,0 +1,7 @@
+# Dev-only requirements (CI, local dev)
+pytest
+httpx
+openai
+ruff
+black
+pre-commit
