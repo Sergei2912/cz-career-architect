@@ -32,13 +32,29 @@ async def upload_file(file: UploadFile = File(...)):
     if suffix not in ALLOWED_EXTENSIONS:
         raise HTTPException(400, "Формат не поддерживается. Разрешены: PDF, DOCX, TXT")
 
-    content = await file.read()
-    if len(content) > MAX_FILE_SIZE:
-        raise HTTPException(400, "Файл слишком большой. Максимум 10 МБ")
+    # Stream upload to disk to avoid holding the whole file in memory.
+    file_path_tmp = UPLOAD_DIR / f"tmp_{uuid.uuid4().hex}{suffix}"
+    hasher = hashlib.md5()
+    size = 0
 
-    file_id = hashlib.md5(content).hexdigest()[:8] + "_" + str(uuid.uuid4())[:4]
-    file_path = UPLOAD_DIR / f"{file_id}{suffix}"
-    file_path.write_bytes(content)
+    try:
+        with file_path_tmp.open("wb") as out:
+            while True:
+                chunk = await file.read(1024 * 1024)  # 1MB
+                if not chunk:
+                    break
+                size += len(chunk)
+                if size > MAX_FILE_SIZE:
+                    raise HTTPException(400, "Файл слишком большой. Максимум 10 МБ")
+                hasher.update(chunk)
+                out.write(chunk)
+
+        file_id = hasher.hexdigest()[:8] + "_" + str(uuid.uuid4())[:4]
+        file_path = UPLOAD_DIR / f"{file_id}{suffix}"
+        file_path_tmp.replace(file_path)
+    finally:
+        # Best-effort cleanup if anything fails before rename.
+        file_path_tmp.unlink(missing_ok=True)
 
     text = extract_text(file_path)
     issues = analyze_text(text)
@@ -47,7 +63,7 @@ async def upload_file(file: UploadFile = File(...)):
     file_info = {
         "id": file_id,
         "name": file.filename,
-        "size": len(content),
+        "size": size,
         "type": suffix[1:],
         "path": str(file_path),
         "text": text,
