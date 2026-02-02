@@ -1,7 +1,7 @@
 import uuid
 from datetime import datetime
 
-from fastapi import APIRouter
+from fastapi import APIRouter, HTTPException
 
 from ..models.schemas import ChatRequest, ChatResponse
 from ..services.agent_service import chat_with_agent, get_suggestions
@@ -25,14 +25,19 @@ async def chat(request: ChatRequest):
 
     history = chat_sessions[session_id]
 
-    # Get file context
+    # Get file context (privacy): only include files belonging to this session.
     file_context = None
     if request.file_ids:
+        # Require explicit session_id when file_ids are used.
+        if not request.session_id:
+            raise HTTPException(400, "file_ids require session_id")
+
         contexts = []
         for fid in request.file_ids:
             if fid in uploaded_files:
                 f = uploaded_files[fid]
-                contexts.append(f"Файл '{f['name']}':\n{f['text'][:2000]}")
+                if f.get("owner_session_id") == session_id:
+                    contexts.append(f"Файл '{f['name']}':\n{f['text'][:2000]}")
         if contexts:
             file_context = "\n\n".join(contexts)
 
