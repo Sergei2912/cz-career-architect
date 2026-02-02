@@ -6,7 +6,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
-from .routers import chat, files
+from .routers import chat, files, legacy
 
 # Load environment
 ROOT_DIR = Path(__file__).resolve().parent.parent
@@ -37,6 +37,8 @@ app.add_middleware(
 # Include routers
 app.include_router(files.router)
 app.include_router(chat.router)
+# Legacy aliases (old api.py routes)
+app.include_router(legacy.router)
 
 # Serve frontend
 FRONTEND_DIR = ROOT_DIR / "frontend"

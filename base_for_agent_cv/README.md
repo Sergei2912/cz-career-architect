@@ -39,13 +39,25 @@ open http://localhost:8000
 Запрещено: Дата рождения, Фото, Семейный статус, Гражданство, Rodné číslo
 Разрешено: Имя, Город, Email, Телефон, Опыт, Nostrifikace status
 
-## API Endpoints
+## API Endpoints (canonical)
 
-- GET / — Веб-чат
+- GET / — Веб-чат (если есть `frontend/index.html`)
+- GET /docs — Swagger UI
 - GET /health — Статус
-- POST /chat — Сообщение
-- POST /upload — Файл
-- GET /files — Список
+- POST /chat/ — Сообщение
+- GET /chat/session/{session_id} — История
+- DELETE /chat/session/{session_id} — Очистить историю
+- POST /files/upload — Загрузить файл
+- GET /files/ — Список файлов
+- DELETE /files/{file_id} — Удалить файл
+
+## Legacy aliases (compat)
+
+Для совместимости также доступны старые пути (без Swagger):
+- POST /chat
+- POST /upload
+- GET /files
+- GET/DELETE /session/{session_id}
 
 ## Конфигурация (.env)
 
