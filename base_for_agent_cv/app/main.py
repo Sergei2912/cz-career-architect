@@ -11,13 +11,9 @@ from .security import require_api_key
 
 # Load environment
 ROOT_DIR = Path(__file__).resolve().parent.parent
-env_path = ROOT_DIR / ".env"
-if env_path.exists():
-    for line in env_path.read_text().splitlines():
-        line = line.strip()
-        if "=" in line and not line.startswith("#"):
-            key, val = line.split("=", 1)
-            os.environ[key] = val
+from env_loader import load_env  # noqa: E402
+
+load_env(ROOT_DIR)
 
 VERSION = os.getenv("APP_VERSION", "2.0.0")
 
