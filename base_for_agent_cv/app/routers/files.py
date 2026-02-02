@@ -4,7 +4,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import List
 
-from fastapi import APIRouter, File, HTTPException, UploadFile
+from fastapi import APIRouter, File, Form, Header, HTTPException, UploadFile
 
 from ..models.schemas import FileInfo
 from ..services.text_analysis import analyze_text, extract_text
@@ -27,10 +27,19 @@ def get_uploaded_files_store():
 
 
 @router.post("/upload", response_model=FileInfo)
-async def upload_file(file: UploadFile = File(...)):
+async def upload_file(
+    file: UploadFile = File(...),
+    session_id: str | None = Form(default=None),
+    x_session_id: str | None = Header(default=None, alias="X-Session-Id"),
+):
     suffix = Path(file.filename).suffix.lower()
     if suffix not in ALLOWED_EXTENSIONS:
         raise HTTPException(400, "Формат не поддерживается. Разрешены: PDF, DOCX, TXT")
+
+    # Require session scoping to avoid cross-user leaks.
+    owner_session_id = session_id or x_session_id
+    if not owner_session_id:
+        raise HTTPException(400, "Session required. Provide session_id or X-Session-Id")
 
     # Stream upload to disk to avoid holding the whole file in memory.
     file_path_tmp = UPLOAD_DIR / f"tmp_{uuid.uuid4().hex}{suffix}"
@@ -70,6 +79,7 @@ async def upload_file(file: UploadFile = File(...)):
         "uploaded_at": datetime.now().isoformat(),
         "preview": preview,
         "issues": issues,
+        "owner_session_id": owner_session_id,
     }
     uploaded_files[file_id] = file_info
 
@@ -77,7 +87,21 @@ async def upload_file(file: UploadFile = File(...)):
 
 
 @router.get("/", response_model=List[FileInfo])
-async def list_files():
+async def list_files(
+    session_id: str | None = None,
+    x_session_id: str | None = Header(default=None, alias="X-Session-Id"),
+):
+    """List files.
+
+    For privacy, if a session id is provided (query or header), only return
+    files belonging to that session. If no session id is provided, return an
+    empty list.
+    """
+
+    owner = session_id or x_session_id
+    if not owner:
+        return []
+
     return [
         FileInfo(
             id=f["id"],
@@ -89,15 +113,27 @@ async def list_files():
             issues=f.get("issues"),
         )
         for f in uploaded_files.values()
+        if f.get("owner_session_id") == owner
     ]
 
 
 @router.delete("/{file_id}")
-async def delete_file(file_id: str):
+async def delete_file(
+    file_id: str,
+    session_id: str | None = None,
+    x_session_id: str | None = Header(default=None, alias="X-Session-Id"),
+):
     if file_id not in uploaded_files:
         raise HTTPException(404, "Файл не найден")
 
     file_info = uploaded_files[file_id]
+
+    owner = file_info.get("owner_session_id")
+    requester = session_id or x_session_id
+    if owner and requester != owner:
+        # Avoid leaking that the file exists.
+        raise HTTPException(404, "Файл не найден")
+
     Path(file_info["path"]).unlink(missing_ok=True)
     del uploaded_files[file_id]
 

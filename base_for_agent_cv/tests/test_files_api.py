@@ -5,7 +5,10 @@ def test_upload_file_txt_success_returns_fileinfo_and_issues(client: TestClient)
     content = "Datum narození: 15.1.1985\nPraxe 2015-2023\n"
     resp = client.post(
         "/files/upload",
-        files={"file": ("cv.txt", content.encode("utf-8"), "text/plain")},
+        files={
+            "file": ("cv.txt", content.encode("utf-8"), "text/plain"),
+            "session_id": (None, "s1"),
+        },
     )
     assert resp.status_code == 200
     data = resp.json()
@@ -30,7 +33,7 @@ def test_upload_file_too_large_returns_400(client: TestClient):
     big = b"a" * (10 * 1024 * 1024 + 1)
     resp = client.post(
         "/files/upload",
-        files={"file": ("big.txt", big, "text/plain")},
+        files={"file": ("big.txt", big, "text/plain"), "session_id": (None, "s1")},
     )
     assert resp.status_code == 400
     assert "Файл слишком большой" in resp.text
@@ -39,11 +42,16 @@ def test_upload_file_too_large_returns_400(client: TestClient):
 def test_list_files_returns_uploaded_files_without_text_or_path(client: TestClient):
     resp = client.post(
         "/files/upload",
-        files={"file": ("cv.txt", b"hello", "text/plain")},
+        files={"file": ("cv.txt", b"hello", "text/plain"), "session_id": (None, "s1")},
     )
     assert resp.status_code == 200
 
+    # Without session id, list is empty (privacy)
     resp = client.get("/files/")
+    assert resp.status_code == 200
+    assert resp.json() == []
+
+    resp = client.get("/files/", params={"session_id": "s1"})
     assert resp.status_code == 200
     items = resp.json()
     assert isinstance(items, list)
@@ -64,15 +72,26 @@ def test_list_files_returns_uploaded_files_without_text_or_path(client: TestClie
 def test_delete_file_removes_from_store_and_list(client: TestClient):
     resp = client.post(
         "/files/upload",
-        files={"file": ("cv.txt", b"hello", "text/plain")},
+        files={"file": ("cv.txt", b"hello", "text/plain"), "session_id": (None, "s1")},
     )
     file_id = resp.json()["id"]
 
-    resp = client.delete(f"/files/{file_id}")
+    # Without session id, list is empty (privacy)
+    resp = client.get("/files/")
+    assert resp.status_code == 200
+    assert resp.json() == []
+
+    # With session id, it appears
+    resp = client.get("/files/", params={"session_id": "s1"})
+    assert resp.status_code == 200
+    assert len(resp.json()) == 1
+
+    # Delete with correct session id
+    resp = client.delete(f"/files/{file_id}", params={"session_id": "s1"})
     assert resp.status_code == 200
     assert resp.json()["status"] == "deleted"
 
-    resp = client.get("/files/")
+    resp = client.get("/files/", params={"session_id": "s1"})
     assert resp.status_code == 200
     assert resp.json() == []
 
