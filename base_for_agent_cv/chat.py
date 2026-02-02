@@ -13,13 +13,9 @@ ROOT_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT_DIR))
 sys.path.insert(0, str(ROOT_DIR / "packages"))
 
-env_path = ROOT_DIR / ".env"
-if env_path.exists():
-    for line in env_path.read_text().splitlines():
-        line = line.strip()
-        if "=" in line and not line.startswith("#"):
-            key, val = line.split("=", 1)
-            os.environ[key] = val
+from env_loader import load_env
+
+load_env(ROOT_DIR)
 
 # System prompt v1.2.3
 CHAT_SYSTEM_PROMPT = """You are CZ Career Architect v1.2.3 - expert consultant for Czech
