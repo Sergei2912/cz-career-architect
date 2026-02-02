@@ -1,0 +1,26 @@
+profile_id: hr_review_default
+version: 0
+language:
+  documents: cs
+  comments: ru
+ats:
+  allow_tables: false
+  single_language: true
+  max_pages: 2
+czech_typography:
+  csn_01_6910: true
+medical:
+  title_rule:
+    allow_titles_only_if_approbation_status: "Plně aprobován"
+policy:
+  gdpr_blocked_fields:
+    - birth_date
+    - age
+    - photo
+    - marital_status
+    - children
+    - nationality
+    - rodne_cislo
+    - full_address
+notes:
+  - "Default HR review profile. Documents in Czech, explanations in Russian."
