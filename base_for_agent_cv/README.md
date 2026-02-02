@@ -54,3 +54,13 @@ OPENAI_VECTOR_STORE_ID=vs_697776db24488191bf2f9bf0528d2845
 ---
 
 CZ Career Architect v2.0.0 | Model: gpt-5.2
+
+---
+
+## Roadmap (work in progress)
+
+This folder is being upgraded to a **profile-driven, SSOT-first pipeline**:
+- Profiles live in `base_for_agent_cv/profiles/`.
+- Foundation request/response types live in `base_for_agent_cv/pipeline/types.py`.
+
+This PR is additive: existing v1/v2 entry points keep working.

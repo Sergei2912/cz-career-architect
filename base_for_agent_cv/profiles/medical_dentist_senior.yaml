@@ -1,0 +1,12 @@
+profile_id: medical_dentist_senior
+version: 0
+inherits: hr_review_default
+specialization: dentist
+style:
+  tone: professional
+  emphasize:
+    - endodontics
+    - microscope
+    - leadership
+notes:
+  - "For experienced dentists applying in CZ healthcare."
