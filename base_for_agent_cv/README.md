@@ -80,6 +80,63 @@ CORS_ALLOW_CREDENTIALS=false
 
 (Опционально) `OPENAI_VECTOR_STORE_ID` — если/когда будет реально подключён.
 
+## Context7 MCP Server
+
+Проект интегрирован с Context7 MCP (Model Context Protocol) сервером для расширенного управления контекстом.
+
+### Что такое Context7 MCP?
+
+Context7 MCP — это сервер Model Context Protocol от Upstash, который обеспечивает:
+- Долговременное хранение контекста в Redis
+- Управление сессиями для AI-ассистентов
+- Кроссплатформенную совместимость через стандартный протокол
+
+Подробнее: [Context7 MCP Documentation](https://github.com/upstash/context7-mcp)
+
+### Быстрый старт с MCP
+
+```bash
+# 1. Установить Node.js зависимости (если еще не установлены)
+npm install
+
+# 2. Настроить переменные окружения для Upstash Redis
+# Добавь в .env:
+# UPSTASH_REDIS_REST_URL=your_url_here
+# UPSTASH_REDIS_REST_TOKEN=your_token_here
+
+# 3. Валидировать конфигурацию MCP
+./validate-mcp-config.sh
+
+# 4. Запустить интеграционный тест
+npm run test:mcp
+```
+
+### Конфигурация (.mcp.json)
+
+MCP сервер настраивается через `.mcp.json`:
+- Версия зафиксирована на `@upstash/context7-mcp@2.1.1` для стабильности
+- Требуются переменные окружения: `UPSTASH_REDIS_REST_URL` и `UPSTASH_REDIS_REST_TOKEN`
+
+### Docker поддержка
+
+Запустить MCP сервер в контейнере:
+
+```bash
+# Собрать образ
+docker build -t cz-career-architect-mcp .
+
+# Запустить с переменными окружения
+docker run -e UPSTASH_REDIS_REST_URL=your_url \
+           -e UPSTASH_REDIS_REST_TOKEN=your_token \
+           cz-career-architect-mcp
+```
+
+### Разработка
+
+- **Валидация**: `./validate-mcp-config.sh` проверяет корректность `.mcp.json`
+- **Тестирование**: `npm run test:mcp` запускает интеграционные тесты
+- **Логирование**: Все операции MCP логируются в `mcp.log` через winston
+
 ---
 
 CZ Career Architect v2.0.0 | Model: gpt-5.2

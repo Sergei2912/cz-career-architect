@@ -9,3 +9,11 @@ build/
 uploads/
 venv/
 .venv/
+
+# Node.js
+node_modules/
+npm-debug.log
+package-lock.json
+
+# MCP logs
+mcp.log
