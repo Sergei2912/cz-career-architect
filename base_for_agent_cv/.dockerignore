@@ -1,0 +1,41 @@
+# Node
+node_modules
+npm-debug.log
+dist
+
+# Python
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info
+.venv
+venv
+.pytest_cache
+
+# Logs
+*.log
+mcp.log
+
+# Environment
+.env
+.env.local
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Uploads and output
+uploads/
+out/
+
+# Git
+.git
+.gitignore

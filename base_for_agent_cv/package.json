@@ -1,0 +1,18 @@
+{
+  "name": "cz-career-architect-mcp",
+  "version": "1.0.0",
+  "description": "Context7 MCP server integration for CZ Career Architect",
+  "scripts": {
+    "test:mcp": "ts-node test-mcp-setup.ts",
+    "validate:mcp": "./validate-mcp-config.sh"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3",
+    "winston": "^3.11.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
