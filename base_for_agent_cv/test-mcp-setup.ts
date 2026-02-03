@@ -123,14 +123,19 @@ async function testMCPExecution(config: MCPConfig): Promise<boolean> {
     });
     
     process.on('close', (code) => {
-      if (code === 0 || stdout.length > 0 || stderr.includes('context7')) {
+      // Success if: help text was displayed (expected output for --help flag)
+      if (code === 0 && stdout.includes('Usage:') && stdout.includes('Options:')) {
         logger.info('✓ MCP server execution test passed');
         resolve(true);
-      } else {
+      } else if (code !== 0) {
         logger.error(`MCP server execution failed with code ${code}`);
         logger.error(`stdout: ${stdout}`);
         logger.error(`stderr: ${stderr}`);
         resolve(false);
+      } else {
+        logger.warn('MCP server executed but output format was unexpected');
+        logger.info('This may indicate a version change in the MCP server');
+        resolve(true);
       }
     });
     

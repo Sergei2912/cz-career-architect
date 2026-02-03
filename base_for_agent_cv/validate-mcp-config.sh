@@ -54,9 +54,9 @@ if echo "$ARGS" | grep -q "@latest"; then
 fi
 
 # Check if version is pinned
-if echo "$ARGS" | grep -q "@[0-9]\+\.[0-9]\+\.[0-9]\+"; then
+if echo "$ARGS" | grep -E '@[0-9]+\.[0-9]+\.[0-9]+' > /dev/null; then
     echo "✓ MCP configuration is valid."
-    echo "✓ Version is pinned: $(echo "$ARGS" | grep -o '@[0-9]\+\.[0-9]\+\.[0-9]\+')"
+    echo "✓ Version is pinned: $(echo "$ARGS" | grep -oE '@[0-9]+\.[0-9]+\.[0-9]+')"
 else
     echo "Warning: Version does not appear to be pinned to a specific semver version."
 fi
