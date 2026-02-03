@@ -32,9 +32,10 @@ ENV UPSTASH_REDIS_REST_TOKEN=""
 # Expose a port if the MCP server uses one (adjust as needed)
 EXPOSE 3000
 
-# Health check
+# Health check - verify Node.js is working
+# Note: MCP server health depends on Redis connection at runtime
 HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
-  CMD node -e "console.log('healthy')" || exit 1
+  CMD node -e "process.exit(0)" || exit 1
 
 # Default command: run the MCP server
 # Can be overridden with docker run command
