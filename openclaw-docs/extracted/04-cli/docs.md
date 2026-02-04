@@ -1,0 +1,8 @@
+# `openclaw docs`
+
+Search the live docs index.
+
+```bash
+openclaw docs browser extension
+openclaw docs sandbox allowHostControl
+```
