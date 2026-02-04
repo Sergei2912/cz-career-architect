@@ -1,0 +1,2370 @@
+{
+  "name": "openclaw-docs",
+  "version": "1.0.0",
+  "source": "https://github.com/openclaw/openclaw",
+  "extracted_at": "2026-02-04T02:56:45.466Z",
+  "documents": [
+    {
+      "id": "01-core/overview",
+      "title": "OpenClaw",
+      "path": "01-core/overview.md",
+      "source_path": "index.md",
+      "source_url": "https://docs.openclaw.ai/index",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/index.md",
+      "category": "01-core",
+      "description": ""
+    },
+    {
+      "id": "01-core/getting-started",
+      "title": "Getting Started",
+      "path": "01-core/getting-started.md",
+      "source_path": "start/getting-started.md",
+      "source_url": "https://docs.openclaw.ai/start/getting-started",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/start/getting-started.md",
+      "category": "01-core",
+      "description": ""
+    },
+    {
+      "id": "01-core/onboarding-wizard",
+      "title": "Onboarding Wizard",
+      "path": "01-core/onboarding-wizard.md",
+      "source_path": "start/wizard.md",
+      "source_url": "https://docs.openclaw.ai/start/wizard",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/start/wizard.md",
+      "category": "01-core",
+      "description": ""
+    },
+    {
+      "id": "01-core/setup",
+      "title": "Setup",
+      "path": "01-core/setup.md",
+      "source_path": "start/setup.md",
+      "source_url": "https://docs.openclaw.ai/start/setup",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/start/setup.md",
+      "category": "01-core",
+      "description": ""
+    },
+    {
+      "id": "01-core/onboarding",
+      "title": "Onboarding",
+      "path": "01-core/onboarding.md",
+      "source_path": "start/onboarding.md",
+      "source_url": "https://docs.openclaw.ai/start/onboarding",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/start/onboarding.md",
+      "category": "01-core",
+      "description": ""
+    },
+    {
+      "id": "01-core/pairing",
+      "title": "Pairing",
+      "path": "01-core/pairing.md",
+      "source_path": "start/pairing.md",
+      "source_url": "https://docs.openclaw.ai/start/pairing",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/start/pairing.md",
+      "category": "01-core",
+      "description": ""
+    },
+    {
+      "id": "01-core/personal-assistant",
+      "title": "Personal Assistant Setup",
+      "path": "01-core/personal-assistant.md",
+      "source_path": "start/openclaw.md",
+      "source_url": "https://docs.openclaw.ai/start/openclaw",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/start/openclaw.md",
+      "category": "01-core",
+      "description": ""
+    },
+    {
+      "id": "01-core/hubs",
+      "title": "Docs Hubs",
+      "path": "01-core/hubs.md",
+      "source_path": "start/hubs.md",
+      "source_url": "https://docs.openclaw.ai/start/hubs",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/start/hubs.md",
+      "category": "01-core",
+      "description": ""
+    },
+    {
+      "id": "01-core/showcase",
+      "title": "Showcase",
+      "path": "01-core/showcase.md",
+      "source_path": "start/showcase.md",
+      "source_url": "https://docs.openclaw.ai/start/showcase",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/start/showcase.md",
+      "category": "01-core",
+      "description": "Real-world OpenClaw projects from the community"
+    },
+    {
+      "id": "01-core/lore",
+      "title": "OpenClaw Lore",
+      "path": "01-core/lore.md",
+      "source_path": "start/lore.md",
+      "source_url": "https://docs.openclaw.ai/start/lore",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/start/lore.md",
+      "category": "01-core",
+      "description": ""
+    },
+    {
+      "id": "02-installation/overview",
+      "title": "Install",
+      "path": "02-installation/overview.md",
+      "source_path": "install/index.md",
+      "source_url": "https://docs.openclaw.ai/install",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/install/index.md",
+      "category": "02-installation",
+      "description": ""
+    },
+    {
+      "id": "02-installation/installer",
+      "title": "Installer Internals",
+      "path": "02-installation/installer.md",
+      "source_path": "install/installer.md",
+      "source_url": "https://docs.openclaw.ai/install/installer",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/install/installer.md",
+      "category": "02-installation",
+      "description": ""
+    },
+    {
+      "id": "02-installation/docker",
+      "title": "Docker",
+      "path": "02-installation/docker.md",
+      "source_path": "install/docker.md",
+      "source_url": "https://docs.openclaw.ai/install/docker",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/install/docker.md",
+      "category": "02-installation",
+      "description": ""
+    },
+    {
+      "id": "02-installation/bun",
+      "title": "Bun (Experimental)",
+      "path": "02-installation/bun.md",
+      "source_path": "install/bun.md",
+      "source_url": "https://docs.openclaw.ai/install/bun",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/install/bun.md",
+      "category": "02-installation",
+      "description": ""
+    },
+    {
+      "id": "02-installation/nix",
+      "title": "Nix",
+      "path": "02-installation/nix.md",
+      "source_path": "install/nix.md",
+      "source_url": "https://docs.openclaw.ai/install/nix",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/install/nix.md",
+      "category": "02-installation",
+      "description": ""
+    },
+    {
+      "id": "02-installation/ansible",
+      "title": "Ansible",
+      "path": "02-installation/ansible.md",
+      "source_path": "install/ansible.md",
+      "source_url": "https://docs.openclaw.ai/install/ansible",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/install/ansible.md",
+      "category": "02-installation",
+      "description": ""
+    },
+    {
+      "id": "02-installation/development-channels",
+      "title": "Development Channels",
+      "path": "02-installation/development-channels.md",
+      "source_path": "install/development-channels.md",
+      "source_url": "https://docs.openclaw.ai/install/development-channels",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/install/development-channels.md",
+      "category": "02-installation",
+      "description": ""
+    },
+    {
+      "id": "02-installation/updating",
+      "title": "Updating",
+      "path": "02-installation/updating.md",
+      "source_path": "install/updating.md",
+      "source_url": "https://docs.openclaw.ai/install/updating",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/install/updating.md",
+      "category": "02-installation",
+      "description": ""
+    },
+    {
+      "id": "02-installation/uninstall",
+      "title": "Uninstall",
+      "path": "02-installation/uninstall.md",
+      "source_path": "install/uninstall.md",
+      "source_url": "https://docs.openclaw.ai/install/uninstall",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/install/uninstall.md",
+      "category": "02-installation",
+      "description": ""
+    },
+    {
+      "id": "03-configuration/gateway-config",
+      "title": "Configuration",
+      "path": "03-configuration/gateway-config.md",
+      "source_path": "gateway/configuration.md",
+      "source_url": "https://docs.openclaw.ai/gateway/configuration",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/gateway/configuration.md",
+      "category": "03-configuration",
+      "description": ""
+    },
+    {
+      "id": "03-configuration/config-examples",
+      "title": "Configuration Examples",
+      "path": "03-configuration/config-examples.md",
+      "source_path": "gateway/configuration-examples.md",
+      "source_url": "https://docs.openclaw.ai/gateway/configuration-examples",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/gateway/configuration-examples.md",
+      "category": "03-configuration",
+      "description": ""
+    },
+    {
+      "id": "03-configuration/environment",
+      "title": "Environment Variables",
+      "path": "03-configuration/environment.md",
+      "source_path": "environment.md",
+      "source_url": "https://docs.openclaw.ai/environment",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/environment.md",
+      "category": "03-configuration",
+      "description": ""
+    },
+    {
+      "id": "04-cli/overview",
+      "title": "CLI Reference",
+      "path": "04-cli/overview.md",
+      "source_path": "cli/index.md",
+      "source_url": "https://docs.openclaw.ai/cli",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/cli/index.md",
+      "category": "04-cli",
+      "description": ""
+    },
+    {
+      "id": "04-cli/agent",
+      "title": "agent",
+      "path": "04-cli/agent.md",
+      "source_path": "cli/agent.md",
+      "source_url": "https://docs.openclaw.ai/cli/agent",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/cli/agent.md",
+      "category": "04-cli",
+      "description": ""
+    },
+    {
+      "id": "04-cli/agents",
+      "title": "agents",
+      "path": "04-cli/agents.md",
+      "source_path": "cli/agents.md",
+      "source_url": "https://docs.openclaw.ai/cli/agents",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/cli/agents.md",
+      "category": "04-cli",
+      "description": ""
+    },
+    {
+      "id": "04-cli/gateway",
+      "title": "gateway",
+      "path": "04-cli/gateway.md",
+      "source_path": "cli/gateway.md",
+      "source_url": "https://docs.openclaw.ai/cli/gateway",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/cli/gateway.md",
+      "category": "04-cli",
+      "description": ""
+    },
+    {
+      "id": "04-cli/browser",
+      "title": "browser",
+      "path": "04-cli/browser.md",
+      "source_path": "cli/browser.md",
+      "source_url": "https://docs.openclaw.ai/cli/browser",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/cli/browser.md",
+      "category": "04-cli",
+      "description": ""
+    },
+    {
+      "id": "04-cli/message",
+      "title": "message",
+      "path": "04-cli/message.md",
+      "source_path": "cli/message.md",
+      "source_url": "https://docs.openclaw.ai/cli/message",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/cli/message.md",
+      "category": "04-cli",
+      "description": ""
+    },
+    {
+      "id": "04-cli/channels",
+      "title": "channels",
+      "path": "04-cli/channels.md",
+      "source_path": "cli/channels.md",
+      "source_url": "https://docs.openclaw.ai/cli/channels",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/cli/channels.md",
+      "category": "04-cli",
+      "description": ""
+    },
+    {
+      "id": "04-cli/configure",
+      "title": "configure",
+      "path": "04-cli/configure.md",
+      "source_path": "cli/configure.md",
+      "source_url": "https://docs.openclaw.ai/cli/configure",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/cli/configure.md",
+      "category": "04-cli",
+      "description": ""
+    },
+    {
+      "id": "04-cli/cron",
+      "title": "cron",
+      "path": "04-cli/cron.md",
+      "source_path": "cli/cron.md",
+      "source_url": "https://docs.openclaw.ai/cli/cron",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/cli/cron.md",
+      "category": "04-cli",
+      "description": ""
+    },
+    {
+      "id": "04-cli/dashboard",
+      "title": "dashboard",
+      "path": "04-cli/dashboard.md",
+      "source_path": "cli/dashboard.md",
+      "source_url": "https://docs.openclaw.ai/cli/dashboard",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/cli/dashboard.md",
+      "category": "04-cli",
+      "description": ""
+    },
+    {
+      "id": "04-cli/doctor",
+      "title": "doctor",
+      "path": "04-cli/doctor.md",
+      "source_path": "cli/doctor.md",
+      "source_url": "https://docs.openclaw.ai/cli/doctor",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/cli/doctor.md",
+      "category": "04-cli",
+      "description": ""
+    },
+    {
+      "id": "04-cli/health",
+      "title": "health",
+      "path": "04-cli/health.md",
+      "source_path": "cli/health.md",
+      "source_url": "https://docs.openclaw.ai/cli/health",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/cli/health.md",
+      "category": "04-cli",
+      "description": ""
+    },
+    {
+      "id": "04-cli/hooks",
+      "title": "hooks",
+      "path": "04-cli/hooks.md",
+      "source_path": "cli/hooks.md",
+      "source_url": "https://docs.openclaw.ai/cli/hooks",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/cli/hooks.md",
+      "category": "04-cli",
+      "description": ""
+    },
+    {
+      "id": "04-cli/logs",
+      "title": "logs",
+      "path": "04-cli/logs.md",
+      "source_path": "cli/logs.md",
+      "source_url": "https://docs.openclaw.ai/cli/logs",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/cli/logs.md",
+      "category": "04-cli",
+      "description": ""
+    },
+    {
+      "id": "04-cli/memory",
+      "title": "memory",
+      "path": "04-cli/memory.md",
+      "source_path": "cli/memory.md",
+      "source_url": "https://docs.openclaw.ai/cli/memory",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/cli/memory.md",
+      "category": "04-cli",
+      "description": ""
+    },
+    {
+      "id": "04-cli/models",
+      "title": "models",
+      "path": "04-cli/models.md",
+      "source_path": "cli/models.md",
+      "source_url": "https://docs.openclaw.ai/cli/models",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/cli/models.md",
+      "category": "04-cli",
+      "description": ""
+    },
+    {
+      "id": "04-cli/nodes",
+      "title": "nodes",
+      "path": "04-cli/nodes.md",
+      "source_path": "cli/nodes.md",
+      "source_url": "https://docs.openclaw.ai/cli/nodes",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/cli/nodes.md",
+      "category": "04-cli",
+      "description": ""
+    },
+    {
+      "id": "04-cli/onboard",
+      "title": "onboard",
+      "path": "04-cli/onboard.md",
+      "source_path": "cli/onboard.md",
+      "source_url": "https://docs.openclaw.ai/cli/onboard",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/cli/onboard.md",
+      "category": "04-cli",
+      "description": ""
+    },
+    {
+      "id": "04-cli/pairing",
+      "title": "pairing",
+      "path": "04-cli/pairing.md",
+      "source_path": "cli/pairing.md",
+      "source_url": "https://docs.openclaw.ai/cli/pairing",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/cli/pairing.md",
+      "category": "04-cli",
+      "description": ""
+    },
+    {
+      "id": "04-cli/plugins",
+      "title": "plugins",
+      "path": "04-cli/plugins.md",
+      "source_path": "cli/plugins.md",
+      "source_url": "https://docs.openclaw.ai/cli/plugins",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/cli/plugins.md",
+      "category": "04-cli",
+      "description": ""
+    },
+    {
+      "id": "04-cli/reset",
+      "title": "reset",
+      "path": "04-cli/reset.md",
+      "source_path": "cli/reset.md",
+      "source_url": "https://docs.openclaw.ai/cli/reset",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/cli/reset.md",
+      "category": "04-cli",
+      "description": ""
+    },
+    {
+      "id": "04-cli/sandbox",
+      "title": "Sandbox CLI",
+      "path": "04-cli/sandbox.md",
+      "source_path": "cli/sandbox.md",
+      "source_url": "https://docs.openclaw.ai/cli/sandbox",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/cli/sandbox.md",
+      "category": "04-cli",
+      "description": ""
+    },
+    {
+      "id": "04-cli/security",
+      "title": "security",
+      "path": "04-cli/security.md",
+      "source_path": "cli/security.md",
+      "source_url": "https://docs.openclaw.ai/cli/security",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/cli/security.md",
+      "category": "04-cli",
+      "description": ""
+    },
+    {
+      "id": "04-cli/sessions",
+      "title": "sessions",
+      "path": "04-cli/sessions.md",
+      "source_path": "cli/sessions.md",
+      "source_url": "https://docs.openclaw.ai/cli/sessions",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/cli/sessions.md",
+      "category": "04-cli",
+      "description": ""
+    },
+    {
+      "id": "04-cli/setup",
+      "title": "setup",
+      "path": "04-cli/setup.md",
+      "source_path": "cli/setup.md",
+      "source_url": "https://docs.openclaw.ai/cli/setup",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/cli/setup.md",
+      "category": "04-cli",
+      "description": ""
+    },
+    {
+      "id": "04-cli/skills",
+      "title": "skills",
+      "path": "04-cli/skills.md",
+      "source_path": "cli/skills.md",
+      "source_url": "https://docs.openclaw.ai/cli/skills",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/cli/skills.md",
+      "category": "04-cli",
+      "description": ""
+    },
+    {
+      "id": "04-cli/status",
+      "title": "status",
+      "path": "04-cli/status.md",
+      "source_path": "cli/status.md",
+      "source_url": "https://docs.openclaw.ai/cli/status",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/cli/status.md",
+      "category": "04-cli",
+      "description": ""
+    },
+    {
+      "id": "04-cli/system",
+      "title": "system",
+      "path": "04-cli/system.md",
+      "source_path": "cli/system.md",
+      "source_url": "https://docs.openclaw.ai/cli/system",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/cli/system.md",
+      "category": "04-cli",
+      "description": ""
+    },
+    {
+      "id": "04-cli/tui",
+      "title": "tui",
+      "path": "04-cli/tui.md",
+      "source_path": "cli/tui.md",
+      "source_url": "https://docs.openclaw.ai/cli/tui",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/cli/tui.md",
+      "category": "04-cli",
+      "description": ""
+    },
+    {
+      "id": "04-cli/uninstall",
+      "title": "uninstall",
+      "path": "04-cli/uninstall.md",
+      "source_path": "cli/uninstall.md",
+      "source_url": "https://docs.openclaw.ai/cli/uninstall",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/cli/uninstall.md",
+      "category": "04-cli",
+      "description": ""
+    },
+    {
+      "id": "04-cli/update",
+      "title": "update",
+      "path": "04-cli/update.md",
+      "source_path": "cli/update.md",
+      "source_url": "https://docs.openclaw.ai/cli/update",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/cli/update.md",
+      "category": "04-cli",
+      "description": ""
+    },
+    {
+      "id": "04-cli/voicecall",
+      "title": "voicecall",
+      "path": "04-cli/voicecall.md",
+      "source_path": "cli/voicecall.md",
+      "source_url": "https://docs.openclaw.ai/cli/voicecall",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/cli/voicecall.md",
+      "category": "04-cli",
+      "description": ""
+    },
+    {
+      "id": "04-cli/approvals",
+      "title": "approvals",
+      "path": "04-cli/approvals.md",
+      "source_path": "cli/approvals.md",
+      "source_url": "https://docs.openclaw.ai/cli/approvals",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/cli/approvals.md",
+      "category": "04-cli",
+      "description": ""
+    },
+    {
+      "id": "04-cli/directory",
+      "title": "directory",
+      "path": "04-cli/directory.md",
+      "source_path": "cli/directory.md",
+      "source_url": "https://docs.openclaw.ai/cli/directory",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/cli/directory.md",
+      "category": "04-cli",
+      "description": ""
+    },
+    {
+      "id": "04-cli/dns",
+      "title": "dns",
+      "path": "04-cli/dns.md",
+      "source_path": "cli/dns.md",
+      "source_url": "https://docs.openclaw.ai/cli/dns",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/cli/dns.md",
+      "category": "04-cli",
+      "description": ""
+    },
+    {
+      "id": "04-cli/docs",
+      "title": "docs",
+      "path": "04-cli/docs.md",
+      "source_path": "cli/docs.md",
+      "source_url": "https://docs.openclaw.ai/cli/docs",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/cli/docs.md",
+      "category": "04-cli",
+      "description": ""
+    },
+    {
+      "id": "05-skills/overview",
+      "title": "Tools",
+      "path": "05-skills/overview.md",
+      "source_path": "tools/index.md",
+      "source_url": "https://docs.openclaw.ai/tools",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/tools/index.md",
+      "category": "05-skills",
+      "description": ""
+    },
+    {
+      "id": "05-skills/skills",
+      "title": "Skills",
+      "path": "05-skills/skills.md",
+      "source_path": "tools/skills.md",
+      "source_url": "https://docs.openclaw.ai/tools/skills",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/tools/skills.md",
+      "category": "05-skills",
+      "description": ""
+    },
+    {
+      "id": "05-skills/skills-config",
+      "title": "Skills Config",
+      "path": "05-skills/skills-config.md",
+      "source_path": "tools/skills-config.md",
+      "source_url": "https://docs.openclaw.ai/tools/skills-config",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/tools/skills-config.md",
+      "category": "05-skills",
+      "description": ""
+    },
+    {
+      "id": "05-skills/clawhub",
+      "title": "ClawHub",
+      "path": "05-skills/clawhub.md",
+      "source_path": "tools/clawhub.md",
+      "source_url": "https://docs.openclaw.ai/tools/clawhub",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/tools/clawhub.md",
+      "category": "05-skills",
+      "description": ""
+    },
+    {
+      "id": "05-skills/exec",
+      "title": "Exec Tool",
+      "path": "05-skills/exec.md",
+      "source_path": "tools/exec.md",
+      "source_url": "https://docs.openclaw.ai/tools/exec",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/tools/exec.md",
+      "category": "05-skills",
+      "description": ""
+    },
+    {
+      "id": "05-skills/browser",
+      "title": "Browser (OpenClaw-managed)",
+      "path": "05-skills/browser.md",
+      "source_path": "tools/browser.md",
+      "source_url": "https://docs.openclaw.ai/tools/browser",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/tools/browser.md",
+      "category": "05-skills",
+      "description": ""
+    },
+    {
+      "id": "05-skills/browser-login",
+      "title": "Browser Login",
+      "path": "05-skills/browser-login.md",
+      "source_path": "tools/browser-login.md",
+      "source_url": "https://docs.openclaw.ai/tools/browser-login",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/tools/browser-login.md",
+      "category": "05-skills",
+      "description": ""
+    },
+    {
+      "id": "05-skills/chrome-extension",
+      "title": "Chrome Extension",
+      "path": "05-skills/chrome-extension.md",
+      "source_path": "tools/chrome-extension.md",
+      "source_url": "https://docs.openclaw.ai/tools/chrome-extension",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/tools/chrome-extension.md",
+      "category": "05-skills",
+      "description": ""
+    },
+    {
+      "id": "05-skills/browser-linux-troubleshooting",
+      "title": "Browser Troubleshooting",
+      "path": "05-skills/browser-linux-troubleshooting.md",
+      "source_path": "tools/browser-linux-troubleshooting.md",
+      "source_url": "https://docs.openclaw.ai/tools/browser-linux-troubleshooting",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/tools/browser-linux-troubleshooting.md",
+      "category": "05-skills",
+      "description": ""
+    },
+    {
+      "id": "05-skills/lobster",
+      "title": "Lobster",
+      "path": "05-skills/lobster.md",
+      "source_path": "tools/lobster.md",
+      "source_url": "https://docs.openclaw.ai/tools/lobster",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/tools/lobster.md",
+      "category": "05-skills",
+      "description": "Typed workflow runtime for OpenClaw — composable pipelines with approval gates."
+    },
+    {
+      "id": "05-skills/llm-task",
+      "title": "LLM Task",
+      "path": "05-skills/llm-task.md",
+      "source_path": "tools/llm-task.md",
+      "source_url": "https://docs.openclaw.ai/tools/llm-task",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/tools/llm-task.md",
+      "category": "05-skills",
+      "description": ""
+    },
+    {
+      "id": "05-skills/web",
+      "title": "Web Tools",
+      "path": "05-skills/web.md",
+      "source_path": "tools/web.md",
+      "source_url": "https://docs.openclaw.ai/tools/web",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/tools/web.md",
+      "category": "05-skills",
+      "description": ""
+    },
+    {
+      "id": "05-skills/apply-patch",
+      "title": "apply_patch Tool",
+      "path": "05-skills/apply-patch.md",
+      "source_path": "tools/apply-patch.md",
+      "source_url": "https://docs.openclaw.ai/tools/apply-patch",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/tools/apply-patch.md",
+      "category": "05-skills",
+      "description": ""
+    },
+    {
+      "id": "05-skills/elevated",
+      "title": "Elevated Mode",
+      "path": "05-skills/elevated.md",
+      "source_path": "tools/elevated.md",
+      "source_url": "https://docs.openclaw.ai/tools/elevated",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/tools/elevated.md",
+      "category": "05-skills",
+      "description": ""
+    },
+    {
+      "id": "05-skills/thinking",
+      "title": "Thinking Levels",
+      "path": "05-skills/thinking.md",
+      "source_path": "tools/thinking.md",
+      "source_url": "https://docs.openclaw.ai/tools/thinking",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/tools/thinking.md",
+      "category": "05-skills",
+      "description": ""
+    },
+    {
+      "id": "05-skills/reactions",
+      "title": "Reactions",
+      "path": "05-skills/reactions.md",
+      "source_path": "tools/reactions.md",
+      "source_url": "https://docs.openclaw.ai/tools/reactions",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/tools/reactions.md",
+      "category": "05-skills",
+      "description": ""
+    },
+    {
+      "id": "05-skills/agent-send",
+      "title": "Agent Send",
+      "path": "05-skills/agent-send.md",
+      "source_path": "tools/agent-send.md",
+      "source_url": "https://docs.openclaw.ai/tools/agent-send",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/tools/agent-send.md",
+      "category": "05-skills",
+      "description": ""
+    },
+    {
+      "id": "05-skills/subagents",
+      "title": "Sub-Agents",
+      "path": "05-skills/subagents.md",
+      "source_path": "tools/subagents.md",
+      "source_url": "https://docs.openclaw.ai/tools/subagents",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/tools/subagents.md",
+      "category": "05-skills",
+      "description": ""
+    },
+    {
+      "id": "05-skills/slash-commands",
+      "title": "Slash Commands",
+      "path": "05-skills/slash-commands.md",
+      "source_path": "tools/slash-commands.md",
+      "source_url": "https://docs.openclaw.ai/tools/slash-commands",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/tools/slash-commands.md",
+      "category": "05-skills",
+      "description": ""
+    },
+    {
+      "id": "05-skills/plugin-overview",
+      "title": "Plugins",
+      "path": "05-skills/plugin-overview.md",
+      "source_path": "plugin.md",
+      "source_url": "https://docs.openclaw.ai/plugin",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/plugin.md",
+      "category": "05-skills",
+      "description": ""
+    },
+    {
+      "id": "05-skills/voice-call-plugin",
+      "title": "Voice Call Plugin",
+      "path": "05-skills/voice-call-plugin.md",
+      "source_path": "plugins/voice-call.md",
+      "source_url": "https://docs.openclaw.ai/plugins/voice-call",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/plugins/voice-call.md",
+      "category": "05-skills",
+      "description": ""
+    },
+    {
+      "id": "05-skills/zalouser-plugin",
+      "title": "Zalo Personal Plugin",
+      "path": "05-skills/zalouser-plugin.md",
+      "source_path": "plugins/zalouser.md",
+      "source_url": "https://docs.openclaw.ai/plugins/zalouser",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/plugins/zalouser.md",
+      "category": "05-skills",
+      "description": ""
+    },
+    {
+      "id": "06-channels/overview",
+      "title": "Chat Channels",
+      "path": "06-channels/overview.md",
+      "source_path": "channels/index.md",
+      "source_url": "https://docs.openclaw.ai/channels",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/channels/index.md",
+      "category": "06-channels",
+      "description": ""
+    },
+    {
+      "id": "06-channels/whatsapp",
+      "title": "WhatsApp",
+      "path": "06-channels/whatsapp.md",
+      "source_path": "channels/whatsapp.md",
+      "source_url": "https://docs.openclaw.ai/channels/whatsapp",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/channels/whatsapp.md",
+      "category": "06-channels",
+      "description": ""
+    },
+    {
+      "id": "06-channels/telegram",
+      "title": "Telegram",
+      "path": "06-channels/telegram.md",
+      "source_path": "channels/telegram.md",
+      "source_url": "https://docs.openclaw.ai/channels/telegram",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/channels/telegram.md",
+      "category": "06-channels",
+      "description": ""
+    },
+    {
+      "id": "06-channels/grammy",
+      "title": "grammY",
+      "path": "06-channels/grammy.md",
+      "source_path": "channels/grammy.md",
+      "source_url": "https://docs.openclaw.ai/channels/grammy",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/channels/grammy.md",
+      "category": "06-channels",
+      "description": ""
+    },
+    {
+      "id": "06-channels/discord",
+      "title": "Discord",
+      "path": "06-channels/discord.md",
+      "source_path": "channels/discord.md",
+      "source_url": "https://docs.openclaw.ai/channels/discord",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/channels/discord.md",
+      "category": "06-channels",
+      "description": ""
+    },
+    {
+      "id": "06-channels/slack",
+      "title": "Slack",
+      "path": "06-channels/slack.md",
+      "source_path": "channels/slack.md",
+      "source_url": "https://docs.openclaw.ai/channels/slack",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/channels/slack.md",
+      "category": "06-channels",
+      "description": ""
+    },
+    {
+      "id": "06-channels/signal",
+      "title": "Signal",
+      "path": "06-channels/signal.md",
+      "source_path": "channels/signal.md",
+      "source_url": "https://docs.openclaw.ai/channels/signal",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/channels/signal.md",
+      "category": "06-channels",
+      "description": ""
+    },
+    {
+      "id": "06-channels/imessage",
+      "title": "iMessage",
+      "path": "06-channels/imessage.md",
+      "source_path": "channels/imessage.md",
+      "source_url": "https://docs.openclaw.ai/channels/imessage",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/channels/imessage.md",
+      "category": "06-channels",
+      "description": ""
+    },
+    {
+      "id": "06-channels/msteams",
+      "title": "Microsoft Teams",
+      "path": "06-channels/msteams.md",
+      "source_path": "channels/msteams.md",
+      "source_url": "https://docs.openclaw.ai/channels/msteams",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/channels/msteams.md",
+      "category": "06-channels",
+      "description": ""
+    },
+    {
+      "id": "06-channels/mattermost",
+      "title": "Mattermost",
+      "path": "06-channels/mattermost.md",
+      "source_path": "channels/mattermost.md",
+      "source_url": "https://docs.openclaw.ai/channels/mattermost",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/channels/mattermost.md",
+      "category": "06-channels",
+      "description": ""
+    },
+    {
+      "id": "06-channels/googlechat",
+      "title": "Google Chat",
+      "path": "06-channels/googlechat.md",
+      "source_path": "channels/googlechat.md",
+      "source_url": "https://docs.openclaw.ai/channels/googlechat",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/channels/googlechat.md",
+      "category": "06-channels",
+      "description": ""
+    },
+    {
+      "id": "06-channels/feishu",
+      "title": "Feishu",
+      "path": "06-channels/feishu.md",
+      "source_path": "channels/feishu.md",
+      "source_url": "https://docs.openclaw.ai/channels/feishu",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/channels/feishu.md",
+      "category": "06-channels",
+      "description": ""
+    },
+    {
+      "id": "06-channels/line",
+      "title": "LINE",
+      "path": "06-channels/line.md",
+      "source_path": "channels/line.md",
+      "source_url": "https://docs.openclaw.ai/channels/line",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/channels/line.md",
+      "category": "06-channels",
+      "description": ""
+    },
+    {
+      "id": "06-channels/matrix",
+      "title": "Matrix",
+      "path": "06-channels/matrix.md",
+      "source_path": "channels/matrix.md",
+      "source_url": "https://docs.openclaw.ai/channels/matrix",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/channels/matrix.md",
+      "category": "06-channels",
+      "description": ""
+    },
+    {
+      "id": "06-channels/zalo",
+      "title": "Zalo",
+      "path": "06-channels/zalo.md",
+      "source_path": "channels/zalo.md",
+      "source_url": "https://docs.openclaw.ai/channels/zalo",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/channels/zalo.md",
+      "category": "06-channels",
+      "description": ""
+    },
+    {
+      "id": "06-channels/zalouser",
+      "title": "Zalo Personal",
+      "path": "06-channels/zalouser.md",
+      "source_path": "channels/zalouser.md",
+      "source_url": "https://docs.openclaw.ai/channels/zalouser",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/channels/zalouser.md",
+      "category": "06-channels",
+      "description": ""
+    },
+    {
+      "id": "06-channels/location",
+      "title": "Channel Location Parsing",
+      "path": "06-channels/location.md",
+      "source_path": "channels/location.md",
+      "source_url": "https://docs.openclaw.ai/channels/location",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/channels/location.md",
+      "category": "06-channels",
+      "description": ""
+    },
+    {
+      "id": "06-channels/troubleshooting",
+      "title": "Channel Troubleshooting",
+      "path": "06-channels/troubleshooting.md",
+      "source_path": "channels/troubleshooting.md",
+      "source_url": "https://docs.openclaw.ai/channels/troubleshooting",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/channels/troubleshooting.md",
+      "category": "06-channels",
+      "description": ""
+    },
+    {
+      "id": "07-architecture/overview",
+      "title": "Gateway Architecture",
+      "path": "07-architecture/overview.md",
+      "source_path": "concepts/architecture.md",
+      "source_url": "https://docs.openclaw.ai/concepts/architecture",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/concepts/architecture.md",
+      "category": "07-architecture",
+      "description": ""
+    },
+    {
+      "id": "07-architecture/agent-runtime",
+      "title": "Agent Runtime",
+      "path": "07-architecture/agent-runtime.md",
+      "source_path": "concepts/agent.md",
+      "source_url": "https://docs.openclaw.ai/concepts/agent",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/concepts/agent.md",
+      "category": "07-architecture",
+      "description": ""
+    },
+    {
+      "id": "07-architecture/agent-loop",
+      "title": "Agent Loop",
+      "path": "07-architecture/agent-loop.md",
+      "source_path": "concepts/agent-loop.md",
+      "source_url": "https://docs.openclaw.ai/concepts/agent-loop",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/concepts/agent-loop.md",
+      "category": "07-architecture",
+      "description": ""
+    },
+    {
+      "id": "07-architecture/system-prompt",
+      "title": "System Prompt",
+      "path": "07-architecture/system-prompt.md",
+      "source_path": "concepts/system-prompt.md",
+      "source_url": "https://docs.openclaw.ai/concepts/system-prompt",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/concepts/system-prompt.md",
+      "category": "07-architecture",
+      "description": ""
+    },
+    {
+      "id": "07-architecture/context",
+      "title": "Context",
+      "path": "07-architecture/context.md",
+      "source_path": "concepts/context.md",
+      "source_url": "https://docs.openclaw.ai/concepts/context",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/concepts/context.md",
+      "category": "07-architecture",
+      "description": ""
+    },
+    {
+      "id": "07-architecture/agent-workspace",
+      "title": "Agent Workspace",
+      "path": "07-architecture/agent-workspace.md",
+      "source_path": "concepts/agent-workspace.md",
+      "source_url": "https://docs.openclaw.ai/concepts/agent-workspace",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/concepts/agent-workspace.md",
+      "category": "07-architecture",
+      "description": ""
+    },
+    {
+      "id": "07-architecture/memory",
+      "title": "memory",
+      "path": "07-architecture/memory.md",
+      "source_path": "concepts/memory.md",
+      "source_url": "https://docs.openclaw.ai/concepts/memory",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/concepts/memory.md",
+      "category": "07-architecture",
+      "description": ""
+    },
+    {
+      "id": "07-architecture/session",
+      "title": "Session Management",
+      "path": "07-architecture/session.md",
+      "source_path": "concepts/session.md",
+      "source_url": "https://docs.openclaw.ai/concepts/session",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/concepts/session.md",
+      "category": "07-architecture",
+      "description": ""
+    },
+    {
+      "id": "07-architecture/sessions",
+      "title": "Sessions",
+      "path": "07-architecture/sessions.md",
+      "source_path": "concepts/sessions.md",
+      "source_url": "https://docs.openclaw.ai/concepts/sessions",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/concepts/sessions.md",
+      "category": "07-architecture",
+      "description": ""
+    },
+    {
+      "id": "07-architecture/session-pruning",
+      "title": "session-pruning",
+      "path": "07-architecture/session-pruning.md",
+      "source_path": "concepts/session-pruning.md",
+      "source_url": "https://docs.openclaw.ai/concepts/session-pruning",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/concepts/session-pruning.md",
+      "category": "07-architecture",
+      "description": ""
+    },
+    {
+      "id": "07-architecture/session-tool",
+      "title": "Session Tools",
+      "path": "07-architecture/session-tool.md",
+      "source_path": "concepts/session-tool.md",
+      "source_url": "https://docs.openclaw.ai/concepts/session-tool",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/concepts/session-tool.md",
+      "category": "07-architecture",
+      "description": ""
+    },
+    {
+      "id": "07-architecture/compaction",
+      "title": "Compaction",
+      "path": "07-architecture/compaction.md",
+      "source_path": "concepts/compaction.md",
+      "source_url": "https://docs.openclaw.ai/concepts/compaction",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/concepts/compaction.md",
+      "category": "07-architecture",
+      "description": ""
+    },
+    {
+      "id": "07-architecture/multi-agent",
+      "title": "Multi-Agent Routing",
+      "path": "07-architecture/multi-agent.md",
+      "source_path": "concepts/multi-agent.md",
+      "source_url": "https://docs.openclaw.ai/concepts/multi-agent",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/concepts/multi-agent.md",
+      "category": "07-architecture",
+      "description": ""
+    },
+    {
+      "id": "07-architecture/presence",
+      "title": "Presence",
+      "path": "07-architecture/presence.md",
+      "source_path": "concepts/presence.md",
+      "source_url": "https://docs.openclaw.ai/concepts/presence",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/concepts/presence.md",
+      "category": "07-architecture",
+      "description": ""
+    },
+    {
+      "id": "07-architecture/messages",
+      "title": "Messages",
+      "path": "07-architecture/messages.md",
+      "source_path": "concepts/messages.md",
+      "source_url": "https://docs.openclaw.ai/concepts/messages",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/concepts/messages.md",
+      "category": "07-architecture",
+      "description": ""
+    },
+    {
+      "id": "07-architecture/streaming",
+      "title": "Streaming and Chunking",
+      "path": "07-architecture/streaming.md",
+      "source_path": "concepts/streaming.md",
+      "source_url": "https://docs.openclaw.ai/concepts/streaming",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/concepts/streaming.md",
+      "category": "07-architecture",
+      "description": ""
+    },
+    {
+      "id": "07-architecture/retry",
+      "title": "Retry Policy",
+      "path": "07-architecture/retry.md",
+      "source_path": "concepts/retry.md",
+      "source_url": "https://docs.openclaw.ai/concepts/retry",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/concepts/retry.md",
+      "category": "07-architecture",
+      "description": ""
+    },
+    {
+      "id": "07-architecture/queue",
+      "title": "Command Queue",
+      "path": "07-architecture/queue.md",
+      "source_path": "concepts/queue.md",
+      "source_url": "https://docs.openclaw.ai/concepts/queue",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/concepts/queue.md",
+      "category": "07-architecture",
+      "description": ""
+    },
+    {
+      "id": "07-architecture/groups",
+      "title": "Groups",
+      "path": "07-architecture/groups.md",
+      "source_path": "concepts/groups.md",
+      "source_url": "https://docs.openclaw.ai/concepts/groups",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/concepts/groups.md",
+      "category": "07-architecture",
+      "description": ""
+    },
+    {
+      "id": "07-architecture/group-messages",
+      "title": "Group Messages",
+      "path": "07-architecture/group-messages.md",
+      "source_path": "concepts/group-messages.md",
+      "source_url": "https://docs.openclaw.ai/concepts/group-messages",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/concepts/group-messages.md",
+      "category": "07-architecture",
+      "description": ""
+    },
+    {
+      "id": "07-architecture/channel-routing",
+      "title": "Channel Routing",
+      "path": "07-architecture/channel-routing.md",
+      "source_path": "concepts/channel-routing.md",
+      "source_url": "https://docs.openclaw.ai/concepts/channel-routing",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/concepts/channel-routing.md",
+      "category": "07-architecture",
+      "description": ""
+    },
+    {
+      "id": "07-architecture/model-providers",
+      "title": "Model Providers",
+      "path": "07-architecture/model-providers.md",
+      "source_path": "concepts/model-providers.md",
+      "source_url": "https://docs.openclaw.ai/concepts/model-providers",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/concepts/model-providers.md",
+      "category": "07-architecture",
+      "description": ""
+    },
+    {
+      "id": "07-architecture/model-failover",
+      "title": "Model Failover",
+      "path": "07-architecture/model-failover.md",
+      "source_path": "concepts/model-failover.md",
+      "source_url": "https://docs.openclaw.ai/concepts/model-failover",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/concepts/model-failover.md",
+      "category": "07-architecture",
+      "description": ""
+    },
+    {
+      "id": "07-architecture/models",
+      "title": "Models CLI",
+      "path": "07-architecture/models.md",
+      "source_path": "concepts/models.md",
+      "source_url": "https://docs.openclaw.ai/concepts/models",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/concepts/models.md",
+      "category": "07-architecture",
+      "description": ""
+    },
+    {
+      "id": "07-architecture/oauth",
+      "title": "OAuth",
+      "path": "07-architecture/oauth.md",
+      "source_path": "concepts/oauth.md",
+      "source_url": "https://docs.openclaw.ai/concepts/oauth",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/concepts/oauth.md",
+      "category": "07-architecture",
+      "description": ""
+    },
+    {
+      "id": "07-architecture/typebox",
+      "title": "TypeBox",
+      "path": "07-architecture/typebox.md",
+      "source_path": "concepts/typebox.md",
+      "source_url": "https://docs.openclaw.ai/concepts/typebox",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/concepts/typebox.md",
+      "category": "07-architecture",
+      "description": ""
+    },
+    {
+      "id": "07-architecture/markdown-formatting",
+      "title": "Markdown Formatting",
+      "path": "07-architecture/markdown-formatting.md",
+      "source_path": "concepts/markdown-formatting.md",
+      "source_url": "https://docs.openclaw.ai/concepts/markdown-formatting",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/concepts/markdown-formatting.md",
+      "category": "07-architecture",
+      "description": ""
+    },
+    {
+      "id": "07-architecture/typing-indicators",
+      "title": "Typing Indicators",
+      "path": "07-architecture/typing-indicators.md",
+      "source_path": "concepts/typing-indicators.md",
+      "source_url": "https://docs.openclaw.ai/concepts/typing-indicators",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/concepts/typing-indicators.md",
+      "category": "07-architecture",
+      "description": ""
+    },
+    {
+      "id": "07-architecture/usage-tracking",
+      "title": "Usage Tracking",
+      "path": "07-architecture/usage-tracking.md",
+      "source_path": "concepts/usage-tracking.md",
+      "source_url": "https://docs.openclaw.ai/concepts/usage-tracking",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/concepts/usage-tracking.md",
+      "category": "07-architecture",
+      "description": ""
+    },
+    {
+      "id": "07-architecture/timezone",
+      "title": "Timezones",
+      "path": "07-architecture/timezone.md",
+      "source_path": "concepts/timezone.md",
+      "source_url": "https://docs.openclaw.ai/concepts/timezone",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/concepts/timezone.md",
+      "category": "07-architecture",
+      "description": ""
+    },
+    {
+      "id": "08-gateway/overview",
+      "title": "Gateway Runbook",
+      "path": "08-gateway/overview.md",
+      "source_path": "gateway/index.md",
+      "source_url": "https://docs.openclaw.ai/gateway",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/gateway/index.md",
+      "category": "08-gateway",
+      "description": ""
+    },
+    {
+      "id": "08-gateway/authentication",
+      "title": "Authentication",
+      "path": "08-gateway/authentication.md",
+      "source_path": "gateway/authentication.md",
+      "source_url": "https://docs.openclaw.ai/gateway/authentication",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/gateway/authentication.md",
+      "category": "08-gateway",
+      "description": ""
+    },
+    {
+      "id": "08-gateway/health",
+      "title": "Health Checks",
+      "path": "08-gateway/health.md",
+      "source_path": "gateway/health.md",
+      "source_url": "https://docs.openclaw.ai/gateway/health",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/gateway/health.md",
+      "category": "08-gateway",
+      "description": ""
+    },
+    {
+      "id": "08-gateway/heartbeat",
+      "title": "Heartbeat",
+      "path": "08-gateway/heartbeat.md",
+      "source_path": "gateway/heartbeat.md",
+      "source_url": "https://docs.openclaw.ai/gateway/heartbeat",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/gateway/heartbeat.md",
+      "category": "08-gateway",
+      "description": ""
+    },
+    {
+      "id": "08-gateway/doctor",
+      "title": "Doctor",
+      "path": "08-gateway/doctor.md",
+      "source_path": "gateway/doctor.md",
+      "source_url": "https://docs.openclaw.ai/gateway/doctor",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/gateway/doctor.md",
+      "category": "08-gateway",
+      "description": ""
+    },
+    {
+      "id": "08-gateway/logging",
+      "title": "Logging",
+      "path": "08-gateway/logging.md",
+      "source_path": "gateway/logging.md",
+      "source_url": "https://docs.openclaw.ai/gateway/logging",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/gateway/logging.md",
+      "category": "08-gateway",
+      "description": ""
+    },
+    {
+      "id": "08-gateway/gateway-lock",
+      "title": "Gateway Lock",
+      "path": "08-gateway/gateway-lock.md",
+      "source_path": "gateway/gateway-lock.md",
+      "source_url": "https://docs.openclaw.ai/gateway/gateway-lock",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/gateway/gateway-lock.md",
+      "category": "08-gateway",
+      "description": ""
+    },
+    {
+      "id": "08-gateway/background-process",
+      "title": "Background Exec and Process Tool",
+      "path": "08-gateway/background-process.md",
+      "source_path": "gateway/background-process.md",
+      "source_url": "https://docs.openclaw.ai/gateway/background-process",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/gateway/background-process.md",
+      "category": "08-gateway",
+      "description": ""
+    },
+    {
+      "id": "08-gateway/multiple-gateways",
+      "title": "Multiple Gateways",
+      "path": "08-gateway/multiple-gateways.md",
+      "source_path": "gateway/multiple-gateways.md",
+      "source_url": "https://docs.openclaw.ai/gateway/multiple-gateways",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/gateway/multiple-gateways.md",
+      "category": "08-gateway",
+      "description": ""
+    },
+    {
+      "id": "08-gateway/troubleshooting",
+      "title": "Troubleshooting",
+      "path": "08-gateway/troubleshooting.md",
+      "source_path": "gateway/troubleshooting.md",
+      "source_url": "https://docs.openclaw.ai/gateway/troubleshooting",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/gateway/troubleshooting.md",
+      "category": "08-gateway",
+      "description": ""
+    },
+    {
+      "id": "08-gateway/security",
+      "title": "Security",
+      "path": "08-gateway/security.md",
+      "source_path": "gateway/security/index.md",
+      "source_url": "https://docs.openclaw.ai/gateway/security",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/gateway/security/index.md",
+      "category": "08-gateway",
+      "description": ""
+    },
+    {
+      "id": "08-gateway/sandboxing",
+      "title": "Sandboxing",
+      "path": "08-gateway/sandboxing.md",
+      "source_path": "gateway/sandboxing.md",
+      "source_url": "https://docs.openclaw.ai/gateway/sandboxing",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/gateway/sandboxing.md",
+      "category": "08-gateway",
+      "description": ""
+    },
+    {
+      "id": "08-gateway/sandbox-vs-tool-policy",
+      "title": "Sandbox vs Tool Policy vs Elevated",
+      "path": "08-gateway/sandbox-vs-tool-policy.md",
+      "source_path": "gateway/sandbox-vs-tool-policy-vs-elevated.md",
+      "source_url": "https://docs.openclaw.ai/gateway/sandbox-vs-tool-policy-vs-elevated",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/gateway/sandbox-vs-tool-policy-vs-elevated.md",
+      "category": "08-gateway",
+      "description": ""
+    },
+    {
+      "id": "08-gateway/protocol",
+      "title": "Gateway Protocol",
+      "path": "08-gateway/protocol.md",
+      "source_path": "gateway/protocol.md",
+      "source_url": "https://docs.openclaw.ai/gateway/protocol",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/gateway/protocol.md",
+      "category": "08-gateway",
+      "description": ""
+    },
+    {
+      "id": "08-gateway/bridge-protocol",
+      "title": "Bridge Protocol",
+      "path": "08-gateway/bridge-protocol.md",
+      "source_path": "gateway/bridge-protocol.md",
+      "source_url": "https://docs.openclaw.ai/gateway/bridge-protocol",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/gateway/bridge-protocol.md",
+      "category": "08-gateway",
+      "description": ""
+    },
+    {
+      "id": "08-gateway/openai-http-api",
+      "title": "OpenAI Chat Completions",
+      "path": "08-gateway/openai-http-api.md",
+      "source_path": "gateway/openai-http-api.md",
+      "source_url": "https://docs.openclaw.ai/gateway/openai-http-api",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/gateway/openai-http-api.md",
+      "category": "08-gateway",
+      "description": ""
+    },
+    {
+      "id": "08-gateway/tools-invoke-http-api",
+      "title": "Tools Invoke API",
+      "path": "08-gateway/tools-invoke-http-api.md",
+      "source_path": "gateway/tools-invoke-http-api.md",
+      "source_url": "https://docs.openclaw.ai/gateway/tools-invoke-http-api",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/gateway/tools-invoke-http-api.md",
+      "category": "08-gateway",
+      "description": ""
+    },
+    {
+      "id": "08-gateway/cli-backends",
+      "title": "CLI Backends",
+      "path": "08-gateway/cli-backends.md",
+      "source_path": "gateway/cli-backends.md",
+      "source_url": "https://docs.openclaw.ai/gateway/cli-backends",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/gateway/cli-backends.md",
+      "category": "08-gateway",
+      "description": ""
+    },
+    {
+      "id": "08-gateway/local-models",
+      "title": "Local Models",
+      "path": "08-gateway/local-models.md",
+      "source_path": "gateway/local-models.md",
+      "source_url": "https://docs.openclaw.ai/gateway/local-models",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/gateway/local-models.md",
+      "category": "08-gateway",
+      "description": ""
+    },
+    {
+      "id": "08-gateway/pairing",
+      "title": "Gateway-Owned Pairing",
+      "path": "08-gateway/pairing.md",
+      "source_path": "gateway/pairing.md",
+      "source_url": "https://docs.openclaw.ai/gateway/pairing",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/gateway/pairing.md",
+      "category": "08-gateway",
+      "description": ""
+    },
+    {
+      "id": "08-gateway/discovery",
+      "title": "Discovery and Transports",
+      "path": "08-gateway/discovery.md",
+      "source_path": "gateway/discovery.md",
+      "source_url": "https://docs.openclaw.ai/gateway/discovery",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/gateway/discovery.md",
+      "category": "08-gateway",
+      "description": ""
+    },
+    {
+      "id": "08-gateway/bonjour",
+      "title": "Bonjour Discovery",
+      "path": "08-gateway/bonjour.md",
+      "source_path": "gateway/bonjour.md",
+      "source_url": "https://docs.openclaw.ai/gateway/bonjour",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/gateway/bonjour.md",
+      "category": "08-gateway",
+      "description": ""
+    },
+    {
+      "id": "08-gateway/remote",
+      "title": "Remote Access",
+      "path": "08-gateway/remote.md",
+      "source_path": "gateway/remote.md",
+      "source_url": "https://docs.openclaw.ai/gateway/remote",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/gateway/remote.md",
+      "category": "08-gateway",
+      "description": ""
+    },
+    {
+      "id": "08-gateway/remote-gateway-readme",
+      "title": "Remote Gateway Setup",
+      "path": "08-gateway/remote-gateway-readme.md",
+      "source_path": "gateway/remote-gateway-readme.md",
+      "source_url": "https://docs.openclaw.ai/gateway/remote-gateway-readme",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/gateway/remote-gateway-readme.md",
+      "category": "08-gateway",
+      "description": ""
+    },
+    {
+      "id": "08-gateway/tailscale",
+      "title": "Tailscale",
+      "path": "08-gateway/tailscale.md",
+      "source_path": "gateway/tailscale.md",
+      "source_url": "https://docs.openclaw.ai/gateway/tailscale",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/gateway/tailscale.md",
+      "category": "08-gateway",
+      "description": ""
+    },
+    {
+      "id": "09-providers/overview",
+      "title": "Model Providers",
+      "path": "09-providers/overview.md",
+      "source_path": "providers/index.md",
+      "source_url": "https://docs.openclaw.ai/providers",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/providers/index.md",
+      "category": "09-providers",
+      "description": ""
+    },
+    {
+      "id": "09-providers/models-list",
+      "title": "Model Provider Quickstart",
+      "path": "09-providers/models-list.md",
+      "source_path": "providers/models.md",
+      "source_url": "https://docs.openclaw.ai/providers/models",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/providers/models.md",
+      "category": "09-providers",
+      "description": ""
+    },
+    {
+      "id": "09-providers/anthropic",
+      "title": "Anthropic",
+      "path": "09-providers/anthropic.md",
+      "source_path": "providers/anthropic.md",
+      "source_url": "https://docs.openclaw.ai/providers/anthropic",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/providers/anthropic.md",
+      "category": "09-providers",
+      "description": ""
+    },
+    {
+      "id": "09-providers/openai",
+      "title": "OpenAI",
+      "path": "09-providers/openai.md",
+      "source_path": "providers/openai.md",
+      "source_url": "https://docs.openclaw.ai/providers/openai",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/providers/openai.md",
+      "category": "09-providers",
+      "description": ""
+    },
+    {
+      "id": "09-providers/openrouter",
+      "title": "OpenRouter",
+      "path": "09-providers/openrouter.md",
+      "source_path": "providers/openrouter.md",
+      "source_url": "https://docs.openclaw.ai/providers/openrouter",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/providers/openrouter.md",
+      "category": "09-providers",
+      "description": ""
+    },
+    {
+      "id": "09-providers/bedrock",
+      "title": "Amazon Bedrock",
+      "path": "09-providers/bedrock.md",
+      "source_path": "bedrock.md",
+      "source_url": "https://docs.openclaw.ai/bedrock",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/bedrock.md",
+      "category": "09-providers",
+      "description": ""
+    },
+    {
+      "id": "09-providers/vercel-ai-gateway",
+      "title": "Vercel AI Gateway",
+      "path": "09-providers/vercel-ai-gateway.md",
+      "source_path": "providers/vercel-ai-gateway.md",
+      "source_url": "https://docs.openclaw.ai/providers/vercel-ai-gateway",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/providers/vercel-ai-gateway.md",
+      "category": "09-providers",
+      "description": ""
+    },
+    {
+      "id": "09-providers/moonshot",
+      "title": "Moonshot AI",
+      "path": "09-providers/moonshot.md",
+      "source_path": "providers/moonshot.md",
+      "source_url": "https://docs.openclaw.ai/providers/moonshot",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/providers/moonshot.md",
+      "category": "09-providers",
+      "description": ""
+    },
+    {
+      "id": "09-providers/minimax",
+      "title": "MiniMax",
+      "path": "09-providers/minimax.md",
+      "source_path": "providers/minimax.md",
+      "source_url": "https://docs.openclaw.ai/providers/minimax",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/providers/minimax.md",
+      "category": "09-providers",
+      "description": ""
+    },
+    {
+      "id": "09-providers/opencode",
+      "title": "OpenCode Zen",
+      "path": "09-providers/opencode.md",
+      "source_path": "providers/opencode.md",
+      "source_url": "https://docs.openclaw.ai/providers/opencode",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/providers/opencode.md",
+      "category": "09-providers",
+      "description": ""
+    },
+    {
+      "id": "09-providers/glm",
+      "title": "GLM Models",
+      "path": "09-providers/glm.md",
+      "source_path": "providers/glm.md",
+      "source_url": "https://docs.openclaw.ai/providers/glm",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/providers/glm.md",
+      "category": "09-providers",
+      "description": ""
+    },
+    {
+      "id": "09-providers/zai",
+      "title": "Z.AI",
+      "path": "09-providers/zai.md",
+      "source_path": "providers/zai.md",
+      "source_url": "https://docs.openclaw.ai/providers/zai",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/providers/zai.md",
+      "category": "09-providers",
+      "description": ""
+    },
+    {
+      "id": "09-providers/synthetic",
+      "title": "Synthetic",
+      "path": "09-providers/synthetic.md",
+      "source_path": "providers/synthetic.md",
+      "source_url": "https://docs.openclaw.ai/providers/synthetic",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/providers/synthetic.md",
+      "category": "09-providers",
+      "description": ""
+    },
+    {
+      "id": "10-deployment/overview",
+      "title": "Platforms",
+      "path": "10-deployment/overview.md",
+      "source_path": "platforms/index.md",
+      "source_url": "https://docs.openclaw.ai/platforms",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/platforms/index.md",
+      "category": "10-deployment",
+      "description": ""
+    },
+    {
+      "id": "10-deployment/macos",
+      "title": "macOS App",
+      "path": "10-deployment/macos.md",
+      "source_path": "platforms/macos.md",
+      "source_url": "https://docs.openclaw.ai/platforms/macos",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/platforms/macos.md",
+      "category": "10-deployment",
+      "description": ""
+    },
+    {
+      "id": "10-deployment/linux",
+      "title": "Linux App",
+      "path": "10-deployment/linux.md",
+      "source_path": "platforms/linux.md",
+      "source_url": "https://docs.openclaw.ai/platforms/linux",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/platforms/linux.md",
+      "category": "10-deployment",
+      "description": ""
+    },
+    {
+      "id": "10-deployment/windows",
+      "title": "Windows (WSL2)",
+      "path": "10-deployment/windows.md",
+      "source_path": "platforms/windows.md",
+      "source_url": "https://docs.openclaw.ai/platforms/windows",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/platforms/windows.md",
+      "category": "10-deployment",
+      "description": ""
+    },
+    {
+      "id": "10-deployment/android",
+      "title": "Android App",
+      "path": "10-deployment/android.md",
+      "source_path": "platforms/android.md",
+      "source_url": "https://docs.openclaw.ai/platforms/android",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/platforms/android.md",
+      "category": "10-deployment",
+      "description": ""
+    },
+    {
+      "id": "10-deployment/ios",
+      "title": "iOS App",
+      "path": "10-deployment/ios.md",
+      "source_path": "platforms/ios.md",
+      "source_url": "https://docs.openclaw.ai/platforms/ios",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/platforms/ios.md",
+      "category": "10-deployment",
+      "description": ""
+    },
+    {
+      "id": "10-deployment/fly-io",
+      "title": "Fly.io",
+      "path": "10-deployment/fly-io.md",
+      "source_path": "platforms/fly.md",
+      "source_url": "https://docs.openclaw.ai/platforms/fly",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/platforms/fly.md",
+      "category": "10-deployment",
+      "description": "Deploy OpenClaw on Fly.io"
+    },
+    {
+      "id": "10-deployment/hetzner",
+      "title": "Hetzner",
+      "path": "10-deployment/hetzner.md",
+      "source_path": "platforms/hetzner.md",
+      "source_url": "https://docs.openclaw.ai/platforms/hetzner",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/platforms/hetzner.md",
+      "category": "10-deployment",
+      "description": ""
+    },
+    {
+      "id": "10-deployment/gcp",
+      "title": "GCP",
+      "path": "10-deployment/gcp.md",
+      "source_path": "platforms/gcp.md",
+      "source_url": "https://docs.openclaw.ai/platforms/gcp",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/platforms/gcp.md",
+      "category": "10-deployment",
+      "description": ""
+    },
+    {
+      "id": "10-deployment/macos-vm",
+      "title": "macOS VMs",
+      "path": "10-deployment/macos-vm.md",
+      "source_path": "platforms/macos-vm.md",
+      "source_url": "https://docs.openclaw.ai/platforms/macos-vm",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/platforms/macos-vm.md",
+      "category": "10-deployment",
+      "description": ""
+    },
+    {
+      "id": "10-deployment/exe-dev",
+      "title": "exe.dev",
+      "path": "10-deployment/exe-dev.md",
+      "source_path": "platforms/exe-dev.md",
+      "source_url": "https://docs.openclaw.ai/platforms/exe-dev",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/platforms/exe-dev.md",
+      "category": "10-deployment",
+      "description": ""
+    },
+    {
+      "id": "10-deployment/railway",
+      "title": "Deploy on Railway",
+      "path": "10-deployment/railway.md",
+      "source_path": "railway.mdx",
+      "source_url": "https://docs.openclaw.ai/railway",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/railway.mdx",
+      "category": "10-deployment",
+      "description": ""
+    },
+    {
+      "id": "10-deployment/render",
+      "title": "Deploy on Render",
+      "path": "10-deployment/render.md",
+      "source_path": "render.mdx",
+      "source_url": "https://docs.openclaw.ai/render",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/render.mdx",
+      "category": "10-deployment",
+      "description": ""
+    },
+    {
+      "id": "10-deployment/northflank",
+      "title": "Deploy on Northflank",
+      "path": "10-deployment/northflank.md",
+      "source_path": "northflank.mdx",
+      "source_url": "https://docs.openclaw.ai/northflank",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/northflank.mdx",
+      "category": "10-deployment",
+      "description": ""
+    },
+    {
+      "id": "11-automation/hooks",
+      "title": "Hooks",
+      "path": "11-automation/hooks.md",
+      "source_path": "hooks.md",
+      "source_url": "https://docs.openclaw.ai/hooks",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/hooks.md",
+      "category": "11-automation",
+      "description": ""
+    },
+    {
+      "id": "11-automation/soul-evil",
+      "title": "SOUL Evil Hook",
+      "path": "11-automation/soul-evil.md",
+      "source_path": "hooks/soul-evil.md",
+      "source_url": "https://docs.openclaw.ai/hooks/soul-evil",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/hooks/soul-evil.md",
+      "category": "11-automation",
+      "description": ""
+    },
+    {
+      "id": "11-automation/cron-jobs",
+      "title": "Cron Jobs",
+      "path": "11-automation/cron-jobs.md",
+      "source_path": "automation/cron-jobs.md",
+      "source_url": "https://docs.openclaw.ai/automation/cron-jobs",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/automation/cron-jobs.md",
+      "category": "11-automation",
+      "description": ""
+    },
+    {
+      "id": "11-automation/cron-vs-heartbeat",
+      "title": "Cron vs Heartbeat",
+      "path": "11-automation/cron-vs-heartbeat.md",
+      "source_path": "automation/cron-vs-heartbeat.md",
+      "source_url": "https://docs.openclaw.ai/automation/cron-vs-heartbeat",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/automation/cron-vs-heartbeat.md",
+      "category": "11-automation",
+      "description": ""
+    },
+    {
+      "id": "11-automation/webhook",
+      "title": "Webhooks",
+      "path": "11-automation/webhook.md",
+      "source_path": "automation/webhook.md",
+      "source_url": "https://docs.openclaw.ai/automation/webhook",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/automation/webhook.md",
+      "category": "11-automation",
+      "description": ""
+    },
+    {
+      "id": "11-automation/gmail-pubsub",
+      "title": "Gmail PubSub",
+      "path": "11-automation/gmail-pubsub.md",
+      "source_path": "automation/gmail-pubsub.md",
+      "source_url": "https://docs.openclaw.ai/automation/gmail-pubsub",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/automation/gmail-pubsub.md",
+      "category": "11-automation",
+      "description": ""
+    },
+    {
+      "id": "11-automation/poll",
+      "title": "Polls",
+      "path": "11-automation/poll.md",
+      "source_path": "automation/poll.md",
+      "source_url": "https://docs.openclaw.ai/automation/poll",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/automation/poll.md",
+      "category": "11-automation",
+      "description": ""
+    },
+    {
+      "id": "11-automation/auth-monitoring",
+      "title": "Auth Monitoring",
+      "path": "11-automation/auth-monitoring.md",
+      "source_path": "automation/auth-monitoring.md",
+      "source_url": "https://docs.openclaw.ai/automation/auth-monitoring",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/automation/auth-monitoring.md",
+      "category": "11-automation",
+      "description": ""
+    },
+    {
+      "id": "12-nodes/overview",
+      "title": "Nodes",
+      "path": "12-nodes/overview.md",
+      "source_path": "nodes/index.md",
+      "source_url": "https://docs.openclaw.ai/nodes",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/nodes/index.md",
+      "category": "12-nodes",
+      "description": ""
+    },
+    {
+      "id": "12-nodes/images",
+      "title": "Image and Media Support",
+      "path": "12-nodes/images.md",
+      "source_path": "nodes/images.md",
+      "source_url": "https://docs.openclaw.ai/nodes/images",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/nodes/images.md",
+      "category": "12-nodes",
+      "description": ""
+    },
+    {
+      "id": "12-nodes/audio",
+      "title": "Audio and Voice Notes",
+      "path": "12-nodes/audio.md",
+      "source_path": "nodes/audio.md",
+      "source_url": "https://docs.openclaw.ai/nodes/audio",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/nodes/audio.md",
+      "category": "12-nodes",
+      "description": ""
+    },
+    {
+      "id": "12-nodes/camera",
+      "title": "Camera Capture",
+      "path": "12-nodes/camera.md",
+      "source_path": "nodes/camera.md",
+      "source_url": "https://docs.openclaw.ai/nodes/camera",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/nodes/camera.md",
+      "category": "12-nodes",
+      "description": ""
+    },
+    {
+      "id": "12-nodes/talk",
+      "title": "Talk Mode",
+      "path": "12-nodes/talk.md",
+      "source_path": "nodes/talk.md",
+      "source_url": "https://docs.openclaw.ai/nodes/talk",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/nodes/talk.md",
+      "category": "12-nodes",
+      "description": ""
+    },
+    {
+      "id": "12-nodes/voicewake",
+      "title": "Voice Wake",
+      "path": "12-nodes/voicewake.md",
+      "source_path": "nodes/voicewake.md",
+      "source_url": "https://docs.openclaw.ai/nodes/voicewake",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/nodes/voicewake.md",
+      "category": "12-nodes",
+      "description": ""
+    },
+    {
+      "id": "12-nodes/location-command",
+      "title": "Location Command",
+      "path": "12-nodes/location-command.md",
+      "source_path": "nodes/location-command.md",
+      "source_url": "https://docs.openclaw.ai/nodes/location-command",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/nodes/location-command.md",
+      "category": "12-nodes",
+      "description": ""
+    },
+    {
+      "id": "13-web/overview",
+      "title": "Web",
+      "path": "13-web/overview.md",
+      "source_path": "web/index.md",
+      "source_url": "https://docs.openclaw.ai/web",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/web/index.md",
+      "category": "13-web",
+      "description": ""
+    },
+    {
+      "id": "13-web/control-ui",
+      "title": "Control UI",
+      "path": "13-web/control-ui.md",
+      "source_path": "web/control-ui.md",
+      "source_url": "https://docs.openclaw.ai/web/control-ui",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/web/control-ui.md",
+      "category": "13-web",
+      "description": ""
+    },
+    {
+      "id": "13-web/dashboard",
+      "title": "Dashboard",
+      "path": "13-web/dashboard.md",
+      "source_path": "web/dashboard.md",
+      "source_url": "https://docs.openclaw.ai/web/dashboard",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/web/dashboard.md",
+      "category": "13-web",
+      "description": ""
+    },
+    {
+      "id": "13-web/webchat",
+      "title": "WebChat",
+      "path": "13-web/webchat.md",
+      "source_path": "web/webchat.md",
+      "source_url": "https://docs.openclaw.ai/web/webchat",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/web/webchat.md",
+      "category": "13-web",
+      "description": ""
+    },
+    {
+      "id": "13-web/tui",
+      "title": "TUI",
+      "path": "13-web/tui.md",
+      "source_path": "tui.md",
+      "source_url": "https://docs.openclaw.ai/tui",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/tui.md",
+      "category": "13-web",
+      "description": ""
+    },
+    {
+      "id": "14-reference/rpc",
+      "title": "RPC Adapters",
+      "path": "14-reference/rpc.md",
+      "source_path": "reference/rpc.md",
+      "source_url": "https://docs.openclaw.ai/reference/rpc",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/reference/rpc.md",
+      "category": "14-reference",
+      "description": ""
+    },
+    {
+      "id": "14-reference/device-models",
+      "title": "Device Model Database",
+      "path": "14-reference/device-models.md",
+      "source_path": "reference/device-models.md",
+      "source_url": "https://docs.openclaw.ai/reference/device-models",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/reference/device-models.md",
+      "category": "14-reference",
+      "description": ""
+    },
+    {
+      "id": "14-reference/agents-default",
+      "title": "agents-default",
+      "path": "14-reference/agents-default.md",
+      "source_path": "reference/AGENTS.default.md",
+      "source_url": "https://docs.openclaw.ai/reference/AGENTS.default",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/reference/AGENTS.default.md",
+      "category": "14-reference",
+      "description": ""
+    },
+    {
+      "id": "14-reference/template-agents",
+      "title": "template-agents",
+      "path": "14-reference/template-agents.md",
+      "source_path": "reference/templates/AGENTS.md",
+      "source_url": "https://docs.openclaw.ai/reference/templates/AGENTS",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/reference/templates/AGENTS.md",
+      "category": "14-reference",
+      "description": ""
+    },
+    {
+      "id": "14-reference/template-boot",
+      "title": "template-boot",
+      "path": "14-reference/template-boot.md",
+      "source_path": "reference/templates/BOOT.md",
+      "source_url": "https://docs.openclaw.ai/reference/templates/BOOT",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/reference/templates/BOOT.md",
+      "category": "14-reference",
+      "description": ""
+    },
+    {
+      "id": "14-reference/template-bootstrap",
+      "title": "template-bootstrap",
+      "path": "14-reference/template-bootstrap.md",
+      "source_path": "reference/templates/BOOTSTRAP.md",
+      "source_url": "https://docs.openclaw.ai/reference/templates/BOOTSTRAP",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/reference/templates/BOOTSTRAP.md",
+      "category": "14-reference",
+      "description": ""
+    },
+    {
+      "id": "14-reference/template-heartbeat",
+      "title": "template-heartbeat",
+      "path": "14-reference/template-heartbeat.md",
+      "source_path": "reference/templates/HEARTBEAT.md",
+      "source_url": "https://docs.openclaw.ai/reference/templates/HEARTBEAT",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/reference/templates/HEARTBEAT.md",
+      "category": "14-reference",
+      "description": ""
+    },
+    {
+      "id": "14-reference/template-identity",
+      "title": "template-identity",
+      "path": "14-reference/template-identity.md",
+      "source_path": "reference/templates/IDENTITY.md",
+      "source_url": "https://docs.openclaw.ai/reference/templates/IDENTITY",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/reference/templates/IDENTITY.md",
+      "category": "14-reference",
+      "description": ""
+    },
+    {
+      "id": "14-reference/template-soul",
+      "title": "template-soul",
+      "path": "14-reference/template-soul.md",
+      "source_path": "reference/templates/SOUL.md",
+      "source_url": "https://docs.openclaw.ai/reference/templates/SOUL",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/reference/templates/SOUL.md",
+      "category": "14-reference",
+      "description": ""
+    },
+    {
+      "id": "14-reference/template-tools",
+      "title": "template-tools",
+      "path": "14-reference/template-tools.md",
+      "source_path": "reference/templates/TOOLS.md",
+      "source_url": "https://docs.openclaw.ai/reference/templates/TOOLS",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/reference/templates/TOOLS.md",
+      "category": "14-reference",
+      "description": ""
+    },
+    {
+      "id": "14-reference/template-user",
+      "title": "template-user",
+      "path": "14-reference/template-user.md",
+      "source_path": "reference/templates/USER.md",
+      "source_url": "https://docs.openclaw.ai/reference/templates/USER",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/reference/templates/USER.md",
+      "category": "14-reference",
+      "description": ""
+    },
+    {
+      "id": "14-reference/releasing",
+      "title": "releasing",
+      "path": "14-reference/releasing.md",
+      "source_path": "reference/RELEASING.md",
+      "source_url": "https://docs.openclaw.ai/reference/RELEASING",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/reference/RELEASING.md",
+      "category": "14-reference",
+      "description": ""
+    },
+    {
+      "id": "14-reference/session-management-compaction",
+      "title": "Session Management Deep Dive",
+      "path": "14-reference/session-management-compaction.md",
+      "source_path": "reference/session-management-compaction.md",
+      "source_url": "https://docs.openclaw.ai/reference/session-management-compaction",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/reference/session-management-compaction.md",
+      "category": "14-reference",
+      "description": ""
+    },
+    {
+      "id": "15-help/overview",
+      "title": "Help",
+      "path": "15-help/overview.md",
+      "source_path": "help/index.md",
+      "source_url": "https://docs.openclaw.ai/help",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/help/index.md",
+      "category": "15-help",
+      "description": ""
+    },
+    {
+      "id": "15-help/troubleshooting",
+      "title": "Troubleshooting",
+      "path": "15-help/troubleshooting.md",
+      "source_path": "help/troubleshooting.md",
+      "source_url": "https://docs.openclaw.ai/help/troubleshooting",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/help/troubleshooting.md",
+      "category": "15-help",
+      "description": ""
+    },
+    {
+      "id": "15-help/faq",
+      "title": "FAQ",
+      "path": "15-help/faq.md",
+      "source_path": "help/faq.md",
+      "source_url": "https://docs.openclaw.ai/help/faq",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/help/faq.md",
+      "category": "15-help",
+      "description": ""
+    },
+    {
+      "id": "15-help/debugging",
+      "title": "Debugging",
+      "path": "15-help/debugging.md",
+      "source_path": "debugging.md",
+      "source_url": "https://docs.openclaw.ai/debugging",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/debugging.md",
+      "category": "15-help",
+      "description": ""
+    },
+    {
+      "id": "15-help/testing",
+      "title": "Testing",
+      "path": "15-help/testing.md",
+      "source_path": "testing.md",
+      "source_url": "https://docs.openclaw.ai/testing",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/testing.md",
+      "category": "15-help",
+      "description": ""
+    },
+    {
+      "id": "15-help/scripts",
+      "title": "Scripts",
+      "path": "15-help/scripts.md",
+      "source_path": "scripts.md",
+      "source_url": "https://docs.openclaw.ai/scripts",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/scripts.md",
+      "category": "15-help",
+      "description": ""
+    },
+    {
+      "id": "07-architecture/broadcast-groups",
+      "title": "Broadcast Groups",
+      "path": "07-architecture/broadcast-groups.md",
+      "source_path": "broadcast-groups.md",
+      "source_url": "https://docs.openclaw.ai/broadcast-groups",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/broadcast-groups.md",
+      "category": "07-architecture",
+      "description": ""
+    },
+    {
+      "id": "05-skills/multi-agent-sandbox-tools",
+      "title": "Multi-Agent Sandbox & Tools",
+      "path": "05-skills/multi-agent-sandbox-tools.md",
+      "source_path": "multi-agent-sandbox-tools.md",
+      "source_url": "https://docs.openclaw.ai/multi-agent-sandbox-tools",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/multi-agent-sandbox-tools.md",
+      "category": "05-skills",
+      "description": ""
+    },
+    {
+      "id": "14-reference/token-use",
+      "title": "Token Use and Costs",
+      "path": "14-reference/token-use.md",
+      "source_path": "token-use.md",
+      "source_url": "https://docs.openclaw.ai/token-use",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/token-use.md",
+      "category": "14-reference",
+      "description": ""
+    },
+    {
+      "id": "07-architecture/pi-agent",
+      "title": "Pi Integration Architecture",
+      "path": "07-architecture/pi-agent.md",
+      "source_path": "pi.md",
+      "source_url": "https://docs.openclaw.ai/pi",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/pi.md",
+      "category": "07-architecture",
+      "description": ""
+    },
+    {
+      "id": "07-architecture/pi-agent-dev",
+      "title": "Pi Development Workflow",
+      "path": "07-architecture/pi-agent-dev.md",
+      "source_path": "pi-dev.md",
+      "source_url": "https://docs.openclaw.ai/pi-dev",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/pi-dev.md",
+      "category": "07-architecture",
+      "description": ""
+    },
+    {
+      "id": "08-gateway/logging-standalone",
+      "title": "Logging",
+      "path": "08-gateway/logging-standalone.md",
+      "source_path": "logging.md",
+      "source_url": "https://docs.openclaw.ai/logging",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/logging.md",
+      "category": "08-gateway",
+      "description": ""
+    },
+    {
+      "id": "14-reference/prose",
+      "title": "OpenProse",
+      "path": "14-reference/prose.md",
+      "source_path": "prose.md",
+      "source_url": "https://docs.openclaw.ai/prose",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/prose.md",
+      "category": "14-reference",
+      "description": ""
+    },
+    {
+      "id": "14-reference/date-time",
+      "title": "Date and Time",
+      "path": "14-reference/date-time.md",
+      "source_path": "date-time.md",
+      "source_url": "https://docs.openclaw.ai/date-time",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/date-time.md",
+      "category": "14-reference",
+      "description": ""
+    },
+    {
+      "id": "08-gateway/network",
+      "title": "Network",
+      "path": "08-gateway/network.md",
+      "source_path": "network.md",
+      "source_url": "https://docs.openclaw.ai/network",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/network.md",
+      "category": "08-gateway",
+      "description": ""
+    },
+    {
+      "id": "09-providers/perplexity",
+      "title": "Perplexity Sonar",
+      "path": "09-providers/perplexity.md",
+      "source_path": "perplexity.md",
+      "source_url": "https://docs.openclaw.ai/perplexity",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/perplexity.md",
+      "category": "09-providers",
+      "description": ""
+    },
+    {
+      "id": "09-providers/brave-search",
+      "title": "Brave Search",
+      "path": "09-providers/brave-search.md",
+      "source_path": "brave-search.md",
+      "source_url": "https://docs.openclaw.ai/brave-search",
+      "github_url": "https://github.com/openclaw/openclaw/blob/main/docs/brave-search.md",
+      "category": "09-providers",
+      "description": ""
+    }
+  ],
+  "categories": {
+    "01-core": {
+      "name": "Core",
+      "description": "Getting started and basic concepts"
+    },
+    "02-installation": {
+      "name": "Installation",
+      "description": "Installation methods and package managers"
+    },
+    "03-configuration": {
+      "name": "Configuration",
+      "description": "Configuration options and examples"
+    },
+    "04-cli": {
+      "name": "CLI Reference",
+      "description": "Command-line interface documentation"
+    },
+    "05-skills": {
+      "name": "Skills & Tools",
+      "description": "Skills system, tools, and extensions"
+    },
+    "06-channels": {
+      "name": "Channels",
+      "description": "Messaging platform integrations"
+    },
+    "07-architecture": {
+      "name": "Architecture",
+      "description": "System design, agents, and concepts"
+    },
+    "08-gateway": {
+      "name": "Gateway",
+      "description": "Gateway configuration and protocols"
+    },
+    "09-providers": {
+      "name": "Model Providers",
+      "description": "LLM provider configurations"
+    },
+    "10-deployment": {
+      "name": "Deployment",
+      "description": "Platform-specific deployment guides"
+    },
+    "11-automation": {
+      "name": "Automation",
+      "description": "Hooks, cron jobs, and webhooks"
+    },
+    "12-nodes": {
+      "name": "Nodes",
+      "description": "Media and device integrations"
+    },
+    "13-web": {
+      "name": "Web Interfaces",
+      "description": "Web UI and dashboard"
+    },
+    "14-reference": {
+      "name": "Reference",
+      "description": "Templates, RPC, and technical reference"
+    },
+    "15-help": {
+      "name": "Help",
+      "description": "FAQ, troubleshooting, and debugging"
+    }
+  }
+}
